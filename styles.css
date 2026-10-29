@@ -1,0 +1,72 @@
+/* EL_YO landing — cero dependencias externas */
+:root{
+  --bg:#0d1117; --panel:#161b22; --text:#e6edf3; --muted:#9da7b3;
+  --accent:#4da3ff; --accent2:#7ee0a3; --border:#30363d;
+  --max:72rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:ui-sans-serif,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.2;letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,4.5vw,3rem)}
+h2{font-size:clamp(1.4rem,3vw,2rem);margin-top:3.2rem;
+  padding-top:1rem;border-top:1px solid var(--border)}
+.site-header{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.92);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;gap:1rem;
+  padding:.7rem 1.2rem}
+.brand{font-weight:700;font-size:1.15rem;color:var(--text)}
+.nav-links{display:flex;gap:1.2rem;list-style:none;margin:0 0 0 auto;padding:0;flex-wrap:wrap}
+.nav-links a{color:var(--muted);font-size:.95rem}
+.nav-links a:hover{color:var(--text);text-decoration:none}
+.lang-toggle{margin-left:auto;background:none;border:1px solid var(--border);
+  color:var(--muted);border-radius:.5rem;padding:.25rem .7rem;cursor:pointer;
+  font-variant-numeric:tabular-nums}
+.lang-toggle:hover{color:var(--text);border-color:var(--accent)}
+.nav-links{margin-left:0}
+main{max-width:var(--max);margin:0 auto;padding:0 1.2rem 4rem}
+.hero{padding:4.5rem 0 2.5rem;animation:fade .6s ease both}
+.lead{font-size:1.15rem;color:var(--muted);max-width:46rem}
+.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.4rem 0}
+.btn{display:inline-block;padding:.65rem 1.2rem;border-radius:.6rem;font-weight:600}
+.btn.primary{background:var(--accent);color:#08111f}
+.btn.primary:hover{text-decoration:none;filter:brightness(1.1)}
+.btn.ghost{border:1px solid var(--border);color:var(--text)}
+.btn.ghost:hover{border-color:var(--accent);text-decoration:none}
+.disclaimer{font-size:.85rem;color:var(--muted);border-left:3px solid var(--accent2);
+  padding:.4rem .8rem;background:var(--panel);border-radius:0 .5rem .5rem 0;max-width:52rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:.8rem;
+  padding:1.1rem 1.2rem;transition:transform .15s ease,border-color .15s ease}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card h3{margin:.1rem 0 .4rem;font-size:1.02rem}
+.card p{margin:0;color:var(--muted);font-size:.94rem}
+.facts{list-style:none;padding:0;display:grid;gap:.7rem;max-width:56rem}
+.facts li{background:var(--panel);border:1px solid var(--border);border-radius:.7rem;
+  padding:.8rem 1rem}
+.facts span{color:var(--muted)}
+.docs-list{list-style:none;padding:0;display:grid;gap:.5rem;max-width:44rem}
+.docs-list a{display:block;background:var(--panel);border:1px solid var(--border);
+  border-radius:.6rem;padding:.65rem .9rem}
+.docs-list a:hover{border-color:var(--accent2);text-decoration:none}
+.note{font-size:.85rem;color:var(--muted)}
+.site-footer{border-top:1px solid var(--border);color:var(--muted);font-size:.88rem;
+  text-align:center;padding:1.6rem 1rem}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero{animation:none}
+  .card:hover{transform:none}
+}
+@media (max-width:640px){
+  .nav{flex-wrap:wrap}
+  .nav-links{order:3;width:100%;justify-content:flex-start;gap:.9rem}
+  .hero{padding-top:3rem}
+}
+
+ol.steps li{margin:.4rem 0}
+.steps strong{color:var(--accent2)}

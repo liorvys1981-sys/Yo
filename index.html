@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YO Clone — Crea tu clon digital / Create your digital clone</title>
+<meta name="description" content="YO Clone: crea tu representacion digital dentro de YO con consentimiento explicito. / YO Clone: create your digital representation inside YO with explicit consent.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Principal / Main">
+    <a class="brand" href="#top">YO Clone</a>
+    <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">EN</button>
+    <ul class="nav-links">
+      <li><a href="#proceso" data-i18n="n1">Proceso</a></li>
+      <li><a href="#privacidad" data-i18n="n2">Privacidad</a></li>
+      <li><a href="#capacidades" data-i18n="n3">Capacidades</a></li>
+      <li><a href="#estado" data-i18n="n4">Estado real</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <h1 data-i18n="h1">Un clon digital tuyo, dentro de YO, bajo tu consentimiento</h1>
+    <p class="lead" data-i18n="lead">YO Clone guia la creacion de tu representacion digital: capturas con evaluacion de calidad, consentimiento por tipo de dato, y una conversacion en vivo que responde por el pipeline real de EL_YO — sin respuestas prefabricadas.</p>
+    <p class="disclaimer" data-i18n="disc">ESTADO: PARCIAL. La generacion fotorrealista, la voz y la sincronizacion labial estan BLOQUEADAS por proveedores externos (sin claves en este entorno). Esta pagina no muestra ninguna replica generada ni simula una videollamada.</p>
+  </section>
+
+  <section id="proceso">
+    <h2 data-i18n="s1">Como se crea</h2>
+    <ol class="steps">
+      <li data-i18n="p1"><strong>Consentimiento explicito</strong> por tipo de dato (fotos, voz, video), revocable en cualquier momento.</li>
+      <li data-i18n="p2"><strong>Captura guiada</strong>: 5–10 fotos recomendadas; el sistema evalua iluminacion y contraste de cada toma y pide mas si la fidelidad no alcanza el umbral.</li>
+      <li data-i18n="p3"><strong>Evaluacion de calidad</strong> determinista; cancelar, repetir o eliminar siempre disponibles.</li>
+      <li data-i18n="p4"><strong>Registro de la representacion</strong>: el clon es una representacion tuya — nunca una identidad soberana nueva; todas sus capturas quedan trazadas con procedencia.</li>
+      <li data-i18n="p5"><strong>Transferencias a proveedores</strong> solo con una autorizacion criptografica independiente (R1). Sin ella, nada sale del sistema.</li>
+    </ol>
+  </section>
+
+  <section id="privacidad">
+    <h2 data-i18n="s2">Privacidad y control</h2>
+    <ul class="facts">
+      <li data-i18n="v1"><strong>Tus datos son tuyos:</strong> eliminacion completa disponible en cualquier momento, con evidencia en el ledger.</li>
+      <li data-i18n="v2"><strong>Aislamiento por usuario:</strong> las capturas de un usuario nunca se mezclan con las de otro.</li>
+      <li data-i18n="v3"><strong>Nada se envia sin autorizacion:</strong> la transferencia a cualquier proveedor exige consentimiento mas autorizacion R1 (frase-canal verificada).</li>
+      <li data-i18n="v4"><strong>El clon no es identidad:</strong> es una representacion con <code>is_identity=False</code> estructural; no reemplaza tu identidad ni la de ELLA.</li>
+    </ul>
+  </section>
+
+  <section id="capacidades">
+    <h2 data-i18n="s3">Capacidades</h2>
+    <div class="grid">
+      <article class="card"><h3 data-i18n="c1t">Onboarding con consentimiento</h3><p data-i18n="c1p">Explicacion previa, scopes por tipo de dato, cancelar/repetir/eliminar. Probado: 25 pruebas.</p></article>
+      <article class="card"><h3 data-i18n="c2t">Captura y calidad</h3><p data-i18n="c2p">Evaluacion determinista de iluminacion y contraste, progreso con umbral de fidelidad, solicitud de capturas adicionales.</p></article>
+      <article class="card"><h3 data-i18n="c3t">Conversacion en vivo</h3><p data-i18n="c3p">Turnos, interrupciones, estados visibles, latencia medida por fase. Las respuestas provienen del pipeline real de EL_YO; el TTS y la animacion reportan su estado (bloqueado) honestamente.</p></article>
+      <article class="card"><h3 data-i18n="c4t">Gobernanza</h3><p data-i18n="c4p">Cambios al clon y transferencias de datos pasan por Evolucion y Autorizacion R1; evidencia append-only.</p></article>
+    </div>
+  </section>
+
+  <section id="estado">
+    <h2 data-i18n="s4">Estado real y limites</h2>
+    <p data-i18n="st1"><strong>Implementado y probado:</strong> incorporacion, consentimiento, captura con evaluacion de calidad, registro de representacion del clon, conversacion en vivo con latencia medida. Suite: 25/25 pruebas.</p>
+    <p data-i18n="st2"><strong>Bloqueado por proveedores externos (EXTERNAL_BLOCKED):</strong> generacion fotorrealista del avatar, texto-a-voz, sincronizacion labial y proveedores de modelos. Las interfaces y los gates estan implementados y probados; la replica real NO se simula.</p>
+    <p data-i18n="st3"><strong>No verificado:</strong> render en navegador real, videollamada con replica visual. El sistema completo no se declara terminado.</p>
+    <ul class="docs-list">
+      <li><a href="../yoclone/tests/test_yoclone.py" data-i18n="d1">Suite de pruebas (25 tests)</a></li>
+      <li><a href="../YO_CLONE_AUDIT_FASE1.json" data-i18n="d2">Auditoria FASE 1</a></li>
+      <li><a href="../../EL_YO/EXTERNAL_DEPENDENCIES.json" data-i18n="d3">Dependencias externas</a></li>
+    </ul>
+  </section>
+</main>
+<footer class="site-footer"><p data-i18n="ft">YO Clone — parte de EL_YO. Sin trackers, sin CDNs. Hechos sellados, limites honestos.</p></footer>
+<script src="js/app.js"></script>
+</body>
+</html>

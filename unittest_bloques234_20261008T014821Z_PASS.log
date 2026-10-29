@@ -1,0 +1,100 @@
+test_deterministic_seed (test_bloque2_identidad.TestDID.test_deterministic_seed) ... ok
+test_did_format (test_bloque2_identidad.TestDID.test_did_format) ... ok
+test_sign_verify (test_bloque2_identidad.TestDID.test_sign_verify) ... ok
+test_expired (test_bloque2_identidad.TestVC.test_expired) ... ok
+test_malformed (test_bloque2_identidad.TestVC.test_malformed) ... ok
+test_ok (test_bloque2_identidad.TestVC.test_ok) ... ERROR
+test_revoked (test_bloque2_identidad.TestVC.test_revoked) ... ERROR
+test_tampered (test_bloque2_identidad.TestVC.test_tampered) ... ERROR
+test_untrusted (test_bloque2_identidad.TestVC.test_untrusted) ... ok
+test_complete_terminal (test_bloque3_estados.TestEstados.test_complete_terminal) ... ok
+test_estado_desconocido (test_bloque3_estados.TestEstados.test_estado_desconocido) ... ok
+test_hw_a_implemented (test_bloque3_estados.TestEstados.test_hw_a_implemented) ... ok
+test_persistencia (test_bloque3_estados.TestEstados.test_persistencia) ... ok
+test_prohibida_doc_a_complete (test_bloque3_estados.TestEstados.test_prohibida_doc_a_complete) ... ok
+test_valida (test_bloque3_estados.TestEstados.test_valida) ... ok
+test_concurrencia_50_threads_integridad (test_bloque4_chaos.TestChaos.test_concurrencia_50_threads_integridad) ... ERROR
+test_corte_mid_write_detectado (test_bloque4_chaos.TestChaos.test_corte_mid_write_detectado) ... ok
+test_determinismo_hash_canonical (test_bloque4_chaos.TestChaos.test_determinismo_hash_canonical) ... FAIL
+test_restart_preserva_cadena (test_bloque4_chaos.TestChaos.test_restart_preserva_cadena) ... ERROR
+test_tamper_linea_8 (test_bloque4_chaos.TestChaos.test_tamper_linea_8) ... /mnt/agents/output/EL_YO/tests/test_bloque4_chaos.py:34: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp0oujef4j/l.jsonl' mode='r' encoding='UTF-8'>
+  lines = open(self.led.path).readlines()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/EL_YO/tests/test_bloque4_chaos.py:36: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp0oujef4j/l.jsonl' mode='w' encoding='UTF-8'>
+  open(self.led.path, "w").writelines(lines)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+======================================================================
+ERROR: test_ok (test_bloque2_identidad.TestVC.test_ok)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/EL_YO/tests/test_bloque2_identidad.py", line 28, in test_ok
+    r = CredentialVerifier({self.issuer.did}, StatusList()).verify(self.vc)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/EL_YO/02_IDENTIDAD/identity.py", line 80, in verify
+    vk = Ed25519PublicKey.from_public_bytes(raw_pk)
+         ^^^^^^^^^^^^^^^^
+NameError: name 'Ed25519PublicKey' is not defined. Did you mean: 'Ed25519PrivateKey'?
+
+======================================================================
+ERROR: test_revoked (test_bloque2_identidad.TestVC.test_revoked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/EL_YO/tests/test_bloque2_identidad.py", line 50, in test_revoked
+    r = CredentialVerifier({self.issuer.did}, sl).verify(self.vc)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/EL_YO/02_IDENTIDAD/identity.py", line 80, in verify
+    vk = Ed25519PublicKey.from_public_bytes(raw_pk)
+         ^^^^^^^^^^^^^^^^
+NameError: name 'Ed25519PublicKey' is not defined. Did you mean: 'Ed25519PrivateKey'?
+
+======================================================================
+ERROR: test_tampered (test_bloque2_identidad.TestVC.test_tampered)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/EL_YO/tests/test_bloque2_identidad.py", line 36, in test_tampered
+    r = CredentialVerifier({self.issuer.did}, StatusList()).verify(f"{nuevo}.{sig}")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/EL_YO/02_IDENTIDAD/identity.py", line 80, in verify
+    vk = Ed25519PublicKey.from_public_bytes(raw_pk)
+         ^^^^^^^^^^^^^^^^
+NameError: name 'Ed25519PublicKey' is not defined. Did you mean: 'Ed25519PrivateKey'?
+
+======================================================================
+ERROR: test_concurrencia_50_threads_integridad (test_bloque4_chaos.TestChaos.test_concurrencia_50_threads_integridad)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/EL_YO/tests/test_bloque4_chaos.py", line 29, in test_concurrencia_50_threads_integridad
+    self.assertTrue(self.led.verify())
+                    ^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/EL_YO/01_GOBIERNO/el_yo/evidence.py", line 61, in verify
+    raise TamperedError(f"linea {lineno}: cadena rota")
+el_yo.evidence.TamperedError: linea 1: cadena rota
+
+======================================================================
+ERROR: test_restart_preserva_cadena (test_bloque4_chaos.TestChaos.test_restart_preserva_cadena)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/EL_YO/tests/test_bloque4_chaos.py", line 22, in test_restart_preserva_cadena
+    self.assertTrue(EvidenceLedger(self.led.path).verify())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/EL_YO/01_GOBIERNO/el_yo/evidence.py", line 61, in verify
+    raise TamperedError(f"linea {lineno}: cadena rota")
+el_yo.evidence.TamperedError: linea 1: cadena rota
+
+======================================================================
+FAIL: test_determinismo_hash_canonical (test_bloque4_chaos.TestChaos.test_determinismo_hash_canonical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/EL_YO/tests/test_bloque4_chaos.py", line 44, in test_determinismo_hash_canonical
+    self.assertEqual(hashlib.sha256(b"GENESIS" + canon).hexdigest(), e1["hash"])
+AssertionError: 'cbf618bba9bf2fad4c6ea4077ea394e9fb12dafac9d4cd90f1fff4a7424b8b91' != '9c57ffc280219422c009238831f683423216e10e2a0df3e3523958fc10820f43'
+- cbf618bba9bf2fad4c6ea4077ea394e9fb12dafac9d4cd90f1fff4a7424b8b91
++ 9c57ffc280219422c009238831f683423216e10e2a0df3e3523958fc10820f43
+
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.087s
+
+FAILED (failures=1, errors=5)

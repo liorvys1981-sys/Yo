@@ -1,0 +1,68 @@
+test_deterministic_seed (test_bloque2_identidad.TestDID.test_deterministic_seed) ... ok
+test_did_format (test_bloque2_identidad.TestDID.test_did_format) ... ok
+test_sign_verify (test_bloque2_identidad.TestDID.test_sign_verify) ... ok
+test_expired (test_bloque2_identidad.TestVC.test_expired) ... ok
+test_malformed (test_bloque2_identidad.TestVC.test_malformed) ... ok
+test_ok (test_bloque2_identidad.TestVC.test_ok) ... ok
+test_revoked (test_bloque2_identidad.TestVC.test_revoked) ... ok
+test_tampered (test_bloque2_identidad.TestVC.test_tampered) ... ok
+test_untrusted (test_bloque2_identidad.TestVC.test_untrusted) ... ok
+test_complete_terminal (test_bloque3_estados.TestEstados.test_complete_terminal) ... ok
+test_estado_desconocido (test_bloque3_estados.TestEstados.test_estado_desconocido) ... ok
+test_hw_a_implemented (test_bloque3_estados.TestEstados.test_hw_a_implemented) ... ok
+test_persistencia (test_bloque3_estados.TestEstados.test_persistencia) ... ok
+test_prohibida_doc_a_complete (test_bloque3_estados.TestEstados.test_prohibida_doc_a_complete) ... ok
+test_valida (test_bloque3_estados.TestEstados.test_valida) ... ok
+test_concurrencia_50_threads_integridad (test_bloque4_chaos.TestChaos.test_concurrencia_50_threads_integridad) ... ok
+test_corte_mid_write_detectado (test_bloque4_chaos.TestChaos.test_corte_mid_write_detectado) ... ok
+test_determinismo_hash_canonical (test_bloque4_chaos.TestChaos.test_determinismo_hash_canonical) ... ok
+test_restart_preserva_cadena (test_bloque4_chaos.TestChaos.test_restart_preserva_cadena) ... ok
+test_tamper_linea_8 (test_bloque4_chaos.TestChaos.test_tamper_linea_8) ... /mnt/agents/output/EL_YO/tests/test_bloque4_chaos.py:34: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmptbg9s6t1/l.jsonl' mode='r' encoding='UTF-8'>
+  lines = open(self.led.path).readlines()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/EL_YO/tests/test_bloque4_chaos.py:36: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmptbg9s6t1/l.jsonl' mode='w' encoding='UTF-8'>
+  open(self.led.path, "w").writelines(lines)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_gate_check_allow (test_bloque5_cli.TestCLI.test_gate_check_allow) ... FAIL
+test_gate_check_deny_destructiva (test_bloque5_cli.TestCLI.test_gate_check_deny_destructiva) ... FAIL
+test_status (test_bloque5_cli.TestCLI.test_status) ... /mnt/agents/output/EL_YO/tests/test_bloque5_cli.py:16: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpnr52qkry/AREA.json' mode='w' encoding='UTF-8'>
+  json.dump({"components": {"x": {"state": "IMPLEMENTED"}, "y": {"state": "NOT_IMPLEMENTED"}}},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_verify_ok (test_bloque5_cli.TestCLI.test_verify_ok) ... ok
+test_verify_tamper (test_bloque5_cli.TestCLI.test_verify_tamper) ... /mnt/agents/output/EL_YO/tests/test_bloque5_cli.py:35: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpw06_9rrd/l.jsonl' mode='r' encoding='UTF-8'>
+  lines = open(p).readlines()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/EL_YO/tests/test_bloque5_cli.py:37: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpw06_9rrd/l.jsonl' mode='w' encoding='UTF-8'>
+  open(p, "w").writelines(lines)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+======================================================================
+FAIL: test_gate_check_allow (test_bloque5_cli.TestCLI.test_gate_check_allow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/EL_YO/tests/test_bloque5_cli.py", line 48, in test_gate_check_allow
+    self.assertEqual(r.returncode, 0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_gate_check_deny_destructiva (test_bloque5_cli.TestCLI.test_gate_check_deny_destructiva)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/EL_YO/tests/test_bloque5_cli.py", line 57, in test_gate_check_deny_destructiva
+    self.assertEqual((r.returncode, "DENIED" in r.stdout), (1, True))
+AssertionError: Tuples differ: (1, False) != (1, True)
+
+First differing element 1:
+False
+True
+
+- (1, False)
++ (1, True)
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.454s
+
+FAILED (failures=2)

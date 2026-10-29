@@ -1,0 +1,30 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.11.2, pytest-7.2.1, pluggy-1.0.0+repack -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/agents/output/EL_YO
+[1mcollecting ... [0mcollected 5 items / 2 errors
+
+==================================== ERRORS ====================================
+[31m[1m_______________ ERROR collecting tests/test_bloque2_identidad.py _______________[0m
+[31mImportError while importing test module '/mnt/agents/output/EL_YO/tests/test_bloque2_identidad.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+[1m[31m/usr/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31mtests/test_bloque2_identidad.py[0m:2: in <module>
+    [94mfrom[39;49;00m [04m[96mcryptography[39;49;00m[04m[96m.[39;49;00m[04m[96mhazmat[39;49;00m[04m[96m.[39;49;00m[04m[96mprimitives[39;49;00m[04m[96m.[39;49;00m[04m[96masymmetric[39;49;00m[04m[96m.[39;49;00m[04m[96med25519[39;49;00m [94mimport[39;49;00m Ed25519PublicKey[90m[39;49;00m
+[1m[31mE   ModuleNotFoundError: No module named 'cryptography'[0m[0m
+[31m[1m________________ ERROR collecting tests/test_bloque3_estados.py ________________[0m
+[31mImportError while importing test module '/mnt/agents/output/EL_YO/tests/test_bloque3_estados.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+[1m[31m/usr/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31mtests/test_bloque3_estados.py[0m:2: in <module>
+    [94mfrom[39;49;00m [04m[96mel_yo_03[39;49;00m[04m[96m.[39;49;00m[04m[96mstate_engine[39;49;00m [94mimport[39;49;00m StateEngine, StateError[90m[39;49;00m
+[1m[31mE   ModuleNotFoundError: No module named 'el_yo_03'[0m[0m
+[36m[1m=========================== short test summary info ============================[0m
+[31mERROR[0m tests/test_bloque2_identidad.py
+[31mERROR[0m tests/test_bloque3_estados.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+[31m============================== [31m[1m2 errors[0m[31m in 0.48s[0m[31m ===============================[0m

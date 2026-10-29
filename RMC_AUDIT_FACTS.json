@@ -1,0 +1,202 @@
+[
+ {
+  "file": "12_AUTOCONCIENCIA/self_awareness.py",
+  "state": "EXISTS",
+  "symbols": [
+   [
+    "class CognitiveEvent",
+    true
+   ],
+   [
+    "observation",
+    true
+   ],
+   [
+    "perception",
+    true
+   ],
+   [
+    "interpretation",
+    true
+   ],
+   [
+    "hypothesis",
+    true
+   ],
+   [
+    "def reflection_for",
+    true
+   ],
+   [
+    "identity_conclusion",
+    true
+   ],
+   [
+    "class CongruenceAnalyzer",
+    true
+   ],
+   [
+    "def detect_patterns",
+    true
+   ],
+   [
+    "def evolution_proposal",
+    true
+   ],
+   [
+    "class Metacognition",
+    true
+   ],
+   [
+    "assert_neutral",
+    true
+   ],
+   [
+    "assert_no_consciousness_claim",
+    true
+   ]
+  ]
+ },
+ {
+  "file": "10_INTERACCION/interaction_to_cognition.py",
+  "state": "EXISTS",
+  "symbols": [
+   [
+    "class InteractionToCognitionEngine",
+    true
+   ],
+   [
+    "class RelationalModel",
+    true
+   ],
+   [
+    "class InteractionRecord",
+    true
+   ],
+   [
+    "def process_turn",
+    true
+   ],
+   [
+    "reconstruct",
+    true
+   ]
+  ]
+ },
+ {
+  "file": "11_EMOCION/emotion_engine.py",
+  "state": "EXISTS",
+  "symbols": [
+   [
+    "class EmotionEngine",
+    true
+   ],
+   [
+    "class EmotionSignal",
+    true
+   ],
+   [
+    "class EmotionContradiction",
+    true
+   ],
+   [
+    "is_identity",
+    true
+   ],
+   [
+    "ManipulativeEmotion",
+    true
+   ]
+  ]
+ },
+ {
+  "file": "04_COGNICION/reflection.py",
+  "state": "EXISTS",
+  "symbols": [
+   [
+    "def reflect",
+    true
+   ],
+   [
+    "PATTERN",
+    true
+   ],
+   [
+    "CONTRADICTION",
+    true
+   ],
+   [
+    "HYPOTHESIS",
+    true
+   ]
+  ]
+ },
+ {
+  "file": "05_RAZONAMIENTO/relationship_model.py",
+  "state": "EXISTS",
+  "symbols": [
+   [
+    "class DecisionEngine",
+    true
+   ],
+   [
+    "class PolicyEngine",
+    true
+   ],
+   [
+    "external_execution",
+    true
+   ]
+  ]
+ },
+ {
+  "file": "06_APRENDIZAJE/feedback_loop.py",
+  "state": "EXISTS",
+  "symbols": [
+   [
+    "class FeedbackLoop",
+    true
+   ],
+   [
+    "PROPOSAL",
+    true
+   ],
+   [
+    "PROHIBITED",
+    true
+   ]
+  ]
+ },
+ {
+  "file": "15_COGNITIVE_TWIN/cognitive_twin_yo.py",
+  "state": "EXISTS",
+  "symbols": [
+   [
+    "def build_twin",
+    true
+   ],
+   [
+    "NO EVIDENCE",
+    true
+   ]
+  ]
+ },
+ {
+  "file": "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py",
+  "state": "EXISTS",
+  "symbols": [
+   [
+    "class CognitiveOrchestrator",
+    true
+   ],
+   [
+    "def handle_task",
+    true
+   ],
+   [
+    "class SovereigntySecurity",
+    true
+   ]
+  ]
+ }
+]

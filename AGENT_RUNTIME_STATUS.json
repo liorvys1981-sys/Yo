@@ -1,0 +1,56 @@
+{
+ "generated_utc": "2026-10-09T07:30:36.216228+00:00Z",
+ "state": "REORGANIZATION_VERIFIED",
+ "baseline_protected": "EL_YO-BASELINE-OPERATIONAL-2026-10-08-001",
+ "facade_sha256": "d279f17065d1042959d7b924c1f9ce2faac16fb7aa8481cc9affa17aba78fffd",
+ "rtpkg_sha256": {
+  "__init__.py": "82f4df8328473fa1de99c04a8144f74520ce1e04b4c24fd1d9cba17750ef71b5",
+  "cognition.py": "f8cac1d2a6b50c7f65e35fef061f7608dd15ea124f4dfa77c05e2048174d1b40",
+  "contracts.py": "9fedcf1f0e4e031d896b1f20078e601b7a3888cb714e94db8530bdeb47341ffc",
+  "core.py": "2a26fbb07ee71648451a8c143de6820d2f0cd368548aded2af42572c3189df09",
+  "models.py": "b2a2e1e87933ab40e5684af45081d464529c8f90be48fa9cabfe9720a0fea82e",
+  "research.py": "347f22f52da9bd4bfb8ebaa39df0567f3a6d83aceff5ffd74b12c0c64efd4504",
+  "resilience.py": "85b7a2455d19aeba241bc52eef857561d5fe62a2b1fe14d85c441c86ad5639a1",
+  "security_resources.py": "10e03e11860d0a5d1e617b81539f5ad936beff0cbbfc216e6c1d85e0c5633ce3"
+ },
+ "component_status": {
+  "CognitiveOrchestrator": "IMPLEMENTED+FUNCTIONALLY_VERIFIED+ACTIVE_ON_DEMAND",
+  "SovereigntySecurity": "IMPLEMENTED+FUNCTIONALLY_VERIFIED+ACTIVE_ON_DEMAND",
+  "InfrastructureRecovery": "IMPLEMENTED+FUNCTIONALLY_VERIFIED+ACTIVE_ON_DEMAND",
+  "ResourceManager": "IMPLEMENTED+FUNCTIONALLY_VERIFIED+ACTIVE_ON_DEMAND",
+  "ValueResourceEconomics": "IMPLEMENTED+FUNCTIONALLY_VERIFIED+ACTIVE_ON_DEMAND",
+  "CognitiveAnalytics": "IMPLEMENTED+FUNCTIONALLY_VERIFIED+ACTIVE_ON_DEMAND",
+  "MemoryCognition": "IMPLEMENTED+FUNCTIONALLY_VERIFIED+ACTIVE_ON_DEMAND",
+  "ResearchEvolution": "IMPLEMENTED+FUNCTIONALLY_VERIFIED+ACTIVE_ON_DEMAND"
+ },
+ "suites": {
+  "test_runtime": "17/17 OK (rc=0)",
+  "test_runtime_audit": "10/10 OK (rc=0)"
+ },
+ "regression": {
+  "tests": 537,
+  "fail": 0,
+  "run2": {
+   "tests": 537,
+   "fail": 0
+  },
+  "deterministic": true
+ },
+ "section17": "REVALIDATED",
+ "invariants": "6/6 VERIFIED",
+ "protected_zones_byte_identical": {
+  "constitution": true,
+  "identity": true,
+  "digital_self": true,
+  "app_space": true
+ },
+ "rollback_available": true,
+ "rollback_verified": true,
+ "operational_verdict": "B — OPERATIONAL_WITH_DOCUMENTED_EXTERNAL_BLOCKERS (sin cambio)",
+ "external_blockers": [
+  "daemonizacion plataforma",
+  "Redis/DB multi-proceso",
+  "red/credenciales/proveedores",
+  "hardware"
+ ]
+}

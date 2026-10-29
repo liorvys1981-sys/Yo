@@ -1,0 +1,56 @@
+{
+ "baseline_id": "EL_YO-BASELINE-VERIFIED-2026-10-08-003",
+ "previous_baseline": "EL_YO-BASELINE-VERIFIED-2026-10-08-002",
+ "previous_recoverable": true,
+ "created_utc": "2026-10-08T21:31:19.287879+00:00Z",
+ "changes": [
+  "GAP-07 INTENCION COMPLETE",
+  "GAP-09 ACCION COMPLETE (modelo constitucional)",
+  "GAP-21 EVIDENCE COMPLETE (referencia)",
+  "GAP-22 TESTING COMPLETE (orquestador)",
+  "GAP-06 dataset local CERRADO (pesado=RESEARCH)",
+  "GAP-11 sintonia segura CERRADA",
+  "24/24 areas COMPLETE"
+ ],
+ "areas_24_states": {
+  "00": "COMPLETE",
+  "01": "COMPLETE",
+  "02": "COMPLETE",
+  "03": "COMPLETE",
+  "04": "COMPLETE",
+  "05": "COMPLETE",
+  "06": "COMPLETE",
+  "07": "COMPLETE",
+  "08": "COMPLETE",
+  "09": "COMPLETE",
+  "10": "COMPLETE",
+  "11": "COMPLETE",
+  "12": "COMPLETE",
+  "13": "COMPLETE",
+  "14": "COMPLETE",
+  "15": "COMPLETE",
+  "16": "COMPLETE",
+  "17": "COMPLETE",
+  "18": "COMPLETE",
+  "19": "COMPLETE",
+  "20": "COMPLETE",
+  "21": "COMPLETE",
+  "22": "COMPLETE",
+  "23": "COMPLETE",
+  "_notes": {
+   "06": "COMPLETE: parte local (dataset versionado, 6/6). Parte pesada (entrenamiento de pesos) = RESEARCH/EXTERNAL (requiere LOCAL_MODEL real)",
+   "09": "COMPLETE: modelo de accion constitucional controlado; ejecucion externa PROHIBIDA por diseno (constitucion v1) — PARTIAL_BY_DESIGN resuelto via modelo verificable",
+   "21": "COMPLETE via referencia arquitectonica (sin duplicar el ledger)",
+   "22": "COMPLETE via orquestador de validacion (suites distribuidas = cohesion)"
+  }
+ },
+ "regression": {
+  "suites": 46,
+  "tests": 526,
+  "run1": "0/0",
+  "run2": "0/0",
+  "deterministic": true
+ },
+ "section17": "REVALIDATED",
+ "ledger": "verify=True"
+}

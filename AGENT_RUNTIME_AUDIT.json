@@ -1,0 +1,252 @@
+{
+ "CognitiveOrchestrator": {
+  "exists": true,
+  "file": "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py",
+  "responsibility_effective": "orquestacion bajo demanda; entry handle_task; capability route_task; lifecycle: invocado por request; no persistente",
+  "entry_point": [
+   "def __init__(self, security: SovereigntySecurity, router: Mo",
+   "def handle_task(self, caller: str, task: dict, authorization",
+   "def public_identity_of(caller: str) -> str:"
+  ],
+  "capabilities": null,
+  "dependencies": [
+   "authority",
+   "dataclasses",
+   "el_yo",
+   "relationship_model",
+   "research_engine",
+   "self_awareness",
+   "vector_memory"
+  ],
+  "errors": [
+   "BudgetExceeded",
+   "CapabilityDenied",
+   "CircuitOpen",
+   "RuntimeError_",
+   "TimeoutError_"
+  ],
+  "tests": "tests/test_runtime.py (16) + tests/test_runtime_audit.py (15)",
+  "state": "IMPLEMENTED + FUNCTIONALLY_VERIFIED (suites verdes) + ACTIVO bajo demanda; no worker persistente (EXTERNAL daemon)"
+ },
+ "SovereigntySecurity": {
+  "exists": true,
+  "file": "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py",
+  "responsibility_effective": "autoridad de capabilities; zero-trust default-deny; privileged -> policy ESCALATE + R1 verify; lifecycle: instancia por runtime",
+  "entry_point": [
+   "def __init__(self, policy: PolicyEngine, authority_did: str ",
+   "def grant(self, caller: str, capability: str):",
+   "def check(self, caller: str, capability: str) -> bool:"
+  ],
+  "capabilities": [
+   "route_task",
+   " remember",
+   " recall",
+   " research",
+   " reflect",
+   " perceive",
+   " privileged_op"
+  ],
+  "dependencies": [
+   "authority",
+   "dataclasses",
+   "el_yo",
+   "relationship_model",
+   "research_engine",
+   "self_awareness",
+   "vector_memory"
+  ],
+  "errors": [
+   "BudgetExceeded",
+   "CapabilityDenied",
+   "CircuitOpen",
+   "RuntimeError_",
+   "TimeoutError_"
+  ],
+  "tests": "tests/test_runtime.py (16) + tests/test_runtime_audit.py (15)",
+  "state": "IMPLEMENTED + FUNCTIONALLY_VERIFIED (suites verdes) + ACTIVO bajo demanda; no worker persistente (EXTERNAL daemon)"
+ },
+ "InfrastructureRecovery": {
+  "exists": true,
+  "file": "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py",
+  "responsibility_effective": "idempotency/retry/timeout/circuit breaker; lifecycle: invocado por orchestrator",
+  "entry_point": [
+   "def __init__(self, clock=None):",
+   "def idempotency_key(self, task: dict) -> str:",
+   "def execute(self, task: dict, fn, *, retries: int = 3, timeo"
+  ],
+  "capabilities": null,
+  "dependencies": [
+   "authority",
+   "dataclasses",
+   "el_yo",
+   "relationship_model",
+   "research_engine",
+   "self_awareness",
+   "vector_memory"
+  ],
+  "errors": [
+   "BudgetExceeded",
+   "CapabilityDenied",
+   "CircuitOpen",
+   "RuntimeError_",
+   "TimeoutError_"
+  ],
+  "tests": "tests/test_runtime.py (16) + tests/test_runtime_audit.py (15)",
+  "state": "IMPLEMENTED + FUNCTIONALLY_VERIFIED (suites verdes) + ACTIVO bajo demanda; no worker persistente (EXTERNAL daemon)"
+ },
+ "ResourceManager": {
+  "exists": true,
+  "file": "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py",
+  "responsibility_effective": "presupuestos por tarea; lifecycle: invocado",
+  "entry_point": [
+   "def __init__(self, economics):",
+   "def allocate(self, task_id, max_units=10.0):",
+   "def release(self, task_id):"
+  ],
+  "capabilities": null,
+  "dependencies": [
+   "authority",
+   "dataclasses",
+   "el_yo",
+   "relationship_model",
+   "research_engine",
+   "self_awareness",
+   "vector_memory"
+  ],
+  "errors": [
+   "BudgetExceeded",
+   "CapabilityDenied",
+   "CircuitOpen",
+   "RuntimeError_",
+   "TimeoutError_"
+  ],
+  "tests": "tests/test_runtime.py (16) + tests/test_runtime_audit.py (15)",
+  "state": "IMPLEMENTED + FUNCTIONALLY_VERIFIED (suites verdes) + ACTIVO bajo demanda; no worker persistente (EXTERNAL daemon)"
+ },
+ "ValueResourceEconomics": {
+  "exists": true,
+  "file": "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py",
+  "responsibility_effective": "costo/uso por ruta hacia ledger; lifecycle: invocado",
+  "entry_point": [
+   "def __init__(self, ledger: EvidenceLedger | None = None, clo",
+   "def record(self, task_id: str, route: str, units: float = 1."
+  ],
+  "capabilities": null,
+  "dependencies": [
+   "authority",
+   "dataclasses",
+   "el_yo",
+   "relationship_model",
+   "research_engine",
+   "self_awareness",
+   "vector_memory"
+  ],
+  "errors": [
+   "BudgetExceeded",
+   "CapabilityDenied",
+   "CircuitOpen",
+   "RuntimeError_",
+   "TimeoutError_"
+  ],
+  "tests": "tests/test_runtime.py (16) + tests/test_runtime_audit.py (15)",
+  "state": "IMPLEMENTED + FUNCTIONALLY_VERIFIED (suites verdes) + ACTIVO bajo demanda; no worker persistente (EXTERNAL daemon)"
+ },
+ "CognitiveAnalytics": {
+  "exists": true,
+  "file": "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py",
+  "responsibility_effective": "agregados de uso; lifecycle: invocado",
+  "entry_point": [
+   "def __init__(self, economics: ValueResourceEconomics):",
+   "def summary(self) -> dict:"
+  ],
+  "capabilities": null,
+  "dependencies": [
+   "authority",
+   "dataclasses",
+   "el_yo",
+   "relationship_model",
+   "research_engine",
+   "self_awareness",
+   "vector_memory"
+  ],
+  "errors": [
+   "BudgetExceeded",
+   "CapabilityDenied",
+   "CircuitOpen",
+   "RuntimeError_",
+   "TimeoutError_"
+  ],
+  "tests": "tests/test_runtime.py (16) + tests/test_runtime_audit.py (15)",
+  "state": "IMPLEMENTED + FUNCTIONALLY_VERIFIED (suites verdes) + ACTIVO bajo demanda; no worker persistente (EXTERNAL daemon)"
+ },
+ "MemoryCognition": {
+  "exists": true,
+  "file": "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py",
+  "responsibility_effective": "memoria de trabajo sobre 02_MEMORIA; lifecycle: invocado",
+  "entry_point": [
+   "def __init__(self, index: SemanticMemoryIndex | None = None,",
+   "def remember(self, memory_id: str, text: str, provenance: st",
+   "def recall(self, query: str, top_k: int = 3) -> list:"
+  ],
+  "capabilities": null,
+  "dependencies": [
+   "authority",
+   "dataclasses",
+   "el_yo",
+   "relationship_model",
+   "research_engine",
+   "self_awareness",
+   "vector_memory"
+  ],
+  "errors": [
+   "BudgetExceeded",
+   "CapabilityDenied",
+   "CircuitOpen",
+   "RuntimeError_",
+   "TimeoutError_"
+  ],
+  "tests": "tests/test_runtime.py (16) + tests/test_runtime_audit.py (15)",
+  "state": "IMPLEMENTED + FUNCTIONALLY_VERIFIED (suites verdes) + ACTIVO bajo demanda; no worker persistente (EXTERNAL daemon)"
+ },
+ "ResearchEvolution": {
+  "exists": true,
+  "file": "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py",
+  "responsibility_effective": "propuestas de mejora -> G8+R1; lifecycle: invocado; experimentacion aislada via engine area 23",
+  "entry_point": [
+   "def __init__(self, engine: ResearchEngine | None = None, clo",
+   "def propose_improvement(self, lens_name: str, statement: str"
+  ],
+  "capabilities": null,
+  "dependencies": [
+   "authority",
+   "dataclasses",
+   "el_yo",
+   "relationship_model",
+   "research_engine",
+   "self_awareness",
+   "vector_memory"
+  ],
+  "errors": [
+   "BudgetExceeded",
+   "CapabilityDenied",
+   "CircuitOpen",
+   "RuntimeError_",
+   "TimeoutError_"
+  ],
+  "tests": "tests/test_runtime.py (16) + tests/test_runtime_audit.py (15)",
+  "state": "IMPLEMENTED + FUNCTIONALLY_VERIFIED (suites verdes) + ACTIVO bajo demanda; no worker persistente (EXTERNAL daemon)"
+ },
+ "_findings": {
+  "monolithic_file": "los 8 componentes + contracts en UN archivo (runtime.py); cohesion baja, navegacion dificil",
+  "no_duplication_of_functionality": true,
+  "mixed_lifecycles": "contratos de lifecycle (start/stop/health) no existen para componentes invocados (ok) pero no documentados",
+  "target_architecture_mapping": {
+   "A_Autoridad_constitucional": "SovereigntySecurity (+ el_yo constitution/gates en 00)",
+   "B_Agent_Runtime": "capability registry + orchestracion + aislamiento (CognitiveOrchestrator + SovereigntySecurity)",
+   "C_Cognicion": "CognitiveOrchestrator + MemoryCognition + CognitiveAnalytics",
+   "D_Seguridad_y_recursos": "SovereigntySecurity + ResourceManager + ValueResourceEconomics",
+   "E_Resiliencia": "InfrastructureRecovery (+ operational_core supervisor)",
+   "F_Investigacion_y_evolucion": "ResearchEvolution"
+  }
+ }
+}

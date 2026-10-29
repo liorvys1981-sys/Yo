@@ -1,0 +1,143 @@
+{
+ "baseline_id": "EL_YO-BASELINE-VERIFIED-2026-10-08-001",
+ "created_utc": "2026-10-08T21:11:35.059261+00:00Z",
+ "state": "VERIFIED (cierre arquitectonico previo)",
+ "commit": null,
+ "version": "EL_YO-24areas-verified",
+ "areas_24_states": {
+  "00": "COMPLETE",
+  "01": "COMPLETE",
+  "02": "COMPLETE",
+  "03": "PARTIAL",
+  "04": "COMPLETE",
+  "05": "COMPLETE",
+  "06": "COMPLETE",
+  "07": "PARTIAL",
+  "08": "COMPLETE",
+  "09": "PARTIAL",
+  "10": "COMPLETE",
+  "11": "COMPLETE",
+  "12": "COMPLETE",
+  "13": "COMPLETE",
+  "14": "COMPLETE",
+  "15": "COMPLETE",
+  "16": "COMPLETE",
+  "17": "COMPLETE",
+  "18": "COMPLETE",
+  "19": "COMPLETE",
+  "20": "COMPLETE",
+  "21": "PARTIAL",
+  "22": "PARTIAL",
+  "23": "COMPLETE"
+ },
+ "architecture_manifest_sha256": "49b837c5d601505439fa5be529f114a9d9404c66111924b99a57b8ed9e3c2609",
+ "reconciliation_manifest_sha256": "8ce7f0b16420c0e019d6b276bfd6b91909cb8cc4fb05e1076160b331dd0dadcc",
+ "area_inventory_sha256": "da85d70ab2c2a4ec265b82f8a1d2b8bf1af4f44a7027c1ef5d536d3f4b4f24d9",
+ "areas_state_sha256": "2af12d4c6cde67acef55fe6d9266dd065d331875dbc97a47dcefdb0910649b19",
+ "section17": "REVALIDATED",
+ "agent_runtime": "VERIFIED (15-dimension audit; routing DETERMINISTIC->LOCAL->GPT4o(BLOCKED)->HUMAN)",
+ "constitutional_invariants": [
+  "EXTERNAL_DATA!=IDENTITY",
+  "EVENT!=TRUTH",
+  "APP_PERMISSION!=SOVEREIGN_AUTHORITY",
+  "CONNECTION!=TRUST",
+  "NO_WILDCARD_SCOPE",
+  "READ!=WRITE"
+ ],
+ "regression": {
+  "suites": 39,
+  "tests": 457,
+  "run1": "0 FAIL/0 ERROR",
+  "run2": "0 FAIL/0 ERROR",
+  "deterministic": true
+ },
+ "ledger": {
+  "path": "EL_YO/01_GOBIERNO/evidence/ledger.jsonl",
+  "status": "verify=True"
+ },
+ "protected_zones": {
+  "Constitucion": {
+   "constitution.py": "d32527cc06d66f47161ad69f9ef5592c420d44c1f2b616521cac86980ec3c192",
+   "gates.py": "168b4bf1443d50f9196afe291aff38dd47c8a074a5cde26e0bc9c826e08cbb00",
+   "evidence.py": "c0214c29700870b81d34d4c8369bcd9955b165a5fd703029d49bd9e03fd0867e",
+   "__init__.py": "acdfa6f24fbfb0716306e697cd96c11deb69fabb84ffe425765cecb653cc958a"
+  },
+  "Identity": {
+   "identity.py": "b7f9033b7c99f22844702f6a031476719012eb59c0d3cfd2b80be52ed43d04f0"
+  },
+  "DigitalSelf": {
+   "digital_self.py": "b1a8a6deb4302fbf2b92e0e517d75ae0073d180575650efc21664a83ac165935",
+   "genome.py": "8ff7d65467532c89a191bd1c1f80fbe07aaeb1b11301543ec606ba4742dd23df",
+   "genome_store.py": "730cfd09c96b8ed7212b436ab7c2602741e65b30f080fb47ee34aedc7b6b0865",
+   "cognitive_api.py": "8974bb65a5da57140c91015d906f5df0895e153b2c2134ec71f178f2a3614496"
+  },
+  "CognitiveTwin": {
+   "cognitive_twin_yo.py": "56e1ea7765d1ce65a82c7b89d4b818fbc79099bb9790b416906b2858e0ad4b89",
+   "maturity.py": "8b3bd9b03fd1e0147ab90be49c19a89c671befe18170b59832f53d9611ea684a"
+  },
+  "Sovereignty": {
+   "sovereignty.py": "e068f7294086ccabe2eff3c52d51cccca7e2a19608111044acf7977b9d907ee5",
+   "authority.py": "cd8647f2c0a4f0b6a45117f0edd6148a13e90df3443a16ae472eca3186e8fa55",
+   "elyo_wiring.py": "bf753ec13f9c10024a0e56a117fd428e6b093ae85e57c0893b33fde9112025d2"
+  },
+  "Security": {
+   "webhook.py": "31f1bd9f4bffa2ee10597b52366fdbb0a228b8ecc20e4cb715b9361df0d1dd29"
+  },
+  "Governance": {
+   "pipeline_evolution.py": "0abd7675d8a4f2e9aace23b73b34db3476cb7aa455a636cb0795525d87da10a8",
+   "evolution_engine.py": "f4b813e86cbc4513d168155fcd171a3288a641fde70dc5f7dc1f58508a004ac6",
+   "state_engine.py": "2e919fd08d1b4a7eccfd5740960a07203e9959d7852bb05ce346158165d3d54b"
+  },
+  "EvidenceLedger_data": {
+   "ledger.jsonl": "c9a1301f4ff67f943c3c3f3c57ac9ada273d92c5c42afe44eca5545d9d16c6b5"
+  },
+  "Section17": {
+   "app_space.py": "c9eb3914b4b6946b8df1185bcaf479203d2411c8f155a7ef042f14274a127a98",
+   "APP_SPACE_SECTION17_FREEZE.json": "ed42bd39b5fc5ca06a95a533861eae5150ab7b0a713714fccdb204b8dc6c9fd3"
+  },
+  "AgentRuntime": {
+   "runtime.py": "b04cdd61843139824e39de78375dba5599ec4124bce7fcf249112c2f41054e15"
+  },
+  "Memory": {
+   "persistent_memory.py": "57cd35e707b443385f0ca26f06f81d7ba1bf566a4f1399e55cdd74a1bb4c787a",
+   "vector_memory.py": "5ae1ce898035d92e88a4fec5afd85cfda9c7a053d6e7537ab42fd723039736cc",
+   "memory_model.py": "0b68756159b3e952a0bc1a5658c28e282634b2be46ac5491859a98823a888218"
+  },
+  "Cognition": {
+   "reflection.py": "7ee4bee27b2b5b65c8e207da60ba62f735c37d963d683f409924369f85369012",
+   "insights.py": "9ffeb0ebef79281dbcff967ffb81d64b4c0f8cb7776304d299df9fd74f6a495a"
+  },
+  "Reasoning": {
+   "relationship_model.py": "859f8f9a5b326afe731b7f07ed5c1c016a6175e4433c4b7413c81ee2ffa50609"
+  },
+  "Autoconciencia": {
+   "self_awareness.py": "f2b2244f12a5b7b238afadb903f929d83700d3154d22544f142cfd0dd315968a",
+   "reflective_metacognition.py": "e72a69395514d16450177e47c333e7712f39ceac17d9cadc2d525c1744b63899"
+  },
+  "Emocion": {
+   "emotion_engine.py": "6997c8096dc7dc467d49ee88ccf24e2c50446b5c5312d6f040a4d868759acde2"
+  },
+  "Interaccion": {
+   "chat.py": "3c55c8c0c7500cbf37f4ca35c8489af8a2c05febee093409909ffbbbb8329de6",
+   "realtime.py": "153feb50ed75650b0b2eedaf84dd8d7c1ec018e3fc996be9720735897fd43a00",
+   "interaction_to_cognition.py": "7e07ace881e2497e68dee23bfbb54a305b13862da6adb13121c5dace3496e6f1",
+   "interoperability.py": "1c1649b5386f4cdbf3ba23e3f69161a2d62312ade6f0601b3bb80cf4157cba39"
+  },
+  "Investigacion": {
+   "research_engine.py": "708f979a12e5b9433b03772857da6e39e1db6cb4fd3d25ac1dad5fd58b651780"
+  },
+  "Context": {
+   "context_assembly.py": "f369ea5ae572944c134a2946e97472e71772c411ea5654a5b71bea8fdabfd805"
+  },
+  "Agencia": {
+   "swarm.py": "ab66796f6c33aa63ad841fed9c08fded92a2f3b604744e6d20914e88756f9491"
+  },
+  "AppSpace_webtools": {
+   "web_tools.py": "35cd79c5d266e3f99759874c6d90d47e1f90bc70bd10a8ac9562dec83d124433"
+  },
+  "Audit": {
+   "observability.py": "f2cb810147216ac733a165e88989f76f6f3af7accbbbcd8754e6183a5050529e",
+   "cli.py": "c454cb33d6f3ae8bad43d8437ca07b9aeff32d36aa343c052fd4773adedbceba"
+  }
+ }
+}

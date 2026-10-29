@@ -1,0 +1,150 @@
+{
+ "audit_version": "MASTER-OPERATIONAL-1.0",
+ "baseline": "EL_YO-BASELINE-VERIFIED-2026-10-08-003",
+ "verdict": "B — OPERATIONAL_WITH_DOCUMENTED_EXTERNAL_BLOCKERS",
+ "timestamp": "2026-10-08T21:54:11.263966+00:00Z",
+ "agents": {
+  "count": 8,
+  "status": "VERIFIED",
+  "entry_points": "comp real + tests",
+  "public_identities": [
+   "EL_YO",
+   "ELLA"
+  ],
+  "identity_adversarial": true,
+  "prohibitions": "structural: no DigitalSelf write / no Identity-Constitution modify / no Runtime bypass"
+ },
+ "runtime_chain": {
+  "steps": [
+   "REQUEST",
+   "CONSTITUTION",
+   "AUTHORIZATION(capability)",
+   "RUNTIME+CAPABILITY",
+   "MODEL(router)",
+   "VERIFICATION",
+   "LEDGER",
+   "RESULT",
+   "AUTHORIZATION_capability_denied",
+   "AUTHORIZATION_R1_ok"
+  ],
+  "all_ok": true
+ },
+ "supervisor": {
+  "module": "00_CONSTITUCION_EL_YO/operational_core/supervisor.py",
+  "tests": "11/11 PASS",
+  "features": [
+   "queue(max_depth,dedup,rate_limit)",
+   "retry+dead_letter(off-circuit)",
+   "worker lifecycle",
+   "heartbeat",
+   "orphan recovery",
+   "graceful shutdown",
+   "restart policy",
+   "concurrency safety",
+   "no consumption loop"
+  ]
+ },
+ "24_7_capabilities": {
+  "implemented_verified_in_sandbox": true,
+  "items": [
+   "supervisor machinery",
+   "queue",
+   "workers",
+   "restart",
+   "recovery",
+   "shutdown",
+   "dedup",
+   "rate limit",
+   "dead letter",
+   "orphan recovery"
+  ],
+  "real_daemonization": "EXTERNAL_BLOCKED (sin systemd/contenedor en sandbox)"
+ },
+ "resilience": "verified via supervisor suite + chaos suites",
+ "models": {
+  "routing": "DETERMINISTIC->LOCAL_MODEL->GPT-4o(BLOCKED)->HUMAN_APPROVAL",
+  "fallback_levels": 4,
+  "model_is_not_authority": true,
+  "cost_ledger": true
+ },
+ "tools": {
+  "permission_layer": true,
+  "wildcard": false,
+  "escalation": "R1",
+  "arbitrary_denied": true
+ },
+ "memory": {
+  "write": true,
+  "recover": true,
+  "integrity": true
+ },
+ "persistence": {
+  "memory_restart_recovery": true,
+  "ledger_backup_restore": true
+ },
+ "security": {
+  "invariants": "6/6 VERIFIED",
+  "injection": "BLOCKED",
+  "replay": "BLOCKED",
+  "escalation": "BLOCKED",
+  "compromised_source": "SUSPECT_COMPROMISED"
+ },
+ "resources": {
+  "task_budget": true,
+  "max_depth": true,
+  "rate_limit": true,
+  "max_attempts": true
+ },
+ "economics": {
+  "usage_ledger": true,
+  "budget_exceeded_raises": true,
+  "no_consumption_loop": true
+ },
+ "observability": {
+  "usage_events": 1,
+  "reconstructible": true
+ },
+ "backup_restore": {
+  "backup_bytes": 78762,
+  "restore_verify": true
+ },
+ "representation": {
+  "OBSERVE": "allowed",
+  "ANALYZE": "allowed",
+  "REFLECT": "allowed",
+  "RECOMMEND": "allowed(REVIEW)",
+  "NEGOTIATE": "conditional",
+  "EXECUTE": "R1 or PROHIBITED(externa v1)",
+  "high_impact_by_model_inference": false
+ },
+ "chaos_results": "chaos suite (restart/tamper/mid-write/concurrency) PASS",
+ "regression_run_1": {
+  "suites": 47,
+  "tests": 537,
+  "fail": 0,
+  "error": 0
+ },
+ "regression_run_2": {
+  "suites": 47,
+  "tests": 537,
+  "fail": 0,
+  "error": 0
+ },
+ "deterministic": true,
+ "section_17": "REVALIDATED",
+ "ledger": {
+  "path": "EL_YO/01_GOBIERNO/evidence/ledger.jsonl",
+  "verify": true
+ },
+ "external_blockers": [
+  "daemonizacion real (systemd/contenedor/proceso persistente): fuera del sandbox",
+  "Redis/DB externos: NO existen (NOT_APPLICABLE, no simulados)",
+  "red/credenciales/proveedores (voz, GPT-4o, conectores): EXTERNAL_BLOCKED"
+ ],
+ "remaining_gaps": [
+  "daemonizacion=EXTERNAL",
+  "aprendizaje pesado=RESEARCH",
+  "autopoiesis=RESEARCH"
+ ],
+ "final_state": "B — OPERATIONAL_WITH_DOCUMENTED_EXTERNAL_BLOCKERS"
+}

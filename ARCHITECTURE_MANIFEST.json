@@ -1,0 +1,9 @@
+{
+ "generated_utc": "2026-10-08T21:01:22.820380+00:00Z",
+ "critical_artifacts": {
+  "AREAS_STATE.json": "2af12d4c6cde67acef55fe6d9266dd065d331875dbc97a47dcefdb0910649b19",
+  "CAPA_B_CROSSWALK.md": "e9d63f06db9675adc8f7a357fe56ed9adaa3f6e8c4d41d4fa4324f7fa7d3b5f1",
+  "RECONCILIATION_MANIFEST.json": "8ce7f0b16420c0e019d6b276bfd6b91909cb8cc4fb05e1076160b331dd0dadcc",
+  "00_CONSTITUCION_EL_YO/ARCH_INVENTORY_MAP.json": "f62e5fedf6204ab512aa472c3486e1961fe3e7f139af669817e0703c3a5039ff"
+ }
+}

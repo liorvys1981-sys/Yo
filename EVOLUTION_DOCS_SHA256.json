@@ -1,0 +1,16 @@
+{
+ "current": {
+  "version": "docs-003.1",
+  "created_utc": "2026-10-08T21:36:12.537724+00:00Z",
+  "EVOLUTION_FINAL_REPORT.md": "c53827683e6de23ca869007be64e89d197369e94d705ad28b25eb6287e487db0",
+  "FINAL_SYSTEM_STATE.json": "d1e0b82c6a377252c43401492c1f6c9bbd842c9aa6c9a28951670d3df298021f"
+ },
+ "versions": [
+  {
+   "version": "docs-003.1",
+   "created_utc": "2026-10-08T21:36:12.537724+00:00Z",
+   "EVOLUTION_FINAL_REPORT.md": "c53827683e6de23ca869007be64e89d197369e94d705ad28b25eb6287e487db0",
+   "FINAL_SYSTEM_STATE.json": "d1e0b82c6a377252c43401492c1f6c9bbd842c9aa6c9a28951670d3df298021f"
+  }
+ ]
+}

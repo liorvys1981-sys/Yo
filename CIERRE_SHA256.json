@@ -1,0 +1,8 @@
+{
+ "generated_utc": "2026-10-08T20:52:42.340212+00:00Z",
+ "files": {
+  "REFLECTIVE_METACOGNITION_AUDIT.md": "a9c8c585b969252f79a1079a3b12f1c0fdf2f669d53f85909dfd26d8dc919b4d",
+  "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py": "b04cdd61843139824e39de78375dba5599ec4124bce7fcf249112c2f41054e15",
+  "00_CONSTITUCION_EL_YO/agent_runtime/tests/test_runtime_audit.py": "da3ac23df5e00b1cf4f516e2cd6dac29993818e2c3f72daf894fed6203b43f7e"
+ }
+}

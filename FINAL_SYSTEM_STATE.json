@@ -1,0 +1,91 @@
+{
+ "baseline_id": "EL_YO-BASELINE-VERIFIED-2026-10-08-003",
+ "architecture_status": "ARCHITECTURE VERIFIED",
+ "evolution_status": "EL_YO — EVOLUTION VERIFIED / EXTERNAL & RESEARCH BLOCKED",
+ "timestamp": "2026-10-08T21:35:39.594588+00:00Z",
+ "total_areas": 24,
+ "areas_states": {
+  "00": "COMPLETE",
+  "01": "COMPLETE",
+  "02": "COMPLETE",
+  "03": "COMPLETE",
+  "04": "COMPLETE",
+  "05": "COMPLETE",
+  "06": "COMPLETE",
+  "07": "COMPLETE",
+  "08": "COMPLETE",
+  "09": "COMPLETE",
+  "10": "COMPLETE",
+  "11": "COMPLETE",
+  "12": "COMPLETE",
+  "13": "COMPLETE",
+  "14": "COMPLETE",
+  "15": "COMPLETE",
+  "16": "COMPLETE",
+  "17": "COMPLETE",
+  "18": "COMPLETE",
+  "19": "COMPLETE",
+  "20": "COMPLETE",
+  "21": "COMPLETE",
+  "22": "COMPLETE",
+  "23": "COMPLETE"
+ },
+ "COMPLETE": 24,
+ "PARTIAL": 0,
+ "BLOCKED": 0,
+ "gap_register": "EL_YO/GAP_REGISTER.json",
+ "gap_status": {
+  "GAP-03-PERCEPCION": "CLOSED",
+  "GAP-06-APRENDIZAJE-PESADO": "PARTIALLY_CLOSED",
+  "GAP-11-SINTONIA": "CLOSED_LOCAL_SAFE",
+  "GAP-21-AUTOPOIESIS": "RESEARCH",
+  "GAP-EXT-INFRA": "EXTERNAL_BLOCKED",
+  "GAP-EXT-VOZ": "EXTERNAL_BLOCKED"
+ },
+ "agent_runtime_status": "VERIFIED",
+ "public_identities": [
+  "EL_YO",
+  "ELLA"
+ ],
+ "constitutional_invariants": [
+  "EXTERNAL_DATA!=IDENTITY",
+  "EVENT!=TRUTH",
+  "APP_PERMISSION!=SOVEREIGN_AUTHORITY",
+  "CONNECTION!=TRUST",
+  "NO_WILDCARD_SCOPE",
+  "READ!=WRITE"
+ ],
+ "section17_status": "REVALIDATED",
+ "test_count": 537,
+ "regression_runs": 2,
+ "failures": 0,
+ "errors": 0,
+ "deterministic": true,
+ "ledger_verification": "verify=True",
+ "evidence_references": [
+  "EL_YO/01_GOBIERNO/evidence/ledger.jsonl",
+  "BASELINE_VERIFIED.json",
+  "BASELINE_VERIFIED_002.json",
+  "BASELINE_VERIFIED_003.json"
+ ],
+ "manifest_references": [
+  "ARCHITECTURE_MANIFEST.json",
+  "RECONCILIATION_MANIFEST.json",
+  "AREA_INVENTORY_REAL.json"
+ ],
+ "sha256_references": [
+  "REFLECTIVE_METACOGNITION_SHA256.txt",
+  "AGENT_RUNTIME_SHA256.txt",
+  "CIERRE_SHA256.json"
+ ],
+ "external_blockers": [
+  "GAP-EXT-INFRA",
+  "GAP-EXT-VOZ"
+ ],
+ "research_blockers": [
+  "GAP-06-APRENDIZAJE-PESADO (LOCAL_MODEL real requerido)",
+  "GAP-21-AUTOPOIESIS (decision soberana requerida)"
+ ],
+ "_update_utc": "2026-10-09T07:54:02.832661+00:00Z",
+ "_update_reason": "drift documental: archivo escrito antes de anadir la suite del supervisor (11 tests); conteo real verificado 537 en regresion x2"
+}

@@ -1,0 +1,108 @@
+{
+ "baseline_id": "EL_YO-BASELINE-OPERATIONAL-2026-10-08-001",
+ "previous_baseline": "EL_YO-BASELINE-VERIFIED-2026-10-08-003",
+ "previous_baselines_recoverable": [
+  "001",
+  "002",
+  "003"
+ ],
+ "created_utc": "2026-10-08T22:31:52.497119+00:00Z",
+ "state": "OPERATIONAL (B)",
+ "verdict": "B — OPERATIONAL_WITH_DOCUMENTED_EXTERNAL_BLOCKERS",
+ "inventory_el_yo": {
+  "00_CONSTITUCION_EL_YO/el_yo/constitution.py": "d32527cc06d66f47161ad69f9ef5592c420d44c1f2b616521cac86980ec3c192",
+  "00_CONSTITUCION_EL_YO/el_yo/gates.py": "168b4bf1443d50f9196afe291aff38dd47c8a074a5cde26e0bc9c826e08cbb00",
+  "00_CONSTITUCION_EL_YO/el_yo/evidence.py": "c0214c29700870b81d34d4c8369bcd9955b165a5fd703029d49bd9e03fd0867e",
+  "00_CONSTITUCION_EL_YO/el_yo/__init__.py": "acdfa6f24fbfb0716306e697cd96c11deb69fabb84ffe425765cecb653cc958a",
+  "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py": "48cd3d56ec454165cdb77383b8df90e11408d80c3138d7fc5baa9f3918ea8f43",
+  "00_CONSTITUCION_EL_YO/operational_core/supervisor.py": "2e926d78064aa18c554e9d8245ced211ff43bdb745941e32cea3fad1175c8cec",
+  "01_IDENTIDAD/identity.py": "b7f9033b7c99f22844702f6a031476719012eb59c0d3cfd2b80be52ed43d04f0",
+  "02_MEMORIA/persistent_memory.py": "57cd35e707b443385f0ca26f06f81d7ba1bf566a4f1399e55cdd74a1bb4c787a",
+  "02_MEMORIA/vector_memory.py": "5ae1ce898035d92e88a4fec5afd85cfda9c7a053d6e7537ab42fd723039736cc",
+  "02_MEMORIA/memory_model.py": "0b68756159b3e952a0bc1a5658c28e282634b2be46ac5491859a98823a888218",
+  "03_PERCEPCION/perception_engine.py": "8211b62fe52499022c428417ac5813c24e1cf711c9d41a37faaaf05cb1fdcbca",
+  "04_COGNICION/reflection.py": "7ee4bee27b2b5b65c8e207da60ba62f735c37d963d683f409924369f85369012",
+  "04_COGNICION/insights.py": "9ffeb0ebef79281dbcff967ffb81d64b4c0f8cb7776304d299df9fd74f6a495a",
+  "05_RAZONAMIENTO/relationship_model.py": "859f8f9a5b326afe731b7f07ed5c1c016a6175e4433c4b7413c81ee2ffa50609",
+  "06_APRENDIZAJE/learning_dataset.py": "dcacaa9b465a263dc149cbaaa4c4e05115ef0eb96b6b73d69089104f17cf8ae3",
+  "07_INTENCION/intention_engine.py": "8ac5d25ec54d1a23b5b79852016803dae9974b20cbff2ed53fcbecdb75d2dade",
+  "08_AGENCIA/swarm.py": "ab66796f6c33aa63ad841fed9c08fded92a2f3b604744e6d20914e88756f9491",
+  "09_ACCION/action_engine.py": "3258478e35b52e2b16588a773a8187fac47f93013c155fd93f548c2c5c0c776e",
+  "10_INTERACCION/chat.py": "3c55c8c0c7500cbf37f4ca35c8489af8a2c05febee093409909ffbbbb8329de6",
+  "10_INTERACCION/realtime.py": "153feb50ed75650b0b2eedaf84dd8d7c1ec018e3fc996be9720735897fd43a00",
+  "10_INTERACCION/interaction_to_cognition.py": "7e07ace881e2497e68dee23bfbb54a305b13862da6adb13121c5dace3496e6f1",
+  "10_INTERACCION/interoperability.py": "1c1649b5386f4cdbf3ba23e3f69161a2d62312ade6f0601b3bb80cf4157cba39",
+  "11_EMOCION/emotion_engine.py": "6997c8096dc7dc467d49ee88ccf24e2c50446b5c5312d6f040a4d868759acde2",
+  "11_EMOCION/sintonia_engine.py": "54592ef70f425178eb1e84be53f9fe743779a189cb4e4c175b708d6719337b29",
+  "12_AUTOCONCIENCIA/self_awareness.py": "f2b2244f12a5b7b238afadb903f929d83700d3154d22544f142cfd0dd315968a",
+  "12_AUTOCONCIENCIA/reflective_metacognition.py": "e72a69395514d16450177e47c333e7712f39ceac17d9cadc2d525c1744b63899",
+  "13_CONTEXT/context_assembly.py": "f369ea5ae572944c134a2946e97472e71772c411ea5654a5b71bea8fdabfd805",
+  "14_DIGITAL_SELF/digital_self.py": "b1a8a6deb4302fbf2b92e0e517d75ae0073d180575650efc21664a83ac165935",
+  "14_DIGITAL_SELF/genome.py": "8ff7d65467532c89a191bd1c1f80fbe07aaeb1b11301543ec606ba4742dd23df",
+  "14_DIGITAL_SELF/genome_store.py": "730cfd09c96b8ed7212b436ab7c2602741e65b30f080fb47ee34aedc7b6b0865",
+  "14_DIGITAL_SELF/cognitive_api.py": "8974bb65a5da57140c91015d906f5df0895e153b2c2134ec71f178f2a3614496",
+  "15_COGNITIVE_TWIN/cognitive_twin_yo.py": "56e1ea7765d1ce65a82c7b89d4b818fbc79099bb9790b416906b2858e0ad4b89",
+  "15_COGNITIVE_TWIN/maturity.py": "8b3bd9b03fd1e0147ab90be49c19a89c671befe18170b59832f53d9611ea684a",
+  "16_APP_SPACE/web_tools.py": "35cd79c5d266e3f99759874c6d90d47e1f90bc70bd10a8ac9562dec83d124433",
+  "17_SOVEREIGNTY/sovereignty.py": "e068f7294086ccabe2eff3c52d51cccca7e2a19608111044acf7977b9d907ee5",
+  "17_SOVEREIGNTY/authority.py": "cd8647f2c0a4f0b6a45117f0edd6148a13e90df3443a16ae472eca3186e8fa55",
+  "17_SOVEREIGNTY/elyo_wiring.py": "bf753ec13f9c10024a0e56a117fd428e6b093ae85e57c0893b33fde9112025d2",
+  "18_SECURITY/webhook.py": "31f1bd9f4bffa2ee10597b52366fdbb0a228b8ecc20e4cb715b9361df0d1dd29",
+  "19_GOVERNANCE/pipeline_evolution.py": "0abd7675d8a4f2e9aace23b73b34db3476cb7aa455a636cb0795525d87da10a8",
+  "19_GOVERNANCE/evolution_engine.py": "f4b813e86cbc4513d168155fcd171a3288a641fde70dc5f7dc1f58508a004ac6",
+  "19_GOVERNANCE/state_engine.py": "2e919fd08d1b4a7eccfd5740960a07203e9959d7852bb05ce346158165d3d54b",
+  "20_AUDIT/observability.py": "f2cb810147216ac733a165e88989f76f6f3af7accbbbcd8754e6183a5050529e",
+  "20_AUDIT/cli.py": "c454cb33d6f3ae8bad43d8437ca07b9aeff32d36aa343c052fd4773adedbceba",
+  "21_EVIDENCE_LEDGER/ledger_reference.py": "eceac7ee2973a5402885d260a922ab19159d0a94307360f8bd45d73663889304",
+  "22_TESTING_VALIDATION/test_orchestrator.py": "cecece9b26c37ebbcdaad12979144c3a9ebf3c11c84d023caf0989c9c755b700",
+  "23_INVESTIGACION_EXPERIMENTACION_Y_EVOLUCION/research_engine.py": "708f979a12e5b9433b03772857da6e39e1db6cb4fd3d25ac1dad5fd58b651780",
+  "MASTER_OPERATIONAL_AUDIT.md": "659182535e21944a9eb2bf12dec532e90eb4874750aca8bf6fb15b81a71ed984",
+  "MASTER_OPERATIONAL_STATE.json": "2a79b22c66c91077f0fb37082fe5be98a154c2e1022dcd6e87bb1ae36ad04083",
+  "AREAS_STATE.json": "252443f16dcea22632f625b076505583140c27bb1ba48fa61569a01241cd7f9e",
+  "GAP_REGISTER.json": "5581e3997294024f6962e39f232f99639918941d9403beb8223bd70d2119f764",
+  "ARCHITECTURE_MANIFEST.json": "49b837c5d601505439fa5be529f114a9d9404c66111924b99a57b8ed9e3c2609",
+  "RECONCILIATION_MANIFEST.json": "8ce7f0b16420c0e019d6b276bfd6b91909cb8cc4fb05e1076160b331dd0dadcc",
+  "FINAL_SYSTEM_STATE.json": "d1e0b82c6a377252c43401492c1f6c9bbd842c9aa6c9a28951670d3df298021f",
+  "EVOLUTION_FINAL_REPORT.md": "c53827683e6de23ca869007be64e89d197369e94d705ad28b25eb6287e487db0",
+  "BASELINE_VERIFIED.json": "ecf0495e1577b534ede219d42f45c4c5ea9ba28dc8454f24805d6e48394b0445",
+  "BASELINE_VERIFIED_002.json": "d88602d0793eae7a165512e7dfa9aa734814ccb79e9f4c544477d675aa873e7d",
+  "BASELINE_VERIFIED_003.json": "7d27a3a4a9c0348f327f35aa916773cfa3763cd82e150d930215a67568f9c7ef",
+  "01_GOBIERNO/evidence/ledger.jsonl": "e1a59f3597847a530f30fd744016c03fae3c211df7f75b81fbe5fc5929e71f33"
+ },
+ "inventory_app_yo": {
+  "app_space/app_space.py": "c9eb3914b4b6946b8df1185bcaf479203d2411c8f155a7ef042f14274a127a98",
+  "APP_SPACE_SECTION17_FREEZE.json": "ed42bd39b5fc5ca06a95a533861eae5150ab7b0a713714fccdb204b8dc6c9fd3"
+ },
+ "changes_vs_003": [
+  "operational_core/supervisor.py anadido (maquinaria 24/7, 11/11)",
+  "MASTER_OPERATIONAL_AUDIT.md + MASTER_OPERATIONAL_STATE.json anadidos",
+  "supervisor dedup fix: (task_id,payload) idempotencia",
+  "regresion 47 suites/537 tests x2 det=True; §17 REVALIDATED"
+ ],
+ "tests": {
+  "supervisor": "11/11",
+  "regression_run1": {
+   "suites": 47,
+   "tests": 537,
+   "fail": 0
+  },
+  "regression_run2": {
+   "suites": 47,
+   "tests": 537,
+   "fail": 0
+  },
+  "deterministic": true
+ },
+ "section17": "REVALIDATED",
+ "invariants": "6/6 VERIFIED",
+ "external_blockers": [
+  "supervisor persistente de plataforma (systemd/contenedor)",
+  "Redis/DB externos (no existen en sandbox; NOT_APPLICABLE si arquitectura de proceso unico)",
+  "red/credenciales/proveedores (voz, GPT-4o, conectores externos)",
+  "infraestructura fisica (hardware, redes, off-grid)"
+ ],
+ "ledger": {
+  "path": "EL_YO/01_GOBIERNO/evidence/ledger.jsonl",
+  "verify": true
+ }
+}

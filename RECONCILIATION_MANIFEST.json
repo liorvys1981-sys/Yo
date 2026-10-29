@@ -1,0 +1,286 @@
+{
+ "areas_A_B": [
+  {
+   "area_a": "00_CONSTITUCION_EL_YO",
+   "area_b": "00_CORE / IDENTIDAD",
+   "type": "COMPOSITE",
+   "components": "00: el_yo (constitution, gates, evidence); 01_IDENTIDAD: identity.py (DID/VC)",
+   "evidence": "R1 12/12; fase2 identidad; test_gobierno",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "01_IDENTIDAD",
+   "area_b": "00_CORE / IDENTIDAD",
+   "type": "PARTIAL_CORRESPONDENCE",
+   "components": "identity.py (DID, VC, revocacion)",
+   "evidence": "fase2 10/10",
+   "gaps": "sin gap",
+   "risk": "baja",
+   "action": "no"
+  },
+  {
+   "area_a": "02_MEMORIA",
+   "area_b": "19_PERSISTENCIA_Y_MEMORIA",
+   "type": "COMPOSITE",
+   "components": "persistent_memory.py; vector_memory.py; memory_model.py",
+   "evidence": "G5 10/10; OM memory 7/7",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "03_PERCEPCION",
+   "area_b": "04_INTELIGENCIA_COGNITIVA",
+   "type": "PARTIAL_CORRESPONDENCE",
+   "components": "estados de percepcion embebidos en CognitiveEvent (12)",
+   "evidence": "post284 suites",
+   "gaps": "GAP: sin motor de percepcion standalone",
+   "risk": "media",
+   "action": "DOCUMENTACION+gap futuro"
+  },
+  {
+   "area_a": "04_COGNICION",
+   "area_b": "04_INTELIGENCIA_COGNITIVA",
+   "type": "COMPOSITE",
+   "components": "reflection.py; insights.py",
+   "evidence": "G6 14/14; G10 14/14",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "05_RAZONAMIENTO",
+   "area_b": "04_INTELIGENCIA_COGNITIVA",
+   "type": "COMPOSITE",
+   "components": "relationship_model.py (Decision/Policy/Trust)",
+   "evidence": "OM decision suite",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "06_APRENDIZAJE",
+   "area_b": "21_EVOLUCION_Y_AUTOPOIESIS",
+   "type": "PARTIAL_CORRESPONDENCE",
+   "components": "feedback_loop.py (observation->proposal->G8)",
+   "evidence": "OM feedback tests",
+   "gaps": "GAP: aprendizaje pesado (LoRA/weights) no existe; solo aprendizaje estructural",
+   "risk": "media",
+   "action": "GAP FUTURO"
+  },
+  {
+   "area_a": "07_INTENCION",
+   "area_b": "05_ORQUESTACION_AGENTES",
+   "type": "PARTIAL_CORRESPONDENCE",
+   "components": "Goals via pipeline G8; GoalsAPI en contratos",
+   "evidence": "G8 15/15",
+   "gaps": "GAP: sin modelo de intencion standalone",
+   "risk": "baja",
+   "action": "DOCUMENTACION"
+  },
+  {
+   "area_a": "08_AGENCIA",
+   "area_b": "05_ORQUESTACION_AGENTES",
+   "type": "COMPOSITE",
+   "components": "swarm.py; Agent Runtime (00_CONSTITUCION_EL_YO/agent_runtime)",
+   "evidence": "G9 12/12; runtime suites",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "09_ACCION",
+   "area_b": "17_CORE_SYSTEM_EXEC",
+   "type": "PARTIAL_CORRESPONDENCE",
+   "components": "sin ejecucion externa v1 (constitucion); MCP gateway en 10",
+   "evidence": "decision NEVER test",
+   "gaps": "GAP por diseno: ejecucion externa deshabilitada v1",
+   "risk": "baja",
+   "action": "no (constitucional)"
+  },
+  {
+   "area_a": "10_INTERACCION",
+   "area_b": "11_INTERFACES_USUARIO",
+   "type": "COMPOSITE",
+   "components": "chat.py; realtime.py (SSE/WS/Voice sin backend); interaction_to_cognition.py",
+   "evidence": "OM gaps 16/16",
+   "gaps": "GAP: frontend real ausente; voz sin proveedor (BLOCKED)",
+   "risk": "media",
+   "action": "BLOQUEO EXTERNO"
+  },
+  {
+   "area_a": "11_EMOCION",
+   "area_b": "18_ALQUIMIA_Y_SINTONIA",
+   "type": "PARTIAL_CORRESPONDENCE",
+   "components": "emotion_engine.py (senales, contradicciones, anti-manipulacion)",
+   "evidence": "7/7",
+   "gaps": "GAP: 'sintonia' relacional avanzada no implementada",
+   "risk": "media",
+   "action": "GAP FUTURO"
+  },
+  {
+   "area_a": "12_AUTOCONCIENCIA",
+   "area_b": "04_INTELIGENCIA_COGNITIVA",
+   "type": "COMPOSITE",
+   "components": "self_awareness.py; reflective_metacognition.py",
+   "evidence": "post284 18/18 + audit",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "13_CONTEXT",
+   "area_b": "04_INTELIGENCIA_COGNITIVA",
+   "type": "DIRECT",
+   "components": "context_assembly.py",
+   "evidence": "OM 7/7",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "14_DIGITAL_SELF",
+   "area_b": "00_CORE / IDENTIDAD",
+   "type": "COMPOSITE",
+   "components": "digital_self.py (v2.0.0 FROZEN); genome.py; genome_store.py; cognitive_api.py",
+   "evidence": "20/20; fase3; fase4",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "15_COGNITIVE_TWIN",
+   "area_b": "04_INTELIGENCIA_COGNITIVA",
+   "type": "COMPOSITE",
+   "components": "cognitive_twin_yo.py; maturity.py; ELLA (producto en APP_YO/ELLA con genesis/activation/foundation)",
+   "evidence": "P10 suites",
+   "gaps": "GAP: visual twin no existe (documentado)",
+   "risk": "baja",
+   "action": "DOCUMENTACION"
+  },
+  {
+   "area_a": "16_APP_SPACE",
+   "area_b": "14_ECOSYSTEM_EXTERNOS",
+   "type": "COMPOSITE",
+   "components": "web_tools.py; APP_YO/app_space (registry/bridge/sync; FROZEN §17)",
+   "evidence": "§17 14/14 REVALIDATED; app_space 23/23",
+   "gaps": "GAP: conectores externos reales BLOCKED (sin credenciales)",
+   "risk": "media",
+   "action": "BLOQUEO EXTERNO"
+  },
+  {
+   "area_a": "17_SOVEREIGNTY",
+   "area_b": "03_SOBERANIA_DATOS",
+   "type": "COMPOSITE",
+   "components": "sovereignty.py (export/verify); authority.py (R1); privacy_classification en manifests",
+   "evidence": "G11 20/20; R1 12/12",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "18_SECURITY",
+   "area_b": "07_SEGURIDAD_Y_PERMISOS",
+   "type": "COMPOSITE",
+   "components": "webhook.py (frontera HMAC); runtime SovereigntySecurity (zero-trust)",
+   "evidence": "webhook tests; runtime adversarial",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "19_GOVERNANCE",
+   "area_b": "20_GOBERNANZA_Y_POLITICAS",
+   "type": "DIRECT",
+   "components": "pipeline_evolution.py; evolution_engine.py; state_engine.py",
+   "evidence": "G8 15/15; fase3; fase4",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "20_AUDIT",
+   "area_b": "12_LOGS_Y_MONITOREO + 22_DIAGNOSTICO_Y_RECOVER",
+   "type": "COMPOSITE",
+   "components": "observability.py (logs/metrics/tracing/health/audit); cli.py",
+   "evidence": "OM gaps 16/16",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "21_EVIDENCE_LEDGER",
+   "area_b": "00_CORE / IDENTIDAD",
+   "type": "PARTIAL_CORRESPONDENCE",
+   "components": "datos fisicos en 01_GOBIERNO/evidence (inmutable); engine en 00",
+   "evidence": "ledger verify=True",
+   "gaps": "GAP estructural menor: datos fuera del dir del area (documentado, inamovible)",
+   "risk": "baja",
+   "action": "DOCUMENTACION"
+  },
+  {
+   "area_a": "22_TESTING_VALIDATION",
+   "area_b": "16_SIMULACION_Y_CHAOS + 22_DIAGNOSTICO_Y_RECOVER",
+   "type": "COMPOSITE",
+   "components": "suites distribuidas (37 archivos test_*); chaos evidence en 04_CHAOS_TESTS",
+   "evidence": "39 suites x2 457/457 det=True",
+   "gaps": "sin gap",
+   "risk": "ninguno",
+   "action": "no"
+  },
+  {
+   "area_a": "23_INVESTIGACION_EXPERIMENTACION_Y_EVOLUCION",
+   "area_b": "13_LABORATORIO_CREATIVO + 21_EVOLUCION_Y_AUTOPOIESIS",
+   "type": "COMPOSITE",
+   "components": "research_engine.py (9 lentes, reproducibilidad, evaluacion, evolucion G8+R1)",
+   "evidence": "research suite; 18/18",
+   "gaps": "GAP: autopoiesis completa (auto-mantenimiento) parcial: recovery existe (chaos restart), generacion de nuevas capacidades NO (y no debe sin autorizacion)",
+   "risk": "media",
+   "action": "GAP FUTURO"
+  }
+ ],
+ "areas_B_no_direct": [
+  {
+   "area_b": "01_INFRAESTRUCTURA_FISICA",
+   "evidence": "EL_YO_SOBERANO 46 docs IaC; 0 desplegado",
+   "state": "BLOCKED (hardware)"
+  },
+  {
+   "area_b": "02_REDES_Y_CONECTIVIDAD",
+   "evidence": "EL_YO_SOBERANO capa 02 docs",
+   "state": "BLOCKED (hardware/red)"
+  },
+  {
+   "area_b": "06_AUTOMATIZACION_Y_SCRIPTS",
+   "evidence": "cli.py (20_AUDIT); scripts en docs",
+   "state": "PARTIAL (docs)"
+  },
+  {
+   "area_b": "08_DOCUMENTACION_Y_GUIAS",
+   "evidence": "docs en raiz APP_YO/EL_YO + manifests",
+   "state": "COMPLETE (documentacion)"
+  },
+  {
+   "area_b": "09_MARCO_LEGAL_Y_CUMPLIMIENTO",
+   "evidence": "EL_YO_SOBERANO 13 legal docs; sin codigo en el arbol 24",
+   "state": "PARTIAL (documentacion)"
+  },
+  {
+   "area_b": "10_FINANZAS_Y_TRANSACCIONES",
+   "evidence": "EL_YO_SOBERANO 08 docs; sin codigo en el arbol 24",
+   "state": "PARTIAL (documentacion)"
+  },
+  {
+   "area_b": "15_RESERVAS_Y_OFF_GRID",
+   "evidence": "EL_YO_SOBERANO 14 docs; 0 hardware",
+   "state": "BLOCKED"
+  },
+  {
+   "area_b": "18_ALQUIMIA_Y_SINTONIA",
+   "evidence": "sin correspondencia directa; parcial via 11_EMOCION",
+   "state": "NO_DIRECT_CORRESPONDENCE"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "selected": "GAP-03-PERCEPCION",
+ "priority": "P1",
+ "justification": {
+  "dependencia_actual": "solo areas existentes (12_AUTOCONCIENCIA CognitiveEvent, 02_MEMORIA): desarrollable ya",
+  "beneficio": "desbloquea cadena PARTIAL 03->07->09 (3 de las 5 PARTIAL); completa PERCEPCION del stack",
+  "riesgo": "bajo: capa descriptiva, cero escritura al self, cero dependencias externas",
+  "impacto": "anade modulo nuevo al area 03 (NO es zona protegida); ningun archivo protegido se toca",
+  "capacidad_de_validacion": "alta: tests aislados + regresion x2 en sandbox",
+  "compatibilidad_baseline": "total: modulo nuevo + suite nueva"
+ },
+ "rejected_alternatives": {
+  "GAP-06-APRENDIZAJE-PESADO": "depende de LOCAL_MODEL real (vendoring BLOCKED); riesgo constitucional alto sin gate epistemico previo",
+  "GAP-11-SINTONIA": "menor valor; depende de madurez de 11_EMOCION; hacer tras P1",
+  "GAP-21-AUTOPOIESIS": "riesgo constitucional muy alto; requiere decision soberana explicita",
+  "GAP-EXT-*": "bloqueo externo real (hardware/credenciales/red); no seleccionable"
+ },
+ "decision_rule_applied": "NO entusiasmo, NO complejidad, NO interes tecnico: solo dependencia+beneficio+riesgo+validacion+compatibilidad"
+}

@@ -1,0 +1,69 @@
+{
+ "generated_utc": "2026-10-08T22:31:52.497119+00:00Z",
+ "baseline": "EL_YO-BASELINE-OPERATIONAL-2026-10-08-001",
+ "dependencies": [
+  {
+   "dependency": "supervisor persistente (systemd unit o contenedor)",
+   "status": "EXTERNAL_BLOCKED",
+   "evidence": "operational_core/supervisor.py (11/11) verificado en sandbox; sin proceso daemon real",
+   "acceptance": "servicio persistente con Restart=always; supervisor alive tras 7 dias; evidencia en observability",
+   "test_needed": "despliegue en VM real; kill -9 del proceso -> auto-restart <30s; tareas en cola preservadas (spill a disco)"
+  },
+  {
+   "dependency": "Redis (cola/comparticion entre procesos)",
+   "status": "NOT_REQUIRED_SINGLE_PROCESS / EXTERNAL_IF_MULTI_PROCESS",
+   "evidence": "TaskQueue es in-memory por diseno de proceso unico; dedup/rate/dead-letter verificados",
+   "acceptance": "si se escala a multi-proceso: Redis con persistencia AOF; cola compartida",
+   "test_needed": "prueba de 2 workers en hosts distintos sin duplicados (dedup_key compartido)"
+  },
+  {
+   "dependency": "base de datos persistente",
+   "status": "PARTIAL (datos en archivos JSON/JSONL en sandbox)",
+   "evidence": "GenomeStore/memory/ledger persisten en filesystem; backup/restore del ledger verificado",
+   "acceptance": "para produccion: Postgres/SQLite-WAL o equivalente con backups programados",
+   "test_needed": "restore drill mensual con verificacion de hashes"
+  },
+  {
+   "dependency": "red, credenciales y proveedores externos",
+   "status": "EXTERNAL_BLOCKED",
+   "evidence": "GPT-4o route BLOCKED; VoiceProvider sin backend; conectores sin credenciales",
+   "acceptance": "secretos en gestor (Vault/SOPS); ningun secreto en codigo; TLS verificado",
+   "test_needed": "pen-test de frontera; rotacion de credenciales"
+  },
+  {
+   "dependency": "configuracion de secretos",
+   "status": "DESIGN_READY (gestor de secretos definido en arquitectura; sin implementacion de vault externo)",
+   "evidence": "NINGUN secreto hardcodeado en impl (scan); claves de test son seeds fijas de tests",
+   "acceptance": "vault externo + inyeccion por entorno; auditoria de accesos",
+   "test_needed": "verificacion de zero secrets en repo tras inyeccion"
+  },
+  {
+   "dependency": "health checks y alertas",
+   "status": "CODE_READY (observability.health), EXTERNAL para alertado real",
+   "evidence": "HealthChecks.run_all() verificado en tests OM",
+   "acceptance": "endpoint /health + alertas (correo/Signal) ante FAIL",
+   "test_needed": "corte controlado de servicio -> alerta <60s"
+  },
+  {
+   "dependency": "reinicio automatico y recuperacion tras caida",
+   "status": "CODE_READY (orphan recovery, graceful shutdown, restart policy), EXTERNAL para auto-restart",
+   "evidence": "tests supervisor 11/11",
+   "acceptance": "auto-restart + orphan recovery en produccion",
+   "test_needed": "kill de worker mid-task -> recovery de tarea sin perdida"
+  },
+  {
+   "dependency": "backup y restauracion",
+   "status": "VERIFIED_EN_SANDBOX (ledger backup/restore real), EXTERNAL para produccion",
+   "evidence": "restore_verify=True en auditoria operacional",
+   "acceptance": "backups automatizados diarios + restore drill trimestral",
+   "test_needed": "restore completo en entorno limpio + regresion"
+  },
+  {
+   "dependency": "pruebas de continuidad y recuperacion en infraestructura real",
+   "status": "EXTERNAL_BLOCKED",
+   "evidence": "chaos suite + supervisor suite verificados en sandbox",
+   "acceptance": "72h de operacion continua sin intervencion; 0 perdida de tareas",
+   "test_needed": "soak test en VM real con carga sintetica"
+  }
+ ]
+}

@@ -50,6 +50,7 @@ class Agent:
     trust: str = "shadow"
     active: bool = True
     evidence: list[str] = field(default_factory=list)
+    promotion_evidence_start: int = 0
 
 
 class Swarm:
@@ -123,12 +124,14 @@ class Swarm:
         required = _PROMOTION_EVIDENCE.get(agent.trust)
         if required is None:
             raise TrustRampViolation("agent is already at maximum trust")
-        if not agent.active or len(agent.evidence) < required:
+        available = len(agent.evidence) - agent.promotion_evidence_start
+        if not agent.active or available < required:
             raise TrustRampViolation(
-                f"{agent.trust} promotion requires {required} new verified executions"
+                f"{agent.trust} promotion requires {required} new verified executions; "
+                f"found {available}"
             )
         agent.trust = TRUST_LEVELS[TRUST_LEVELS.index(agent.trust) + 1]
-        agent.evidence.clear()
+        agent.promotion_evidence_start = len(agent.evidence)
         self._audit("promote", agent_id, {"trust": agent.trust})
         return agent.trust
 
@@ -137,7 +140,7 @@ class Swarm:
         if not isinstance(description, str) or not description.strip():
             raise SwarmError("incident description must be non-empty")
         agent.trust = "shadow"
-        agent.evidence.clear()
+        agent.promotion_evidence_start = len(agent.evidence)
         self._audit("report_incident", agent_id, {"description": description, "trust": "shadow"})
 
     def modify_safety_rules(

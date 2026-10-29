@@ -1,0 +1,54 @@
+test_change_reason_obligatorio_en_historial (tests.test_fase2_digitalself.TestConfianza.test_change_reason_obligatorio_en_historial) ... ok
+test_confidence_rango (tests.test_fase2_digitalself.TestConfianza.test_confidence_rango) ... ok
+test_crear_self_las_7_entidades (tests.test_fase2_digitalself.TestCreacion.test_crear_self_las_7_entidades) ... FAIL
+test_entidad_duplicada_rechazada (tests.test_fase2_digitalself.TestCreacion.test_entidad_duplicada_rechazada) ... ok
+test_kind_desconocido_rechazado (tests.test_fase2_digitalself.TestCreacion.test_kind_desconocido_rechazado) ... ok
+test_subject_tenant_obligatorios (tests.test_fase2_digitalself.TestCreacion.test_subject_tenant_obligatorios) ... ok
+test_cinco_etiquetas (tests.test_fase2_digitalself.TestProvenance.test_cinco_etiquetas) ... ok
+test_distinguir_observado_declarado_inferido (tests.test_fase2_digitalself.TestProvenance.test_distinguir_observado_declarado_inferido) ... ERROR
+test_fundamental_no_inferido (tests.test_fase2_digitalself.TestProvenance.test_fundamental_no_inferido) ... ok
+test_fundamental_no_system_derived (tests.test_fase2_digitalself.TestProvenance.test_fundamental_no_system_derived) ... ok
+test_inferido_exige_evidencia (tests.test_fase2_digitalself.TestProvenance.test_inferido_exige_evidencia) ... ok
+test_provenance_invalido_rechazado (tests.test_fase2_digitalself.TestProvenance.test_provenance_invalido_rechazado) ... ok
+test_as_of_previo_al_primer_set_es_none (tests.test_fase2_digitalself.TestTemporalidad.test_as_of_previo_al_primer_set_es_none) ... ok
+test_reconstruir_estado_anterior (tests.test_fase2_digitalself.TestTemporalidad.test_reconstruir_estado_anterior) ... ok
+test_historial_inmutable (tests.test_fase2_digitalself.TestVersionado.test_historial_inmutable) ... FAIL
+test_version_inexistente (tests.test_fase2_digitalself.TestVersionado.test_version_inexistente) ... ok
+test_versiones_se_preservan (tests.test_fase2_digitalself.TestVersionado.test_versiones_se_preservan) ... ok
+
+======================================================================
+ERROR: test_distinguir_observado_declarado_inferido (tests.test_fase2_digitalself.TestProvenance.test_distinguir_observado_declarado_inferido)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_fase2_digitalself.py", line 62, in test_distinguir_observado_declarado_inferido
+    bd = self.ds.provenance_breakdown()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/APP_YO/impl/digital_self.py", line 138, in provenance_breakdown
+    out[e.active.provenance] += 1
+        ^^^^^^^^
+  File "/mnt/agents/output/APP_YO/impl/digital_self.py", line 88, in active
+    return self.versions[self.active_version - 1]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+
+======================================================================
+FAIL: test_crear_self_las_7_entidades (tests.test_fase2_digitalself.TestCreacion.test_crear_self_las_7_entidades)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_fase2_digitalself.py", line 12, in test_crear_self_las_7_entidades
+    self.assertTrue(ds.schema_conformant())
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_historial_inmutable (tests.test_fase2_digitalself.TestVersionado.test_historial_inmutable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_fase2_digitalself.py", line 84, in test_historial_inmutable
+    with self.assertRaises(Exception):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Exception not raised
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.008s
+
+FAILED (failures=2, errors=1)

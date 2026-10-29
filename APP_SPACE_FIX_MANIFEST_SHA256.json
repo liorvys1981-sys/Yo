@@ -1,0 +1,38 @@
+{
+  "generated_utc": "2026-10-15T06:16:16Z",
+  "input_archive_sha256": "f7ef697cbdb265b679984d0884ee75087f1ecd4aa411a6fd4df336de46d79a76",
+  "files": {
+    "APP_YO/app_space/app_space.py": {
+      "sha256": "d66d798859b0b3483703f8cda59033377ade1db93e63d0295fdc803366a1845a",
+      "bytes": 23394
+    },
+    "EL_YO/15_COGNITIVE_TWIN/cognitive_twin_yo.py": {
+      "sha256": "2d0a36b6f947fe4241cbaad18834530e5752b9d5b526627f8f1a6849d14e5033",
+      "bytes": 5122
+    },
+    "APP_YO/tests/test_app_space.py": {
+      "sha256": "c7696e08f50b12756005bd422e345068dd07109e2a5b47e8b91189eca94fcff4",
+      "bytes": 20710
+    },
+    "APP_YO/tests/test_app_space_section17_adversarial.py": {
+      "sha256": "57393799eae9f10bc093dc8ab17e39622187bedc899bdd148a658443800c6062",
+      "bytes": 14794
+    },
+    "APP_YO/tests/e2e_app_space.py": {
+      "sha256": "25353780df403d7c911f74e80736f7bc87110677c753cf51ae66680613ce0abf",
+      "bytes": 2424
+    },
+    "APP_YO/evidence/APP_SPACE_FIX.patch": {
+      "sha256": "f2594dc8408776f4582fb28b4bbf8babec46fba0dd8ce83e9ebbe9c2ce18851c",
+      "bytes": 31237
+    },
+    "APP_YO/evidence/APP_SPACE_FIX_TEST_RESULTS.json": {
+      "sha256": "adc33e442d52d67ed4ed898c5aa918be008a566282180784f4ab289ed57b9dcd",
+      "bytes": 26926
+    },
+    "APP_YO/evidence/APP_SPACE_FIX_REPORT.md": {
+      "sha256": "3e068e9da0e447faece3f50556ec51ee49a955734ae482c44bd75a96413e2d69",
+      "bytes": 4916
+    }
+  }
+}

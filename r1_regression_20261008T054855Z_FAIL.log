@@ -1,0 +1,575 @@
+
+===== test_fase2_api =====
+test_completo_ok (tests.test_fase2_api.TestContexto.test_completo_ok) ... ok
+test_errores_canonicos (tests.test_fase2_api.TestContexto.test_errores_canonicos) ... ok
+test_incompleto_denied (tests.test_fase2_api.TestContexto.test_incompleto_denied) ... ok
+test_none_denied (tests.test_fase2_api.TestContexto.test_none_denied) ... ok
+test_base_no_instanciable (tests.test_fase2_api.TestInterfaces.test_base_no_instanciable) ... ok
+test_enforcement_tenant_estructural (tests.test_fase2_api.TestInterfaces.test_enforcement_tenant_estructural) ... ok
+test_memory_api_no_instanciable_sin_impl (tests.test_fase2_api.TestInterfaces.test_memory_api_no_instanciable_sin_impl) ... ok
+test_stub_concreto_ok (tests.test_fase2_api.TestInterfaces.test_stub_concreto_ok) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
+
+===== test_fase2_digitalself =====
+test_beliefs_acepta_self_reported (tests.test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_acepta_self_reported) ... ok
+test_beliefs_rechaza_inferred (tests.test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_rechaza_inferred) ... ok
+test_beliefs_rechaza_system_derived (tests.test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_rechaza_system_derived) ... ok
+test_change_reason_obligatorio_en_historial (tests.test_fase2_digitalself.TestConfianza.test_change_reason_obligatorio_en_historial) ... ok
+test_confidence_rango (tests.test_fase2_digitalself.TestConfianza.test_confidence_rango) ... ok
+test_crear_self_las_7_entidades (tests.test_fase2_digitalself.TestCreacion.test_crear_self_las_7_entidades) ... ok
+test_entidad_duplicada_rechazada (tests.test_fase2_digitalself.TestCreacion.test_entidad_duplicada_rechazada) ... ok
+test_kind_desconocido_rechazado (tests.test_fase2_digitalself.TestCreacion.test_kind_desconocido_rechazado) ... ok
+test_subject_tenant_obligatorios (tests.test_fase2_digitalself.TestCreacion.test_subject_tenant_obligatorios) ... ok
+test_cinco_etiquetas (tests.test_fase2_digitalself.TestProvenance.test_cinco_etiquetas) ... ok
+test_distinguir_observado_declarado_inferido (tests.test_fase2_digitalself.TestProvenance.test_distinguir_observado_declarado_inferido) ... ok
+test_fundamental_no_inferido (tests.test_fase2_digitalself.TestProvenance.test_fundamental_no_inferido) ... ok
+test_fundamental_no_system_derived (tests.test_fase2_digitalself.TestProvenance.test_fundamental_no_system_derived) ... ok
+test_inferido_exige_evidencia (tests.test_fase2_digitalself.TestProvenance.test_inferido_exige_evidencia) ... ok
+test_provenance_invalido_rechazado (tests.test_fase2_digitalself.TestProvenance.test_provenance_invalido_rechazado) ... ok
+test_as_of_previo_al_primer_set_es_none (tests.test_fase2_digitalself.TestTemporalidad.test_as_of_previo_al_primer_set_es_none) ... ok
+test_reconstruir_estado_anterior (tests.test_fase2_digitalself.TestTemporalidad.test_reconstruir_estado_anterior) ... ok
+test_historial_tamper_evidence (tests.test_fase2_digitalself.TestVersionado.test_historial_tamper_evidence)
+Dicts anidados no son congelables en Python: integridad por deteccion ... ok
+test_version_inexistente (tests.test_fase2_digitalself.TestVersionado.test_version_inexistente) ... ok
+test_versiones_se_preservan (tests.test_fase2_digitalself.TestVersionado.test_versiones_se_preservan) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.013s
+
+OK
+
+===== test_fase2_genome =====
+test_confidence_fuera_rango (tests.test_fase2_genome.TestValidador.test_confidence_fuera_rango) ... ok
+test_determinismo_50x (tests.test_fase2_genome.TestValidador.test_determinismo_50x) ... ok
+test_distinguibilidad (tests.test_fase2_genome.TestValidador.test_distinguibilidad) ... ok
+test_fundamental_inferring_rechazado (tests.test_fase2_genome.TestValidador.test_fundamental_inferring_rechazado) ... ok
+test_fundamental_requiere_aprobacion_humana_en_evolucion (tests.test_fase2_genome.TestValidador.test_fundamental_requiere_aprobacion_humana_en_evolucion) ... ok
+test_fundamental_system_derived_rechazado (tests.test_fase2_genome.TestValidador.test_fundamental_system_derived_rechazado) ... ok
+test_inferred_con_evidencia_ok (tests.test_fase2_genome.TestValidador.test_inferred_con_evidencia_ok) ... ok
+test_inferred_sin_evidencia (tests.test_fase2_genome.TestValidador.test_inferred_sin_evidencia) ... ok
+test_missing_provenance (tests.test_fase2_genome.TestValidador.test_missing_provenance) ... ok
+test_ok_minimo (tests.test_fase2_genome.TestValidador.test_ok_minimo) ... ok
+test_provenance_invalido (tests.test_fase2_genome.TestValidador.test_provenance_invalido) ... ok
+test_version_gap (tests.test_fase2_genome.TestValidador.test_version_gap) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK
+
+===== test_fase2_memory =====
+test_cinco_tipos_existentes (tests.test_fase2_memory.TestMemorias.test_cinco_tipos_existentes) ... ok
+test_consolidacion_procedencia_2o_orden (tests.test_fase2_memory.TestMemorias.test_consolidacion_procedencia_2o_orden) ... ok
+test_consolidar_no_episodica_falla (tests.test_fase2_memory.TestMemorias.test_consolidar_no_episodica_falla) ... ok
+test_emotional_sensible (tests.test_fase2_memory.TestMemorias.test_emotional_sensible) ... ok
+test_forget_es_supersede_no_delete (tests.test_fase2_memory.TestMemorias.test_forget_es_supersede_no_delete) ... ok
+test_provenance_invalido_rechazado (tests.test_fase2_memory.TestMemorias.test_provenance_invalido_rechazado) ... ok
+test_source_ref_obligatorio (tests.test_fase2_memory.TestMemorias.test_source_ref_obligatorio) ... ok
+test_superseded_oculto_por_defecto (tests.test_fase2_memory.TestMemorias.test_superseded_oculto_por_defecto) ... ok
+test_tenant_aislado (tests.test_fase2_memory.TestMemorias.test_tenant_aislado) ... ok
+test_tenant_ok_ve_lo_suyo (tests.test_fase2_memory.TestMemorias.test_tenant_ok_ve_lo_suyo) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK
+
+===== test_fase3_genome_store =====
+test_cada_cambio_produce_evento (tests.test_fase3_genome_store.TestEvidenceWiring.test_cada_cambio_produce_evento) ... ok
+test_evento_contiene_content_hash (tests.test_fase3_genome_store.TestEvidenceWiring.test_evento_contiene_content_hash) ... ok
+test_ledger_verificable (tests.test_fase3_genome_store.TestEvidenceWiring.test_ledger_verificable) ... ok
+test_sin_ledger_funciona_sin_evidencia_externa (tests.test_fase3_genome_store.TestEvidenceWiring.test_sin_ledger_funciona_sin_evidencia_externa) ... ok
+test_reconstruccion_temporal_tras_reload (tests.test_fase3_genome_store.TestPersistencia.test_reconstruccion_temporal_tras_reload) ... ok
+test_save_atomico_sin_tmp_residual (tests.test_fase3_genome_store.TestPersistencia.test_save_atomico_sin_tmp_residual) ... ok
+test_save_load_roundtrip (tests.test_fase3_genome_store.TestPersistencia.test_save_load_roundtrip) ... ok
+test_tamper_en_disco_detectado (tests.test_fase3_genome_store.TestPersistencia.test_tamper_en_disco_detectado) ... /mnt/agents/output/APP_YO/tests/test_fase3_genome_store.py:50: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpv4wex_dc/tenant-1/subj-1.genome.json' mode='r' encoding='UTF-8'>
+  data = open(path).read().replace('"x": 1', '"x": 99')
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/APP_YO/tests/test_fase3_genome_store.py:51: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpv4wex_dc/tenant-1/subj-1.genome.json' mode='w' encoding='UTF-8'>
+  open(path, "w").write(data)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.023s
+
+OK
+
+===== test_fase4_evolution =====
+test_identity_autorizacion_valida_ok (tests.test_fase4_evolution.TestAutorizacionFundamental.test_identity_autorizacion_valida_ok) ... ok
+test_identity_frase_invalida_denegado (tests.test_fase4_evolution.TestAutorizacionFundamental.test_identity_frase_invalida_denegado) ... ok
+test_identity_sin_autorizacion_denegado (tests.test_fase4_evolution.TestAutorizacionFundamental.test_identity_sin_autorizacion_denegado) ... ok
+test_identity_sin_segunda_llave_denegado (tests.test_fase4_evolution.TestAutorizacionFundamental.test_identity_sin_segunda_llave_denegado) ... ok
+test_values_y_beliefs_mismo_guard (tests.test_fase4_evolution.TestAutorizacionFundamental.test_values_y_beliefs_mismo_guard) ... FAIL
+test_cada_cambio_autorizado_genera_evidencia (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_cada_cambio_autorizado_genera_evidencia) ... ok
+test_evidence_api_ctx_ausente_denied (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_evidence_api_ctx_ausente_denied) ... ok
+test_genomestore_es_instancia_de_evidence_api (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_genomestore_es_instancia_de_evidence_api) ... ok
+test_integridad_ledger_tras_toda_la_sesion (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_integridad_ledger_tras_toda_la_sesion) ... ok
+test_rechazo_no_modifica_genome (tests.test_fase4_evolution.TestRechazoYAuditoria.test_rechazo_no_modifica_genome) ... ok
+test_rechazo_queda_en_ledger (tests.test_fase4_evolution.TestRechazoYAuditoria.test_rechazo_queda_en_ledger) ... ok
+
+======================================================================
+FAIL: test_values_y_beliefs_mismo_guard (tests.test_fase4_evolution.TestAutorizacionFundamental.test_values_y_beliefs_mismo_guard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_fase4_evolution.py", line 78, in test_values_y_beliefs_mismo_guard
+    self.assertEqual(ev["approved_by"], "humano")
+AssertionError: 'did:key:z6Mkrwaj4ykXFOTzVsGcmxXNGVHsbmZiqne-B1R_KJODNB0' != 'humano'
+- did:key:z6Mkrwaj4ykXFOTzVsGcmxXNGVHsbmZiqne-B1R_KJODNB0
++ humano
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.012s
+
+FAILED (failures=1)
+
+===== test_g10_insights =====
+test_cada_state_change_auditable (tests.test_g10_insights.TestAuditoria.test_cada_state_change_auditable) ... ok
+test_determinismo (tests.test_g10_insights.TestAuditoria.test_determinismo) ... ok
+test_evidencia_y_confidence_conservadas_en_refutado (tests.test_g10_insights.TestAuditoria.test_evidencia_y_confidence_conservadas_en_refutado) ... ok
+test_no_toca_digital_self (tests.test_g10_insights.TestAuditoria.test_no_toca_digital_self) ... /mnt/agents/output/APP_YO/tests/test_g10_insights.py:153: ResourceWarning: unclosed file <_io.TextIOWrapper name='/mnt/agents/output/APP_YO/impl/insights.py' mode='r' encoding='UTF-8'>
+  src = open("/mnt/agents/output/APP_YO/impl/insights.py").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_campos_conservados (tests.test_g10_insights.TestRegistro.test_campos_conservados) ... ok
+test_fact_types_quedan_registered (tests.test_g10_insights.TestRegistro.test_fact_types_quedan_registered) ... ok
+test_hypothesis_nace_hypothesized_nunca_confirmed (tests.test_g10_insights.TestRegistro.test_hypothesis_nace_hypothesized_nunca_confirmed) ... ok
+test_estado_desconocido (tests.test_g10_insights.TestTransicionesInvalidas.test_estado_desconocido) ... ok
+test_hypothesis_no_confirmada_automaticamente (tests.test_g10_insights.TestTransicionesInvalidas.test_hypothesis_no_confirmada_automaticamente) ... ok
+test_insight_inexistente (tests.test_g10_insights.TestTransicionesInvalidas.test_insight_inexistente) ... ok
+test_salto_directo_a_confirmed_sin_paso (tests.test_g10_insights.TestTransicionesInvalidas.test_salto_directo_a_confirmed_sin_paso) ... ok
+test_state_change_sin_evidencia (tests.test_g10_insights.TestTransicionesInvalidas.test_state_change_sin_evidencia) ... ok
+test_tracker_es_insights_api (tests.test_g10_insights.TestTransicionesInvalidas.test_tracker_es_insights_api) ... ok
+test_confirmed_refuted_terminales (tests.test_g10_insights.TestTransicionesValidas.test_confirmed_refuted_terminales) ... ok
+test_hypothesis_a_confirmed_requiere_humano (tests.test_g10_insights.TestTransicionesValidas.test_hypothesis_a_confirmed_requiere_humano) ... ok
+test_hypothesis_a_refuted_sistema (tests.test_g10_insights.TestTransicionesValidas.test_hypothesis_a_refuted_sistema) ... ok
+test_registered_a_hypothesized (tests.test_g10_insights.TestTransicionesValidas.test_registered_a_hypothesized) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.014s
+
+OK
+
+===== test_g11_sovereignty =====
+test_determinismo_con_clock_inyectado (tests.test_g11_sovereignty.TestExport.test_determinismo_con_clock_inyectado)
+Determinismo de CONTENIDO: entity_id son uuid (identificadores unicos, ... ERROR
+test_export_genera_paquete_completo (tests.test_g11_sovereignty.TestExport.test_export_genera_paquete_completo) ... ERROR
+test_export_no_modifica_digital_self (tests.test_g11_sovereignty.TestExport.test_export_no_modifica_digital_self) ... ERROR
+test_manifest_contenidos (tests.test_g11_sovereignty.TestExport.test_manifest_contenidos) ... ERROR
+test_no_secretos_en_paquete (tests.test_g11_sovereignty.TestExport.test_no_secretos_en_paquete) ... ERROR
+test_audit_trail_truncado (tests.test_g11_sovereignty.TestTamperNegativos.test_audit_trail_truncado)
+Semantica correcta: un prefijo de cadena append-only es internamente valido ... ERROR
+test_contenido_alterado_detectado (tests.test_g11_sovereignty.TestTamperNegativos.test_contenido_alterado_detectado) ... ERROR
+test_did_cambiado_falla_firma (tests.test_g11_sovereignty.TestTamperNegativos.test_did_cambiado_falla_firma) ... ERROR
+test_firma_invalida (tests.test_g11_sovereignty.TestTamperNegativos.test_firma_invalida) ... ERROR
+test_hash_en_manifest_alterado (tests.test_g11_sovereignty.TestTamperNegativos.test_hash_en_manifest_alterado) ... ERROR
+test_manifest_inconsistente_archivo_faltante (tests.test_g11_sovereignty.TestTamperNegativos.test_manifest_inconsistente_archivo_faltante) ... ERROR
+test_full_verify_ok (tests.test_g11_sovereignty.TestVerificacionCompleta.test_full_verify_ok) ... ERROR
+test_verificacion_independiente_otro_proceso (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verificacion_independiente_otro_proceso)
+Sin estado en memoria: solo paquete + DID (re-import fresco). ... ERROR
+test_verify_audit_trail_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_audit_trail_individual) ... ERROR
+test_verify_genome_integrity_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_genome_integrity_individual) ... ERROR
+test_verify_hashes_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_hashes_individual) ... ERROR
+test_verify_history_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_history_individual) ... ERROR
+test_verify_signature_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_signature_individual) ... ERROR
+
+======================================================================
+ERROR: test_determinismo_con_clock_inyectado (tests.test_g11_sovereignty.TestExport.test_determinismo_con_clock_inyectado)
+Determinismo de CONTENIDO: entity_id son uuid (identificadores unicos,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 37, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_export_genera_paquete_completo (tests.test_g11_sovereignty.TestExport.test_export_genera_paquete_completo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 37, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_export_no_modifica_digital_self (tests.test_g11_sovereignty.TestExport.test_export_no_modifica_digital_self)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 37, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_manifest_contenidos (tests.test_g11_sovereignty.TestExport.test_manifest_contenidos)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 37, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_no_secretos_en_paquete (tests.test_g11_sovereignty.TestExport.test_no_secretos_en_paquete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 37, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_audit_trail_truncado (tests.test_g11_sovereignty.TestTamperNegativos.test_audit_trail_truncado)
+Semantica correcta: un prefijo de cadena append-only es internamente valido
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 118, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_contenido_alterado_detectado (tests.test_g11_sovereignty.TestTamperNegativos.test_contenido_alterado_detectado)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 118, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_did_cambiado_falla_firma (tests.test_g11_sovereignty.TestTamperNegativos.test_did_cambiado_falla_firma)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 118, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_firma_invalida (tests.test_g11_sovereignty.TestTamperNegativos.test_firma_invalida)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 118, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_hash_en_manifest_alterado (tests.test_g11_sovereignty.TestTamperNegativos.test_hash_en_manifest_alterado)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 118, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_manifest_inconsistente_archivo_faltante (tests.test_g11_sovereignty.TestTamperNegativos.test_manifest_inconsistente_archivo_faltante)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 118, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_full_verify_ok (tests.test_g11_sovereignty.TestVerificacionCompleta.test_full_verify_ok)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 87, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_verificacion_independiente_otro_proceso (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verificacion_independiente_otro_proceso)
+Sin estado en memoria: solo paquete + DID (re-import fresco).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 87, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_verify_audit_trail_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_audit_trail_individual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 87, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_verify_genome_integrity_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_genome_integrity_individual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 87, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_verify_hashes_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_hashes_individual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 87, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_verify_history_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_history_individual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 87, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+======================================================================
+ERROR: test_verify_signature_individual (tests.test_g11_sovereignty.TestVerificacionCompleta.test_verify_signature_individual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 87, in setUp
+    self.tmp, self.store, self.ds = mk()
+                                    ^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g11_sovereignty.py", line 31, in mk
+    pipe.approve("r1", ds, f"EJECUTA export {elyo_code(KEY, TODAY)}")
+  File "/mnt/agents/output/APP_YO/impl/pipeline_evolution.py", line 153, in approve
+    raise Denied("pipeline sin Authority configurada (R1)")
+el_yo.constitution.Denied: pipeline sin Authority configurada (R1)
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.025s
+
+FAILED (errors=18)
+
+===== test_g12_integration =====
+test_g12_integration (unittest.loader._FailedTest.test_g12_integration) ... ERROR
+
+======================================================================
+ERROR: test_g12_integration (unittest.loader._FailedTest.test_g12_integration)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_g12_integration
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_g12_integration.py", line 6, in <module>
+    from identity import Identity, ElyoGateUnavailable
+ImportError: cannot import name 'ElyoGateUnavailable' from 'identity' (/mnt/agents/output/EL_YO/02_IDENTIDAD/identity.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+===== test_g14_e2e =====
+test_flujo_completo_del_gemelo (tests.test_g14_e2e.TestE2ECompleto.test_flujo_completo_del_gemelo) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.018s
+
+OK
+
+===== test_g5_persistent_memory =====
+test_campos_obligatorios_presentes (tests.test_g5_persistent_memory.TestContrato04.test_campos_obligatorios_presentes) ... ok
+test_cinco_memorias (tests.test_g5_persistent_memory.TestContrato04.test_cinco_memorias) ... ok
+test_forget_tombstone (tests.test_g5_persistent_memory.TestContrato04.test_forget_tombstone) ... ok
+test_inferred_sin_evidencia_rechazado (tests.test_g5_persistent_memory.TestContrato04.test_inferred_sin_evidencia_rechazado) ... ok
+test_ledger_evidence_por_operacion (tests.test_g5_persistent_memory.TestContrato04.test_ledger_evidence_por_operacion) ... ok
+test_no_mutacion_del_digital_self (tests.test_g5_persistent_memory.TestContrato04.test_no_mutacion_del_digital_self)
+Regla soberana 04_MEMORY.md: el modulo no conoce DigitalSelf. ... /mnt/agents/output/APP_YO/tests/test_g5_persistent_memory.py:73: ResourceWarning: unclosed file <_io.TextIOWrapper name='/mnt/agents/output/APP_YO/impl/persistent_memory.py' mode='r' encoding='UTF-8'>
+  src = open("/mnt/agents/output/APP_YO/impl/persistent_memory.py").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_tamper_en_disco_detectado (tests.test_g5_persistent_memory.TestContrato04.test_tamper_en_disco_detectado) ... /mnt/agents/output/APP_YO/tests/test_g5_persistent_memory.py:66: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpbl2n60vr/t1/mem:0239bd306c324a1c.json' mode='r' encoding='UTF-8'>
+  d = json.load(open(p)); d["content"]["hecho"] = "MANIPULADO"
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/APP_YO/tests/test_g5_persistent_memory.py:67: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpbl2n60vr/t1/mem:0239bd306c324a1c.json' mode='w' encoding='UTF-8'>
+  json.dump(d, open(p, "w"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_tenant_aislado_en_disco (tests.test_g5_persistent_memory.TestContrato04.test_tenant_aislado_en_disco) ... ok
+test_update_a_no_activa_falla (tests.test_g5_persistent_memory.TestContrato04.test_update_a_no_activa_falla) ... ok
+test_update_versiona_preservando_anterior (tests.test_g5_persistent_memory.TestContrato04.test_update_versiona_preservando_anterior) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.021s
+
+OK
+
+===== test_g6_reflection =====
+test_blind_spot_y_recommendation (tests.test_g6_reflection.TestDeteccion.test_blind_spot_y_recommendation) ... ok
+test_contradiccion_declarado_vs_observado (tests.test_g6_reflection.TestDeteccion.test_contradiccion_declarado_vs_observado) ... ok
+test_pattern_3_ocurrencias (tests.test_g6_reflection.TestDeteccion.test_pattern_3_ocurrencias) ... ok
+test_sin_contradiccion_si_coinciden (tests.test_g6_reflection.TestDeteccion.test_sin_contradiccion_si_coinciden) ... ok
+test_sin_pattern_bajo_umbral (tests.test_g6_reflection.TestDeteccion.test_sin_pattern_bajo_umbral) ... ok
+test_strength_en_5 (tests.test_g6_reflection.TestDeteccion.test_strength_en_5) ... ok
+test_campos_obligatorios_en_toda_salida (tests.test_g6_reflection.TestEtiquetadoSoberano.test_campos_obligatorios_en_toda_salida) ... ok
+test_determinismo_20_corridas (tests.test_g6_reflection.TestEtiquetadoSoberano.test_determinismo_20_corridas) ... ok
+test_hypothesis_siempre_inferred (tests.test_g6_reflection.TestEtiquetadoSoberano.test_hypothesis_siempre_inferred) ... ok
+test_ts_derivado_del_input_determinista (tests.test_g6_reflection.TestEtiquetadoSoberano.test_ts_derivado_del_input_determinista) ... ok
+test_uncertain_por_baja_confianza (tests.test_g6_reflection.TestEtiquetadoSoberano.test_uncertain_por_baja_confianza) ... ok
+test_versionado_con_prior_insights (tests.test_g6_reflection.TestEtiquetadoSoberano.test_versionado_con_prior_insights) ... ok
+test_no_importa_modulos_de_escritura (tests.test_g6_reflection.TestGuardNoEscritura.test_no_importa_modulos_de_escritura) ... /mnt/agents/output/APP_YO/tests/test_g6_reflection.py:106: ResourceWarning: unclosed file <_io.TextIOWrapper name='/mnt/agents/output/APP_YO/impl/reflection.py' mode='r' encoding='UTF-8'>
+  src = open("/mnt/agents/output/APP_YO/impl/reflection.py").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_rechaza_digitalself (tests.test_g6_reflection.TestGuardNoEscritura.test_rechaza_digitalself) ... ok
+test_salida_no_es_escritura_a_genome (tests.test_g6_reflection.TestGuardNoEscritura.test_salida_no_es_escritura_a_genome)
+Las inferencias no se convierten en Identity/Values/Beliefs: ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.018s
+
+OK
+
+===== test_g8_pipeline =====
+test_beliefs_sin_autorizacion (tests.test_g8_pipeline.TestGateYFundamentales.test_beliefs_sin_autorizacion) ... ok
+test_fundamental_con_autorizacion_valida (tests.test_g8_pipeline.TestGateYFundamentales.test_fundamental_con_autorizacion_valida) ... ok
+test_gate_inalienable_en_no_fundamental (tests.test_g8_pipeline.TestGateYFundamentales.test_gate_inalienable_en_no_fundamental)
+Ningun agente salta el gate: en approve SIEMPRE se invoca gate.authorize, ... FAIL
+test_identity_sin_autorizacion (tests.test_g8_pipeline.TestGateYFundamentales.test_identity_sin_autorizacion) ... ok
+test_values_sin_autorizacion (tests.test_g8_pipeline.TestGateYFundamentales.test_values_sin_autorizacion) ... ok
+test_evolution_locked_bloquea_todo (tests.test_g8_pipeline.TestLockedYRechazo.test_evolution_locked_bloquea_todo) ... ok
+test_rechazo_no_modifica_genome (tests.test_g8_pipeline.TestLockedYRechazo.test_rechazo_no_modifica_genome) ... ok
+test_determinismo_mismo_input (tests.test_g8_pipeline.TestPipelineCompleto.test_determinismo_mismo_input) ... ok
+test_pipeline_happy_path (tests.test_g8_pipeline.TestPipelineCompleto.test_pipeline_happy_path) ... ok
+test_todas_las_transiciones_validas_documentadas (tests.test_g8_pipeline.TestPipelineCompleto.test_todas_las_transiciones_validas_documentadas) ... ok
+test_transicion_invalida_rechazada (tests.test_g8_pipeline.TestPipelineCompleto.test_transicion_invalida_rechazada) ... ok
+test_cada_transicion_genera_evidencia (tests.test_g8_pipeline.TestVersionadoYEvidencia.test_cada_transicion_genera_evidencia) ... ok
+test_content_hash_en_applied (tests.test_g8_pipeline.TestVersionadoYEvidencia.test_content_hash_en_applied) ... ok
+test_nueva_version_sin_sobrescribir (tests.test_g8_pipeline.TestVersionadoYEvidencia.test_nueva_version_sin_sobrescribir) ... ok
+test_reconstruccion_del_estado_anterior (tests.test_g8_pipeline.TestVersionadoYEvidencia.test_reconstruccion_del_estado_anterior) ... ok
+
+======================================================================
+FAIL: test_gate_inalienable_en_no_fundamental (tests.test_g8_pipeline.TestGateYFundamentales.test_gate_inalienable_en_no_fundamental)
+Ningun agente salta el gate: en approve SIEMPRE se invoca gate.authorize,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_g8_pipeline.py", line 138, in test_gate_inalienable_en_no_fundamental
+    self.assertEqual(len(llamadas), 1)
+AssertionError: 2 != 1
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.025s
+
+FAILED (failures=1)
+
+===== test_g9_swarm =====
+test_swarm_no_importa_digital_self (tests.test_g9_swarm.TestGuardNoEscritura.test_swarm_no_importa_digital_self) ... /mnt/agents/output/APP_YO/tests/test_g9_swarm.py:103: ResourceWarning: unclosed file <_io.TextIOWrapper name='/mnt/agents/output/APP_YO/impl/swarm.py' mode='r' encoding='UTF-8'>
+  src = open("/mnt/agents/output/APP_YO/impl/swarm.py").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_capacidad_desconocida_rechazada (tests.test_g9_swarm.TestSpawnYManifest.test_capacidad_desconocida_rechazada) ... ok
+test_duplicado_rechazado (tests.test_g9_swarm.TestSpawnYManifest.test_duplicado_rechazado) ... ok
+test_los_6_agentes_del_spec_spawnables (tests.test_g9_swarm.TestSpawnYManifest.test_los_6_agentes_del_spec_spawnables) ... ok
+test_spawn_ok (tests.test_g9_swarm.TestSpawnYManifest.test_spawn_ok) ... ok
+test_status_y_revoke (tests.test_g9_swarm.TestSpawnYManifest.test_status_y_revoke) ... ok
+test_auditoria_en_ledger (tests.test_g9_swarm.TestTrustRamp.test_auditoria_en_ledger) ... ok
+test_incidente_degrada (tests.test_g9_swarm.TestTrustRamp.test_incidente_degrada) ... ok
+test_promocion_con_evidencia (tests.test_g9_swarm.TestTrustRamp.test_promocion_con_evidencia) ... ok
+test_promocion_exige_evidencia (tests.test_g9_swarm.TestTrustRamp.test_promocion_exige_evidencia) ... ok
+test_safety_inmutable_para_agentes (tests.test_g9_swarm.TestTrustRamp.test_safety_inmutable_para_agentes) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.021s
+
+OK
+
+===== test_r1_adversarial =====
+test_firma_falsificada_rechazada (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_firma_falsificada_rechazada) ... ok
+test_firma_valida_otro_dia_rechazada (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_firma_valida_otro_dia_rechazada) ... ok
+test_kind_vinculado_distinto_rechazado (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_kind_vinculado_distinto_rechazado) ... ok
+test_objeto_arbitrario_rechazado (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_objeto_arbitrario_rechazado) ... ok
+test_verify_rechaza_none_y_vacio (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_verify_rechaza_none_y_vacio) ... ok
+test_beliefs_directo_denied (tests.test_r1_adversarial.TestFundamentalesSinAutorizacion.test_beliefs_directo_denied) ... ok
+test_identity_directo_denied (tests.test_r1_adversarial.TestFundamentalesSinAutorizacion.test_identity_directo_denied) ... ok
+test_values_directo_denied (tests.test_r1_adversarial.TestFundamentalesSinAutorizacion.test_values_directo_denied) ... ok
+test_aprobador_registrado_es_did_verificable (tests.test_r1_adversarial.TestRutaLegitimaFunciona.test_aprobador_registrado_es_did_verificable) ... ok
+test_authority_emite_tras_gate_y_store_acepta (tests.test_r1_adversarial.TestRutaLegitimaFunciona.test_authority_emite_tras_gate_y_store_acepta) ... ok
+test_authority_sin_frase_valida_no_emite (tests.test_r1_adversarial.TestRutaLegitimaFunciona.test_authority_sin_frase_valida_no_emite) ... ok
+test_no_fundamental_no_requiere_autorizacion (tests.test_r1_adversarial.TestRutaLegitimaFunciona.test_no_fundamental_no_requiere_autorizacion) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.006s
+
+OK

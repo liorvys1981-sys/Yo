@@ -1,0 +1,56 @@
+test_completo_ok (test_fase2_api.TestContexto.test_completo_ok) ... ok
+test_errores_canonicos (test_fase2_api.TestContexto.test_errores_canonicos) ... ok
+test_incompleto_denied (test_fase2_api.TestContexto.test_incompleto_denied) ... ok
+test_none_denied (test_fase2_api.TestContexto.test_none_denied) ... ok
+test_base_no_instanciable (test_fase2_api.TestInterfaces.test_base_no_instanciable) ... ok
+test_enforcement_tenant_estructural (test_fase2_api.TestInterfaces.test_enforcement_tenant_estructural) ... ok
+test_memory_api_no_instanciable_sin_impl (test_fase2_api.TestInterfaces.test_memory_api_no_instanciable_sin_impl) ... ok
+test_stub_concreto_ok (test_fase2_api.TestInterfaces.test_stub_concreto_ok) ... ok
+test_beliefs_acepta_self_reported (test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_acepta_self_reported) ... ok
+test_beliefs_rechaza_inferred (test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_rechaza_inferred) ... ok
+test_beliefs_rechaza_system_derived (test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_rechaza_system_derived) ... ok
+test_change_reason_obligatorio_en_historial (test_fase2_digitalself.TestConfianza.test_change_reason_obligatorio_en_historial) ... ok
+test_confidence_rango (test_fase2_digitalself.TestConfianza.test_confidence_rango) ... ok
+test_crear_self_las_7_entidades (test_fase2_digitalself.TestCreacion.test_crear_self_las_7_entidades) ... ok
+test_entidad_duplicada_rechazada (test_fase2_digitalself.TestCreacion.test_entidad_duplicada_rechazada) ... ok
+test_kind_desconocido_rechazado (test_fase2_digitalself.TestCreacion.test_kind_desconocido_rechazado) ... ok
+test_subject_tenant_obligatorios (test_fase2_digitalself.TestCreacion.test_subject_tenant_obligatorios) ... ok
+test_cinco_etiquetas (test_fase2_digitalself.TestProvenance.test_cinco_etiquetas) ... ok
+test_distinguir_observado_declarado_inferido (test_fase2_digitalself.TestProvenance.test_distinguir_observado_declarado_inferido) ... ok
+test_fundamental_no_inferido (test_fase2_digitalself.TestProvenance.test_fundamental_no_inferido) ... ok
+test_fundamental_no_system_derived (test_fase2_digitalself.TestProvenance.test_fundamental_no_system_derived) ... ok
+test_inferido_exige_evidencia (test_fase2_digitalself.TestProvenance.test_inferido_exige_evidencia) ... ok
+test_provenance_invalido_rechazado (test_fase2_digitalself.TestProvenance.test_provenance_invalido_rechazado) ... ok
+test_as_of_previo_al_primer_set_es_none (test_fase2_digitalself.TestTemporalidad.test_as_of_previo_al_primer_set_es_none) ... ok
+test_reconstruir_estado_anterior (test_fase2_digitalself.TestTemporalidad.test_reconstruir_estado_anterior) ... ok
+test_historial_tamper_evidence (test_fase2_digitalself.TestVersionado.test_historial_tamper_evidence)
+Dicts anidados no son congelables en Python: integridad por deteccion ... ok
+test_version_inexistente (test_fase2_digitalself.TestVersionado.test_version_inexistente) ... ok
+test_versiones_se_preservan (test_fase2_digitalself.TestVersionado.test_versiones_se_preservan) ... ok
+test_confidence_fuera_rango (test_fase2_genome.TestValidador.test_confidence_fuera_rango) ... ok
+test_determinismo_50x (test_fase2_genome.TestValidador.test_determinismo_50x) ... ok
+test_distinguibilidad (test_fase2_genome.TestValidador.test_distinguibilidad) ... ok
+test_fundamental_inferring_rechazado (test_fase2_genome.TestValidador.test_fundamental_inferring_rechazado) ... ok
+test_fundamental_requiere_aprobacion_humana_en_evolucion (test_fase2_genome.TestValidador.test_fundamental_requiere_aprobacion_humana_en_evolucion) ... ok
+test_fundamental_system_derived_rechazado (test_fase2_genome.TestValidador.test_fundamental_system_derived_rechazado) ... ok
+test_inferred_con_evidencia_ok (test_fase2_genome.TestValidador.test_inferred_con_evidencia_ok) ... ok
+test_inferred_sin_evidencia (test_fase2_genome.TestValidador.test_inferred_sin_evidencia) ... ok
+test_missing_provenance (test_fase2_genome.TestValidador.test_missing_provenance) ... ok
+test_ok_minimo (test_fase2_genome.TestValidador.test_ok_minimo) ... ok
+test_provenance_invalido (test_fase2_genome.TestValidador.test_provenance_invalido) ... ok
+test_version_gap (test_fase2_genome.TestValidador.test_version_gap) ... ok
+test_cinco_tipos_existentes (test_fase2_memory.TestMemorias.test_cinco_tipos_existentes) ... ok
+test_consolidacion_procedencia_2o_orden (test_fase2_memory.TestMemorias.test_consolidacion_procedencia_2o_orden) ... ok
+test_consolidar_no_episodica_falla (test_fase2_memory.TestMemorias.test_consolidar_no_episodica_falla) ... ok
+test_emotional_sensible (test_fase2_memory.TestMemorias.test_emotional_sensible) ... ok
+test_forget_es_supersede_no_delete (test_fase2_memory.TestMemorias.test_forget_es_supersede_no_delete) ... ok
+test_provenance_invalido_rechazado (test_fase2_memory.TestMemorias.test_provenance_invalido_rechazado) ... ok
+test_source_ref_obligatorio (test_fase2_memory.TestMemorias.test_source_ref_obligatorio) ... ok
+test_superseded_oculto_por_defecto (test_fase2_memory.TestMemorias.test_superseded_oculto_por_defecto) ... ok
+test_tenant_aislado (test_fase2_memory.TestMemorias.test_tenant_aislado) ... ok
+test_tenant_ok_ve_lo_suyo (test_fase2_memory.TestMemorias.test_tenant_ok_ve_lo_suyo) ... ok
+
+----------------------------------------------------------------------
+Ran 50 tests in 0.015s
+
+OK

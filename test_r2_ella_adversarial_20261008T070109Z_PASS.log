@@ -1,0 +1,32 @@
+test_creacion_legitima_completa (tests.test_r2_ella_adversarial.TestLegitimo.test_creacion_legitima_completa) ... ok
+test_10_intento_directo_api (tests.test_r2_ella_adversarial.TestV1Bypasses.test_10_intento_directo_api) ... ok
+test_1_caller_sin_autorizacion (tests.test_r2_ella_adversarial.TestV1Bypasses.test_1_caller_sin_autorizacion) ... ok
+test_2_did_falso (tests.test_r2_ella_adversarial.TestV1Bypasses.test_2_did_falso) ... ok
+test_3_firma_de_otro_did (tests.test_r2_ella_adversarial.TestV1Bypasses.test_3_firma_de_otro_did) ... ok
+test_4_accion_incorrecta (tests.test_r2_ella_adversarial.TestV1Bypasses.test_4_accion_incorrecta) ... ok
+test_5_contenido_diferente (tests.test_r2_ella_adversarial.TestV1Bypasses.test_5_contenido_diferente) ... ok
+test_6_expirada (tests.test_r2_ella_adversarial.TestV1Bypasses.test_6_expirada) ... ok
+test_7_objeto_manipulado (tests.test_r2_ella_adversarial.TestV1Bypasses.test_7_objeto_manipulado) ... ok
+test_8_none_y_9_objeto_arbitrario (tests.test_r2_ella_adversarial.TestV1Bypasses.test_8_none_y_9_objeto_arbitrario) ... ok
+test_rechazo_en_verify_authorization_directo (tests.test_r2_ella_adversarial.TestV1Bypasses.test_rechazo_en_verify_authorization_directo) ... ok
+test_destino_incorrecto_rechazado (tests.test_r2_ella_adversarial.TestV2V3Separacion.test_destino_incorrecto_rechazado) ... ok
+test_runtime_conectada (tests.test_r2_ella_adversarial.TestV2V3Separacion.test_runtime_conectada) ... ok
+test_intacto_pass_alterado_reject (tests.test_r2_ella_adversarial.TestV4ProposalHash.test_intacto_pass_alterado_reject) ... /mnt/agents/output/APP_YO/ELLA/ella_genesis.py:136: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp_evxy76g/ELLA/ELLA_IDENTITY_PROPOSAL.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(self._path(name)))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/APP_YO/tests/test_r2_ella_adversarial.py:130: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp_evxy76g/ELLA/ELLA_IDENTITY_PROPOSAL.json' mode='r' encoding='UTF-8'>
+  d = json.load(open(pth)); d["content"]["nombre"] = "HACKEADA"
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/APP_YO/tests/test_r2_ella_adversarial.py:131: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp_evxy76g/ELLA/ELLA_IDENTITY_PROPOSAL.json' mode='w' encoding='UTF-8'>
+  json.dump(d, open(pth, "w"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_evidence_expirada_rechazada (tests.test_r2_ella_adversarial.TestV5Freshness.test_evidence_expirada_rechazada) ... /mnt/agents/output/APP_YO/ELLA/ella_genesis.py:136: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp69_35js0/ELLA/ELLA_ORIGIN.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(self._path(name)))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.017s
+
+OK

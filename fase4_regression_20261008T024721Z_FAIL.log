@@ -1,0 +1,137 @@
+
+===== tests.test_fase2_digitalself =====
+test_beliefs_acepta_self_reported (tests.test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_acepta_self_reported) ... ok
+test_beliefs_rechaza_inferred (tests.test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_rechaza_inferred) ... ok
+test_beliefs_rechaza_system_derived (tests.test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_rechaza_system_derived) ... ok
+test_change_reason_obligatorio_en_historial (tests.test_fase2_digitalself.TestConfianza.test_change_reason_obligatorio_en_historial) ... ok
+test_confidence_rango (tests.test_fase2_digitalself.TestConfianza.test_confidence_rango) ... ok
+test_crear_self_las_7_entidades (tests.test_fase2_digitalself.TestCreacion.test_crear_self_las_7_entidades) ... ok
+test_entidad_duplicada_rechazada (tests.test_fase2_digitalself.TestCreacion.test_entidad_duplicada_rechazada) ... ok
+test_kind_desconocido_rechazado (tests.test_fase2_digitalself.TestCreacion.test_kind_desconocido_rechazado) ... ok
+test_subject_tenant_obligatorios (tests.test_fase2_digitalself.TestCreacion.test_subject_tenant_obligatorios) ... ok
+test_cinco_etiquetas (tests.test_fase2_digitalself.TestProvenance.test_cinco_etiquetas) ... ok
+test_distinguir_observado_declarado_inferido (tests.test_fase2_digitalself.TestProvenance.test_distinguir_observado_declarado_inferido) ... ok
+test_fundamental_no_inferido (tests.test_fase2_digitalself.TestProvenance.test_fundamental_no_inferido) ... ok
+test_fundamental_no_system_derived (tests.test_fase2_digitalself.TestProvenance.test_fundamental_no_system_derived) ... ok
+test_inferido_exige_evidencia (tests.test_fase2_digitalself.TestProvenance.test_inferido_exige_evidencia) ... ok
+test_provenance_invalido_rechazado (tests.test_fase2_digitalself.TestProvenance.test_provenance_invalido_rechazado) ... ok
+test_as_of_previo_al_primer_set_es_none (tests.test_fase2_digitalself.TestTemporalidad.test_as_of_previo_al_primer_set_es_none) ... ok
+test_reconstruir_estado_anterior (tests.test_fase2_digitalself.TestTemporalidad.test_reconstruir_estado_anterior) ... ok
+test_historial_tamper_evidence (tests.test_fase2_digitalself.TestVersionado.test_historial_tamper_evidence)
+Dicts anidados no son congelables en Python: integridad por deteccion ... ok
+test_version_inexistente (tests.test_fase2_digitalself.TestVersionado.test_version_inexistente) ... ok
+test_versiones_se_preservan (tests.test_fase2_digitalself.TestVersionado.test_versiones_se_preservan) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.013s
+
+OK
+
+===== tests.test_fase2_api =====
+test_completo_ok (tests.test_fase2_api.TestContexto.test_completo_ok) ... ok
+test_errores_canonicos (tests.test_fase2_api.TestContexto.test_errores_canonicos) ... ok
+test_incompleto_denied (tests.test_fase2_api.TestContexto.test_incompleto_denied) ... ok
+test_none_denied (tests.test_fase2_api.TestContexto.test_none_denied) ... ok
+test_base_no_instanciable (tests.test_fase2_api.TestInterfaces.test_base_no_instanciable) ... ok
+test_enforcement_tenant_estructural (tests.test_fase2_api.TestInterfaces.test_enforcement_tenant_estructural) ... ok
+test_memory_api_no_instanciable_sin_impl (tests.test_fase2_api.TestInterfaces.test_memory_api_no_instanciable_sin_impl) ... ok
+test_stub_concreto_ok (tests.test_fase2_api.TestInterfaces.test_stub_concreto_ok) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
+
+===== tests.test_fase2_genome =====
+test_confidence_fuera_rango (tests.test_fase2_genome.TestValidador.test_confidence_fuera_rango) ... ok
+test_determinismo_50x (tests.test_fase2_genome.TestValidador.test_determinismo_50x) ... ok
+test_distinguibilidad (tests.test_fase2_genome.TestValidador.test_distinguibilidad) ... ok
+test_fundamental_inferring_rechazado (tests.test_fase2_genome.TestValidador.test_fundamental_inferring_rechazado) ... ok
+test_fundamental_requiere_aprobacion_humana_en_evolucion (tests.test_fase2_genome.TestValidador.test_fundamental_requiere_aprobacion_humana_en_evolucion) ... ok
+test_fundamental_system_derived_rechazado (tests.test_fase2_genome.TestValidador.test_fundamental_system_derived_rechazado) ... ok
+test_inferred_con_evidencia_ok (tests.test_fase2_genome.TestValidador.test_inferred_con_evidencia_ok) ... ok
+test_inferred_sin_evidencia (tests.test_fase2_genome.TestValidador.test_inferred_sin_evidencia) ... ok
+test_missing_provenance (tests.test_fase2_genome.TestValidador.test_missing_provenance) ... ok
+test_ok_minimo (tests.test_fase2_genome.TestValidador.test_ok_minimo) ... ok
+test_provenance_invalido (tests.test_fase2_genome.TestValidador.test_provenance_invalido) ... ok
+test_version_gap (tests.test_fase2_genome.TestValidador.test_version_gap) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK
+
+===== tests.test_fase2_memory =====
+test_cinco_tipos_existentes (tests.test_fase2_memory.TestMemorias.test_cinco_tipos_existentes) ... ok
+test_consolidacion_procedencia_2o_orden (tests.test_fase2_memory.TestMemorias.test_consolidacion_procedencia_2o_orden) ... ok
+test_consolidar_no_episodica_falla (tests.test_fase2_memory.TestMemorias.test_consolidar_no_episodica_falla) ... ok
+test_emotional_sensible (tests.test_fase2_memory.TestMemorias.test_emotional_sensible) ... ok
+test_forget_es_supersede_no_delete (tests.test_fase2_memory.TestMemorias.test_forget_es_supersede_no_delete) ... ok
+test_provenance_invalido_rechazado (tests.test_fase2_memory.TestMemorias.test_provenance_invalido_rechazado) ... ok
+test_source_ref_obligatorio (tests.test_fase2_memory.TestMemorias.test_source_ref_obligatorio) ... ok
+test_superseded_oculto_por_defecto (tests.test_fase2_memory.TestMemorias.test_superseded_oculto_por_defecto) ... ok
+test_tenant_aislado (tests.test_fase2_memory.TestMemorias.test_tenant_aislado) ... ok
+test_tenant_ok_ve_lo_suyo (tests.test_fase2_memory.TestMemorias.test_tenant_ok_ve_lo_suyo) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK
+
+===== tests.test_fase3_genome_store =====
+test_fase3_genome_store (unittest.loader._FailedTest.test_fase3_genome_store) ... ERROR
+
+======================================================================
+ERROR: test_fase3_genome_store (unittest.loader._FailedTest.test_fase3_genome_store)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_fase3_genome_store
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/APP_YO/tests/test_fase3_genome_store.py", line 4, in <module>
+    from genome_store import GenomeStore
+  File "/mnt/agents/output/APP_YO/impl/genome_store.py", line 13, in <module>
+    from el_yo.constitution import Action, Denied
+ModuleNotFoundError: No module named 'el_yo'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+===== tests.test_fase4_evolution =====
+test_identity_autorizacion_valida_ok (tests.test_fase4_evolution.TestAutorizacionFundamental.test_identity_autorizacion_valida_ok) ... ok
+test_identity_frase_invalida_denegado (tests.test_fase4_evolution.TestAutorizacionFundamental.test_identity_frase_invalida_denegado) ... ok
+test_identity_sin_autorizacion_denegado (tests.test_fase4_evolution.TestAutorizacionFundamental.test_identity_sin_autorizacion_denegado) ... ok
+test_identity_sin_segunda_llave_denegado (tests.test_fase4_evolution.TestAutorizacionFundamental.test_identity_sin_segunda_llave_denegado) ... ok
+test_values_y_beliefs_mismo_guard (tests.test_fase4_evolution.TestAutorizacionFundamental.test_values_y_beliefs_mismo_guard) ... ok
+test_cada_cambio_autorizado_genera_evidencia (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_cada_cambio_autorizado_genera_evidencia) ... ok
+test_evidence_api_ctx_ausente_denied (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_evidence_api_ctx_ausente_denied) ... ERROR
+test_genomestore_es_instancia_de_evidence_api (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_genomestore_es_instancia_de_evidence_api) ... FAIL
+test_integridad_ledger_tras_toda_la_sesion (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_integridad_ledger_tras_toda_la_sesion) ... ok
+test_rechazo_no_modifica_genome (tests.test_fase4_evolution.TestRechazoYAuditoria.test_rechazo_no_modifica_genome) ... ok
+test_rechazo_queda_en_ledger (tests.test_fase4_evolution.TestRechazoYAuditoria.test_rechazo_queda_en_ledger) ... ok
+
+======================================================================
+ERROR: test_evidence_api_ctx_ausente_denied (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_evidence_api_ctx_ausente_denied)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_fase4_evolution.py", line 138, in test_evidence_api_ctx_ausente_denied
+    self.store.append(None, {"x": 1})
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'GenomeStore' object has no attribute 'append'
+
+======================================================================
+FAIL: test_genomestore_es_instancia_de_evidence_api (tests.test_fase4_evolution.TestEvidenciaYReconstruccion.test_genomestore_es_instancia_de_evidence_api)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_fase4_evolution.py", line 130, in test_genomestore_es_instancia_de_evidence_api
+    self.assertIsInstance(self.store, EvidenceAPI)
+AssertionError: <genome_store.GenomeStore object at 0x7fcce1c63500> is not an instance of <class 'cognitive_api.EvidenceAPI'>
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.012s
+
+FAILED (failures=1, errors=1)

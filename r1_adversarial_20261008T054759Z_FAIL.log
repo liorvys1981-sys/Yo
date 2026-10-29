@@ -1,0 +1,47 @@
+test_firma_falsificada_rechazada (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_firma_falsificada_rechazada) ... ok
+test_firma_valida_otro_dia_rechazada (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_firma_valida_otro_dia_rechazada) ... ERROR
+test_kind_vinculado_distinto_rechazado (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_kind_vinculado_distinto_rechazado) ... ERROR
+test_objeto_arbitrario_rechazado (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_objeto_arbitrario_rechazado) ... ok
+test_verify_rechaza_none_y_vacio (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_verify_rechaza_none_y_vacio) ... ok
+test_beliefs_directo_denied (tests.test_r1_adversarial.TestFundamentalesSinAutorizacion.test_beliefs_directo_denied) ... ok
+test_identity_directo_denied (tests.test_r1_adversarial.TestFundamentalesSinAutorizacion.test_identity_directo_denied) ... ok
+test_values_directo_denied (tests.test_r1_adversarial.TestFundamentalesSinAutorizacion.test_values_directo_denied) ... ok
+test_aprobador_registrado_es_did_verificable (tests.test_r1_adversarial.TestRutaLegitimaFunciona.test_aprobador_registrado_es_did_verificable) ... ok
+test_authority_emite_tras_gate_y_store_acepta (tests.test_r1_adversarial.TestRutaLegitimaFunciona.test_authority_emite_tras_gate_y_store_acepta) ... ok
+test_authority_sin_frase_valida_no_emite (tests.test_r1_adversarial.TestRutaLegitimaFunciona.test_authority_sin_frase_valida_no_emite) ... ok
+test_no_fundamental_no_requiere_autorizacion (tests.test_r1_adversarial.TestRutaLegitimaFunciona.test_no_fundamental_no_requiere_autorizacion) ... ok
+
+======================================================================
+ERROR: test_firma_valida_otro_dia_rechazada (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_firma_valida_otro_dia_rechazada)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_r1_adversarial.py", line 71, in test_firma_valida_otro_dia_rechazada
+    authz = a.authorize_change("Values", f"EJECUTA x {DailyCodeProvider(KEY).code('2026-10-06')}")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/APP_YO/impl/authority.py", line 56, in authorize_change
+    self.gate.authorize(Action(kind, impact), actor="humano",
+  File "/mnt/agents/output/EL_YO/01_GOBIERNO/el_yo/gates.py", line 44, in authorize
+    self._verify_phrase(phrase)
+  File "/mnt/agents/output/EL_YO/01_GOBIERNO/el_yo/gates.py", line 54, in _verify_phrase
+    raise Denied("formato de frase-canal invalido (Anexo A)")
+el_yo.constitution.Denied: formato de frase-canal invalido (Anexo A)
+
+======================================================================
+ERROR: test_kind_vinculado_distinto_rechazado (tests.test_r1_adversarial.TestApprovedByFalsificadoImposible.test_kind_vinculado_distinto_rechazado)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_r1_adversarial.py", line 80, in test_kind_vinculado_distinto_rechazado
+    authz = a.authorize_change("Beliefs", f"EJECUTA x {CODE}")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/agents/output/APP_YO/impl/authority.py", line 56, in authorize_change
+    self.gate.authorize(Action(kind, impact), actor="humano",
+  File "/mnt/agents/output/EL_YO/01_GOBIERNO/el_yo/gates.py", line 44, in authorize
+    self._verify_phrase(phrase)
+  File "/mnt/agents/output/EL_YO/01_GOBIERNO/el_yo/gates.py", line 54, in _verify_phrase
+    raise Denied("formato de frase-canal invalido (Anexo A)")
+el_yo.constitution.Denied: formato de frase-canal invalido (Anexo A)
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.008s
+
+FAILED (errors=2)

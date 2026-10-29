@@ -1,0 +1,26 @@
+test_beliefs_acepta_self_reported (tests.test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_acepta_self_reported) ... ok
+test_beliefs_rechaza_inferred (tests.test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_rechaza_inferred) ... ok
+test_beliefs_rechaza_system_derived (tests.test_fase2_digitalself.TestBeliefsFundamentalV2.test_beliefs_rechaza_system_derived) ... ok
+test_change_reason_obligatorio_en_historial (tests.test_fase2_digitalself.TestConfianza.test_change_reason_obligatorio_en_historial) ... ok
+test_confidence_rango (tests.test_fase2_digitalself.TestConfianza.test_confidence_rango) ... ok
+test_crear_self_las_7_entidades (tests.test_fase2_digitalself.TestCreacion.test_crear_self_las_7_entidades) ... ok
+test_entidad_duplicada_rechazada (tests.test_fase2_digitalself.TestCreacion.test_entidad_duplicada_rechazada) ... ok
+test_kind_desconocido_rechazado (tests.test_fase2_digitalself.TestCreacion.test_kind_desconocido_rechazado) ... ok
+test_subject_tenant_obligatorios (tests.test_fase2_digitalself.TestCreacion.test_subject_tenant_obligatorios) ... ok
+test_cinco_etiquetas (tests.test_fase2_digitalself.TestProvenance.test_cinco_etiquetas) ... ok
+test_distinguir_observado_declarado_inferido (tests.test_fase2_digitalself.TestProvenance.test_distinguir_observado_declarado_inferido) ... ok
+test_fundamental_no_inferido (tests.test_fase2_digitalself.TestProvenance.test_fundamental_no_inferido) ... ok
+test_fundamental_no_system_derived (tests.test_fase2_digitalself.TestProvenance.test_fundamental_no_system_derived) ... ok
+test_inferido_exige_evidencia (tests.test_fase2_digitalself.TestProvenance.test_inferido_exige_evidencia) ... ok
+test_provenance_invalido_rechazado (tests.test_fase2_digitalself.TestProvenance.test_provenance_invalido_rechazado) ... ok
+test_as_of_previo_al_primer_set_es_none (tests.test_fase2_digitalself.TestTemporalidad.test_as_of_previo_al_primer_set_es_none) ... ok
+test_reconstruir_estado_anterior (tests.test_fase2_digitalself.TestTemporalidad.test_reconstruir_estado_anterior) ... ok
+test_historial_tamper_evidence (tests.test_fase2_digitalself.TestVersionado.test_historial_tamper_evidence)
+Dicts anidados no son congelables en Python: integridad por deteccion ... ok
+test_version_inexistente (tests.test_fase2_digitalself.TestVersionado.test_version_inexistente) ... ok
+test_versiones_se_preservan (tests.test_fase2_digitalself.TestVersionado.test_versiones_se_preservan) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.013s
+
+OK

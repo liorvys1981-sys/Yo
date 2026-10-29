@@ -1,0 +1,45 @@
+test_genesis_audit_en_ledger (tests.test_ella_genesis.TestGenesisAutorizado.test_genesis_audit_en_ledger) ... /mnt/agents/output/APP_YO/tests/test_ella_genesis.py:90: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpla_ix7hw/ledger.jsonl' mode='r' encoding='UTF-8'>
+  evs = [json.loads(l)["event"] for l in open(os.path.join(tmp, "ledger.jsonl"))]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_genesis_sin_autorizacion_rechazada (tests.test_ella_genesis.TestGenesisAutorizado.test_genesis_sin_autorizacion_rechazada) ... ok
+test_origin_persisted_and_verifiable (tests.test_ella_genesis.TestGenesisAutorizado.test_origin_persisted_and_verifiable) ... /mnt/agents/output/APP_YO/ELLA/ella_genesis.py:136: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpkvt5xpr2/ELLA/ELLA_ORIGIN.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(self._path(name)))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_origin_record_created (tests.test_ella_genesis.TestGenesisAutorizado.test_origin_record_created) ... ok
+test_origin_tamper_detected (tests.test_ella_genesis.TestGenesisAutorizado.test_origin_tamper_detected) ... /mnt/agents/output/APP_YO/tests/test_ella_genesis.py:74: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpowla7e2l/ELLA/ELLA_ORIGIN.json' mode='r' encoding='UTF-8'>
+  d = json.load(open(p)); d["autonomy"] = "ENABLED"
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/APP_YO/tests/test_ella_genesis.py:75: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpowla7e2l/ELLA/ELLA_ORIGIN.json' mode='w' encoding='UTF-8'>
+  json.dump(d, open(p, "w"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/APP_YO/ELLA/ella_genesis.py:136: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpowla7e2l/ELLA/ELLA_ORIGIN.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(self._path(name)))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_load_proposal_verifica_integridad (tests.test_ella_genesis.TestIdentityProposalV4.test_load_proposal_verifica_integridad) ... /mnt/agents/output/APP_YO/ELLA/ella_genesis.py:136: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp0xpvgeer/ELLA/ELLA_IDENTITY_PROPOSAL.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(self._path(name)))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/APP_YO/tests/test_ella_genesis.py:111: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp0xpvgeer/ELLA/ELLA_IDENTITY_PROPOSAL.json' mode='r' encoding='UTF-8'>
+  d = json.load(open(pth)); d["status"] = "ACTIVE"
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/APP_YO/tests/test_ella_genesis.py:112: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp0xpvgeer/ELLA/ELLA_IDENTITY_PROPOSAL.json' mode='w' encoding='UTF-8'>
+  json.dump(d, open(pth, "w"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_proposal_nace_proposed_no_activa (tests.test_ella_genesis.TestIdentityProposalV4.test_proposal_nace_proposed_no_activa) ... ok
+test_cross_namespace_denegado (tests.test_ella_genesis.TestSeparacionYoEllaV2V3.test_cross_namespace_denegado) ... ok
+test_elra_no_importa_digital_self (tests.test_ella_genesis.TestSeparacionYoEllaV2V3.test_elra_no_importa_digital_self) ... /mnt/agents/output/APP_YO/tests/test_ella_genesis.py:140: ResourceWarning: unclosed file <_io.TextIOWrapper name='/mnt/agents/output/APP_YO/ELLA/ella_genesis.py' mode='r' encoding='UTF-8'>
+  src = open("/mnt/agents/output/APP_YO/ELLA/ella_genesis.py").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_modelo_rechaza_destino_ella (tests.test_ella_genesis.TestSeparacionYoEllaV2V3.test_modelo_rechaza_destino_ella) ... ok
+test_runtime_separation_en_genesis (tests.test_ella_genesis.TestSeparacionYoEllaV2V3.test_runtime_separation_en_genesis) ... ok
+test_ruta_ajena_denegada (tests.test_ella_genesis.TestSeparacionYoEllaV2V3.test_ruta_ajena_denegada) ... ok
+test_yo_model_ok_en_yo (tests.test_ella_genesis.TestSeparacionYoEllaV2V3.test_yo_model_ok_en_yo) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.018s
+
+OK

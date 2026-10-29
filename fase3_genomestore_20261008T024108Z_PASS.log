@@ -1,0 +1,19 @@
+test_cada_cambio_produce_evento (tests.test_fase3_genome_store.TestEvidenceWiring.test_cada_cambio_produce_evento) ... ok
+test_evento_contiene_content_hash (tests.test_fase3_genome_store.TestEvidenceWiring.test_evento_contiene_content_hash) ... ok
+test_ledger_verificable (tests.test_fase3_genome_store.TestEvidenceWiring.test_ledger_verificable) ... ok
+test_sin_ledger_funciona_sin_evidencia_externa (tests.test_fase3_genome_store.TestEvidenceWiring.test_sin_ledger_funciona_sin_evidencia_externa) ... ok
+test_reconstruccion_temporal_tras_reload (tests.test_fase3_genome_store.TestPersistencia.test_reconstruccion_temporal_tras_reload) ... ok
+test_save_atomico_sin_tmp_residual (tests.test_fase3_genome_store.TestPersistencia.test_save_atomico_sin_tmp_residual) ... ok
+test_save_load_roundtrip (tests.test_fase3_genome_store.TestPersistencia.test_save_load_roundtrip) ... ok
+test_tamper_en_disco_detectado (tests.test_fase3_genome_store.TestPersistencia.test_tamper_en_disco_detectado) ... /mnt/agents/output/APP_YO/tests/test_fase3_genome_store.py:50: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpf_lz3o23/tenant-1/subj-1.genome.json' mode='r' encoding='UTF-8'>
+  data = open(path).read().replace('"x": 1', '"x": 99')
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/agents/output/APP_YO/tests/test_fase3_genome_store.py:51: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpf_lz3o23/tenant-1/subj-1.genome.json' mode='w' encoding='UTF-8'>
+  open(path, "w").write(data)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.026s
+
+OK

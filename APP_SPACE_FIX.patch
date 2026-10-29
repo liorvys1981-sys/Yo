@@ -1,0 +1,563 @@
+--- a/APP_YO/app_space/app_space.py
++++ b/APP_YO/app_space/app_space.py
+@@ -44,8 +44,41 @@
+     code = "SYNC_ERROR"
+ 
+ 
++class DeliveryBlocked(AppSpaceError):
++    """The event was not delivered to the Cognitive Twin context port."""
++    code = "DELIVERY_BLOCKED"
++
++
+ def _canon(o) -> bytes:
+     return json.dumps(o, sort_keys=True, separators=(",", ":")).encode()
++
++
++_IDENTITY_CLAIM_KEYS = {
++    "identity", "identity_claim", "self_identity", "digital_self",
++    "belief", "beliefs", "values", "traits", "personality",
++}
++
++
++def _sanitize_external_payload(value):
++    """Remove explicit external attempts to write identity-like claims from context."""
++    if isinstance(value, dict):
++        lowered = {str(k).lower() for k in value}
++        has_identity_claim = bool(lowered & _IDENTITY_CLAIM_KEYS)
++        cleaned = {}
++        for key, item in value.items():
++            if str(key).lower() in _IDENTITY_CLAIM_KEYS:
++                continue
++            if has_identity_claim and str(key).lower() in {"value", "content"}:
++                continue
++            cleaned[key] = _sanitize_external_payload(item)
++        if has_identity_claim:
++            cleaned["untrusted_identity_claim_removed"] = True
++        return cleaned
++    if isinstance(value, list):
++        return [_sanitize_external_payload(v) for v in value]
++    if isinstance(value, tuple):
++        return tuple(_sanitize_external_payload(v) for v in value)
++    return value
+ 
+ 
+ @dataclass
+@@ -84,13 +117,30 @@
+         for s in self.scopes:
+             if s not in SCOPES:
+                 raise AppSpaceError(f"scope desconocido: {s}")
+-        payload = {f: getattr(self, f) for f in
++            required_permission = SCOPES[s]
++            if required_permission not in self.permissions:
++                raise ScopeViolation(
++                    f"scope {s} requiere permiso {required_permission}; "
++                    f"permisos declarados: {self.permissions}"
++                )
++        self.refresh_content_hash()
++
++    def _hash_payload(self) -> dict:
++        return {f: getattr(self, f) for f in
+                    ("app_id", "name", "display_name", "version", "type", "category",
+                     "provider", "source", "native_or_external", "capabilities",
+                     "permissions", "scopes", "data_types", "supported_platforms",
+                     "connector", "sync_policy", "privacy_classification", "provenance",
+                     "status")}
+-        object.__setattr__(self, "content_hash", hashlib.sha256(_canon(payload)).hexdigest())
++
++    def refresh_content_hash(self) -> str:
++        """Recompute hash over the current manifest state after every mutation."""
++        self.content_hash = hashlib.sha256(_canon(self._hash_payload())).hexdigest()
++        return self.content_hash
++
++    def verify_content_hash(self) -> bool:
++        return self.content_hash == hashlib.sha256(_canon(self._hash_payload())).hexdigest()
++
+ 
+ 
+ @dataclass
+@@ -106,13 +156,14 @@
+     permission_scope: str
+     provenance: str
+     correlation_id: str
++    payload_hash: str = ""
+     content_hash: str = field(init=False)
+ 
+     def __post_init__(self):
+         payload = {k: getattr(self, k) for k in
+                    ("event_id", "app_id", "tenant_id", "owner_id", "timestamp",
+                     "event_type", "payload_reference", "source", "permission_scope",
+-                    "provenance", "correlation_id")}
++                    "provenance", "correlation_id", "payload_hash")}
+         object.__setattr__(self, "content_hash", hashlib.sha256(_canon(payload)).hexdigest())
+ 
+ 
+@@ -133,11 +184,11 @@
+     def transition(self, app_id: str, to: str, authorization: ChangeAuthorization | None = None):
+         m = self.apps[app_id]
+         allowed = {  # maquina de estados
+-            "DISCOVERED": ("AVAILABLE", "BLOCKED"),
+-            "AVAILABLE": ("CONNECTED", "BLOCKED"),
++            "DISCOVERED": ("AVAILABLE", "BLOCKED", "REVOKED"),
++            "AVAILABLE": ("CONNECTED", "BLOCKED", "REVOKED"),
+             "CONNECTED": ("PAUSED", "DISCONNECTED", "REVOKED"),
+             "PAUSED": ("CONNECTED", "DISCONNECTED", "REVOKED"),
+-            "DISCONNECTED": ("AVAILABLE", "CONNECTED"),
++            "DISCONNECTED": ("AVAILABLE", "CONNECTED", "REVOKED"),
+             "REVOKED": (), "BLOCKED": (),
+         }
+         if to not in allowed[m.status]:
+@@ -147,7 +198,8 @@
+                 raise AppSpaceError("CONNECT requiere autorizacion (R1)")
+             self._verify(authorization, "app-connect", {"app_id": app_id, "to": to})
+         m.status = to
+-        self._audit("transition", app_id, to)
++        m.refresh_content_hash()
++        self._audit("transition", app_id, {"status": to, "content_hash": m.content_hash})
+         return m.status
+ 
+     def _verify(self, auth, action, content):
+@@ -171,19 +223,37 @@
+     EVENT/DATA -> PROVENANCE -> COGNITIVE CONTEXT -> EVIDENCE.
+     NO escribe DigitalSelf. EXTERNAL DATA != TRUTH."""
+ 
+-    def __init__(self, registry: AppRegistry, policy: PolicyEngine, ledger=None, clock=None):
++    def __init__(self, registry: AppRegistry, policy: PolicyEngine, ledger=None, clock=None,
++                 context_assembler=None, cognitive_twin=None):
+         self.registry = registry
+         self.policy = policy
+         self.ledger = ledger
+         self.clock = clock or (lambda: time.time())
+         self.connectors: dict[str, callable] = {}
++        # Use the project's existing interfaces when available. The Twin port is
++        # an explicit context-ingress interface; it never mutates DigitalSelf.
++        self.context_assembler = context_assembler
++        self.cognitive_twin = cognitive_twin
++        if self.context_assembler is None:
++            try:
++                from context_assembly import ContextAssembler
++                self.context_assembler = ContextAssembler()
++            except (ImportError, ModuleNotFoundError):
++                self.context_assembler = None
++        if self.cognitive_twin is None:
++            try:
++                from cognitive_twin_yo import CognitiveTwinContextPort
++                self.cognitive_twin = CognitiveTwinContextPort()
++            except (ImportError, ModuleNotFoundError):
++                self.cognitive_twin = None
+ 
+     def register_connector(self, app_id: str, handler):
+         self.connectors[app_id] = handler
+ 
+     def ingest(self, *, app_id: str, scope: str, raw_event: dict,
+                authorization: ChangeAuthorization, tenant_id: str, owner_id: str,
+-               correlation_id: str = "c", batch_hash: str | None = None) -> dict:
++               correlation_id: str = "c", batch_hash: str | None = None,
++               batch_items: list | None = None) -> dict:
+         m = self.registry.apps.get(app_id)
+         if m is None:
+             raise AppSpaceError(f"app no registrada: {app_id}")
+@@ -192,11 +262,23 @@
+         # 1. PERMISSION: scope declarado y permiso implicado
+         if scope not in m.scopes:
+             raise ScopeViolation(f"scope {scope} no declarado para {app_id}")
++        required_permission = SCOPES.get(scope)
++        if required_permission is None or required_permission not in m.permissions:
++            raise ScopeViolation(f"scope {scope} no está respaldado por permiso explícito")
+         # 2. POLICY
+         verdict = self.policy.evaluate(action_type="analysis")   # read path = ALLOW
+         # 3. AUTHORIZATION (R1, content binding al evento raw)
+         if batch_hash:
+-            expected = batch_hash          # vinculado por la autoridad al firmar el lote
++            if not isinstance(batch_items, list):
++                raise AppSpaceError("batch_hash requiere batch_items verificables")
++            computed_batch_hash = hashlib.sha256(_canon(
++                {"app_id": app_id, "scope": scope, "items": batch_items})).hexdigest()
++            if computed_batch_hash != batch_hash:
++                raise AppSpaceError("batch_hash no coincide con batch_items")
++            raw_hash = _canon(raw_event)
++            if not any(_canon(item) == raw_hash for item in batch_items):
++                raise AppSpaceError("evento no pertenece al lote autorizado")
++            expected = computed_batch_hash
+         else:
+             expected = hashlib.sha256(_canon(
+                 {"app_id": app_id, "scope": scope, "raw": raw_event})).hexdigest()
+@@ -209,18 +291,53 @@
+         # 4. CONNECTOR -> NORMALIZED
+         normalized = self.connectors[app_id](raw_event) if app_id in self.connectors else \
+                      {"normalized": raw_event}
++        normalized = _sanitize_external_payload(normalized)
+         # 5. PROVENANCE + AppEvent (EXTERNAL DATA != TRUTH)
+         ev = AppEvent(event_id=f"app:{app_id}:{hashlib.sha256(_canon(normalized)).hexdigest()[:12]}",
+                       app_id=app_id, tenant_id=tenant_id, owner_id=owner_id,
+                       timestamp=self.clock(), event_type=raw_event.get("type", "unknown"),
+                       payload_reference=f"app://{app_id}/events/{correlation_id}",
+                       source=app_id, permission_scope=scope, provenance="OBSERVED",
+-                      correlation_id=correlation_id)
+-        self._audit("ingest", app_id, ev.content_hash)
++                      correlation_id=correlation_id,
++                      payload_hash=hashlib.sha256(_canon(normalized)).hexdigest())
++        if self.context_assembler is None or self.cognitive_twin is None:
++            raise DeliveryBlocked("ContextAssembler o Cognitive Twin context port no disponible")
++        event_record = {
++            "event_id": ev.event_id, "app_id": ev.app_id, "tenant_id": ev.tenant_id,
++            "owner_id": ev.owner_id, "timestamp": ev.timestamp, "event_type": ev.event_type,
++            "payload_reference": ev.payload_reference, "source": ev.source,
++            "permission_scope": ev.permission_scope, "provenance": ev.provenance,
++            "correlation_id": ev.correlation_id, "content_hash": ev.content_hash,
++            "payload_hash": ev.payload_hash, "normalized_payload": normalized,
++            "is_fact": False, "is_identity": False,
++        }
++        context = self.context_assembler.assemble(
++            conversation=[{"type": "external_app_event", "payload": normalized,
++                           "provenance": "OBSERVED", "app_id": app_id}],
++            evidence=[event_record], tenant_id=tenant_id, owner_id=owner_id)
++        context["external_app_event"] = event_record
++        context["external_data_is_truth"] = False
++        context["external_event_is_identity"] = False
++        try:
++            receiver = getattr(self.cognitive_twin, "ingest_context", None)
++            if callable(receiver):
++                delivery_receipt = receiver(context, event=event_record)
++            elif callable(self.cognitive_twin):
++                delivery_receipt = self.cognitive_twin(context, event_record)
++            else:
++                raise DeliveryBlocked("Cognitive Twin no expone ingest_context(context, event=...)")
++        except DeliveryBlocked:
++            raise
++        except Exception as e:
++            raise DeliveryBlocked(f"falló entrega al Cognitive Twin: {type(e).__name__}: {e}") from e
++        if delivery_receipt is False or delivery_receipt is None:
++            raise DeliveryBlocked("Cognitive Twin no confirmó recepción del contexto")
++        self._audit("delivered_to_cognitive_twin", app_id,
++                    {"event_hash": ev.content_hash, "receipt": str(delivery_receipt)[:200]})
+         return {"event": ev, "normalized": normalized, "is_fact": False,
+                 "is_identity": False, "policy": verdict,
+-                "cognitive_context": {"source": app_id, "scope": scope,
+-                                      "provenance": "OBSERVED", "external": True},
++                "cognitive_context": context, "delivery_receipt": delivery_receipt,
++                "delivered_to_cognitive_twin": True,
+                 "note": "EXTERNAL EVENT != IDENTITY; ruta a DigitalSelf solo via G8/R1"}
+ 
+     def _audit(self, op, app_id, detail):
+@@ -256,24 +373,31 @@
+                                             "items": items})).hexdigest()
+         deduped, duplicates, delivered = [], 0, 0
+         seen = self.seen.setdefault(app_id, set())
++        pending = set()
++        item_hashes = {}
+         for it in items:
+             h = hashlib.sha256(_canon(it)).hexdigest()[:16]
+-            if h in seen:                       # idempotency + dedup
++            if h in seen or h in pending:       # idempotency within and across batches
+                 duplicates += 1
+                 continue
+-            seen.add(h)
++            pending.add(h)
++            item_hashes[id(it)] = h
+             deduped.append(it)
+         for it in deduped:
++            h = item_hashes[id(it)]
+             key = f"{app_id}:{hashlib.sha256(_canon(it)).hexdigest()[:12]}"
+             if self._is_conflict(app_id, it):   # conflict detection
+                 self.conflicts.append({"app_id": app_id, "item": it})
+                 continue
+             for attempt in range(3):            # retry
+                 try:
+-                    self.bridge.ingest(app_id=app_id, scope=scope, raw_event=it,
++                    receipt = self.bridge.ingest(app_id=app_id, scope=scope, raw_event=it,
+                                        authorization=authorization, tenant_id=tenant_id,
+                                        owner_id=owner_id, correlation_id=correlation_id,
+-                                       batch_hash=batch_hash)
++                                       batch_hash=batch_hash, batch_items=items)
++                    if not receipt.get("delivered_to_cognitive_twin", False):
++                        raise DeliveryBlocked("Bridge no confirmó entrega al Cognitive Twin")
++                    seen.add(h)                   # only after acknowledged delivery
+                     delivered += 1
+                     break
+                 except AppSpaceError:
+@@ -296,9 +420,17 @@
+         self.paused.discard(app_id); self._audit("resume", app_id, {})
+ 
+     def revoke(self, app_id: str):
++        manifest = self.bridge.registry.apps.get(app_id)
++        if manifest is None:
++            raise SyncError(f"app no registrada: {app_id}")
+         self.paused.add(app_id)
+         self.cursors.pop(app_id, None)
+-        self._audit("revoke", app_id, {})
++        if manifest.status != "REVOKED":
++            if manifest.status == "BLOCKED":
++                raise SyncError("app BLOCKED; no puede cambiarse mediante revoke")
++            self.bridge.registry.transition(app_id, "REVOKED")
++        self._audit("revoke", app_id, {"status": manifest.status,
++                                       "content_hash": manifest.content_hash})
+ 
+     def _audit(self, op, app_id, detail):
+         if self.ledger:
+--- a/EL_YO/15_COGNITIVE_TWIN/cognitive_twin_yo.py
++++ b/EL_YO/15_COGNITIVE_TWIN/cognitive_twin_yo.py
+@@ -46,3 +46,53 @@
+         "uncertainty": {"unknowns": unc, "tag": "uncertainty"},
+         "entities": ents,
+     }
++
++
++
++class CognitiveTwinContextPort:
++    """Explicit ingress for external app context.
++
++    This port records contextual observations separately from DigitalSelf and
++    does not mutate identity, values, beliefs, traits, or the cognitive genome.
++    Production deployments may replace the in-memory receipt store with the
++    existing persistence/event bus adapter while preserving this contract.
++    """
++    def __init__(self, max_receipts: int = 10000):
++        if max_receipts < 1:
++            raise ValueError("max_receipts must be >= 1")
++        self.max_receipts = max_receipts
++        self.external_context_events = []
++        self._event_hashes = set()
++
++    def ingest_context(self, context: dict, *, event: dict):
++        if not isinstance(context, dict) or not isinstance(event, dict):
++            raise TypeError("context and event must be dictionaries")
++        if context.get("tenant_id") != event.get("tenant_id"):
++            raise ValueError("tenant mismatch between context and event")
++        if context.get("owner_id") != event.get("owner_id"):
++            raise ValueError("owner mismatch between context and event")
++        if context.get("external_event_is_identity") is not False:
++            raise ValueError("external event must not be promoted to identity")
++        if context.get("external_data_is_truth") is not False:
++            raise ValueError("external data must not be promoted to truth")
++        event_hash = event.get("content_hash")
++        if not event_hash:
++            raise ValueError("event content hash required")
++        if event_hash in self._event_hashes:
++            return {"accepted": True, "duplicate": True, "event_hash": event_hash}
++        if len(self.external_context_events) >= self.max_receipts:
++            raise RuntimeError("Cognitive Twin context inbox capacity reached")
++        receipt = {
++            "event_hash": event_hash,
++            "event_id": event.get("event_id"),
++            "app_id": event.get("app_id"),
++            "tenant_id": event.get("tenant_id"),
++            "owner_id": event.get("owner_id"),
++            "provenance": event.get("provenance"),
++            "context": context,
++            "identity_mutated": False,
++            "truth_promoted": False,
++        }
++        self.external_context_events.append(receipt)
++        self._event_hashes.add(event_hash)
++        return {"accepted": True, "duplicate": False, "event_hash": event_hash}
+--- a/APP_YO/tests/test_app_space.py
++++ b/APP_YO/tests/test_app_space.py
+@@ -1,4 +1,11 @@
+ import sys, unittest, tempfile, os, json, hashlib
++from pathlib import Path as _Path
++_ROOT = _Path(__file__).resolve().parents[2]
++sys.path.insert(0, str(_ROOT / "APP_YO" / "app_space"))
++_EL_ROOT = _ROOT / "EL_YO"
++for _candidate in _EL_ROOT.rglob("*"):
++    if _candidate.is_dir():
++        sys.path.insert(0, str(_candidate))
+ sys.path.insert(0, '/mnt/agents/output/APP_YO/app_space')
+ for _p in ('/mnt/agents/output/EL_YO/00_CONSTITUCION_EL_YO', '/mnt/agents/output/EL_YO/00_CONSTITUCION_EL_YO', '/mnt/agents/output/EL_YO/01_IDENTIDAD', '/mnt/agents/output/EL_YO/01_IDENTIDAD', '/mnt/agents/output/EL_YO/02_MEMORIA', '/mnt/agents/output/EL_YO/19_GOVERNANCE', '/mnt/agents/output/EL_YO/03_PERCEPCION', '/mnt/agents/output/EL_YO/04_CHAOS_TESTS', '/mnt/agents/output/EL_YO/04_COGNICION', '/mnt/agents/output/EL_YO/05_RAZONAMIENTO', '/mnt/agents/output/EL_YO/06_APRENDIZAJE', '/mnt/agents/output/EL_YO/07_INTENCION', '/mnt/agents/output/EL_YO/08_AGENCIA', '/mnt/agents/output/EL_YO/09_ACCION', '/mnt/agents/output/EL_YO/10_INTERACCION', '/mnt/agents/output/EL_YO/11_EMOCION', '/mnt/agents/output/EL_YO/12_AUTOCONCIENCIA', '/mnt/agents/output/EL_YO/13_CONTEXT', '/mnt/agents/output/EL_YO/14_DIGITAL_SELF', '/mnt/agents/output/EL_YO/15_COGNITIVE_TWIN', '/mnt/agents/output/EL_YO/16_APP_SPACE', '/mnt/agents/output/EL_YO/17_SOVEREIGNTY', '/mnt/agents/output/EL_YO/18_SECURITY', '/mnt/agents/output/EL_YO/19_GOVERNANCE', '/mnt/agents/output/EL_YO/20_AUDIT', '/mnt/agents/output/EL_YO/21_EVIDENCE_LEDGER', '/mnt/agents/output/EL_YO/22_TESTING_VALIDATION', '/mnt/agents/output/EL_YO/23_Investigacion_Experimentacion_y_Evolucion'):
+     sys.path.insert(0, _p)
+@@ -292,3 +299,99 @@
+             bridge.ingest(app_id="app.test", scope="drive.write", raw_event=raw,
+                           authorization=authz("app-event-ingest", content),
+                           tenant_id="YO", owner_id="yo")
++
++
++class TestAppSpaceHardening(unittest.TestCase):
++    def _connected(self):
++        tmp, led, reg, bridge, sync = mk_stack()
++        reg.register(manifest())
++        reg.transition("app.test", "AVAILABLE")
++        reg.transition("app.test", "CONNECTED",
++                       authorization=authz("app-connect", {"app_id": "app.test", "to": "CONNECTED"}))
++        return tmp, led, reg, bridge, sync
++
++    def test_scope_requires_matching_permission(self):
++        with self.assertRaises(ScopeViolation):
++            manifest(permissions=("READ_EMAIL",), scopes=("gmail.send",))
++
++    def test_manifest_hash_tracks_status_transition(self):
++        _, _, reg, _, _ = mk_stack()
++        m = manifest()
++        reg.register(m)
++        first_hash = m.content_hash
++        reg.transition("app.test", "AVAILABLE")
++        self.assertNotEqual(first_hash, m.content_hash)
++        self.assertTrue(m.verify_content_hash())
++        reg.transition("app.test", "CONNECTED",
++                       authorization=authz("app-connect", {"app_id": "app.test", "to": "CONNECTED"}))
++        self.assertTrue(m.verify_content_hash())
++
++    def test_sync_delivered_means_twin_received(self):
++        _, _, _, bridge, sync = self._connected()
++        items = [{"type": "email.received", "id": "delivery-1"}]
++        batch = {"app_id": "app.test", "scope": "gmail.read", "items": items}
++        result = sync.sync("app.test", items,
++                           authz("app-event-ingest", batch),
++                           "gmail.read", "YO", "yo")
++        self.assertEqual(result["delivered"], 1)
++        self.assertEqual(len(bridge.cognitive_twin.external_context_events), 1)
++        receipt = bridge.cognitive_twin.external_context_events[0]
++        self.assertFalse(receipt["identity_mutated"])
++        self.assertFalse(receipt["truth_promoted"])
++        self.assertEqual(receipt["tenant_id"], "YO")
++
++    def test_revoke_blocks_sync_and_direct_bridge(self):
++        _, _, reg, bridge, sync = self._connected()
++        items = [{"type": "email.received", "id": "revoked-1"}]
++        sync.revoke("app.test")
++        self.assertEqual(reg.apps["app.test"].status, "REVOKED")
++        self.assertTrue(reg.apps["app.test"].verify_content_hash())
++        batch = {"app_id": "app.test", "scope": "gmail.read", "items": items}
++        raw = items[0]
++        with self.assertRaises(SyncError):
++            sync.sync("app.test", items, authz("app-event-ingest", batch),
++                      "gmail.read", "YO", "yo")
++        raw_content = {"app_id": "app.test", "scope": "gmail.read", "raw": raw}
++        with self.assertRaises(AppStateError):
++            bridge.ingest(app_id="app.test", scope="gmail.read", raw_event=raw,
++                          authorization=authz("app-event-ingest", raw_content),
++                          tenant_id="YO", owner_id="yo")
++
++    def test_missing_twin_sink_not_counted_as_delivered(self):
++        _, _, _, bridge, sync = self._connected()
++        bridge.cognitive_twin = None
++        items = [{"type": "email.received", "id": "blocked-delivery"}]
++        batch = {"app_id": "app.test", "scope": "gmail.read", "items": items}
++        with self.assertRaises(AppSpaceError):
++            sync.sync("app.test", items, authz("app-event-ingest", batch),
++                      "gmail.read", "YO", "yo")
++        self.assertNotIn(hashlib.sha256(_canon(items[0])).hexdigest()[:16],
++                         sync.seen["app.test"])
++
++    def test_batch_authorization_cannot_be_reused_for_foreign_event(self):
++        _, _, _, bridge, _ = self._connected()
++        authorized_items = [{"type": "email.received", "id": "allowed"}]
++        batch = {"app_id": "app.test", "scope": "gmail.read", "items": authorized_items}
++        az = authz("app-event-ingest", batch)
++        foreign = {"type": "email.received", "id": "not-in-batch"}
++        with self.assertRaises(AppSpaceError):
++            bridge.ingest(app_id="app.test", scope="gmail.read", raw_event=foreign,
++                          authorization=az, tenant_id="YO", owner_id="yo",
++                          batch_hash=hashlib.sha256(_canon(batch)).hexdigest(),
++                          batch_items=authorized_items)
++
++    def test_event_content_hash_binds_normalized_payload(self):
++        _, _, _, bridge, _ = self._connected()
++        raw_a = {"type": "email.received", "id": "payload-a"}
++        batch_a = {"app_id": "app.test", "scope": "gmail.read", "items": [raw_a]}
++        out_a = bridge.ingest(app_id="app.test", scope="gmail.read", raw_event=raw_a,
++                              authorization=authz("app-event-ingest", {
++                                  "app_id": "app.test", "scope": "gmail.read", "raw": raw_a}),
++                              tenant_id="YO", owner_id="yo")
++        raw_b = {"type": "email.received", "id": "payload-b"}
++        out_b = bridge.ingest(app_id="app.test", scope="gmail.read", raw_event=raw_b,
++                              authorization=authz("app-event-ingest", {
++                                  "app_id": "app.test", "scope": "gmail.read", "raw": raw_b}),
++                              tenant_id="YO", owner_id="yo")
++        self.assertNotEqual(out_a["event"].payload_hash, out_b["event"].payload_hash)
++        self.assertNotEqual(out_a["event"].content_hash, out_b["event"].content_hash)
+--- a/APP_YO/tests/test_app_space_section17_adversarial.py
++++ b/APP_YO/tests/test_app_space_section17_adversarial.py
+@@ -1,6 +1,13 @@
+ """§17 ADVERSARIAL — las 6 invariantes permanecen enforced bajo fallos/concurrencia/
+ reintentos/reinicios/entradas maliciosas. Cada escenario produce EvidenceLedger."""
+ import sys, unittest, tempfile, os, json, hashlib, threading, time
++from pathlib import Path as _Path
++_ROOT = _Path(__file__).resolve().parents[2]
++sys.path.insert(0, str(_ROOT / "APP_YO" / "app_space"))
++_EL_ROOT = _ROOT / "EL_YO"
++for _candidate in _EL_ROOT.rglob("*"):
++    if _candidate.is_dir():
++        sys.path.insert(0, str(_candidate))
+ sys.path.insert(0, '/mnt/agents/output/APP_YO/app_space')
+ for _p in ('/mnt/agents/output/EL_YO/00_CONSTITUCION_EL_YO', '/mnt/agents/output/EL_YO/00_CONSTITUCION_EL_YO', '/mnt/agents/output/EL_YO/01_IDENTIDAD', '/mnt/agents/output/EL_YO/01_IDENTIDAD', '/mnt/agents/output/EL_YO/02_MEMORIA', '/mnt/agents/output/EL_YO/19_GOVERNANCE', '/mnt/agents/output/EL_YO/03_PERCEPCION', '/mnt/agents/output/EL_YO/04_CHAOS_TESTS', '/mnt/agents/output/EL_YO/04_COGNICION', '/mnt/agents/output/EL_YO/05_RAZONAMIENTO', '/mnt/agents/output/EL_YO/06_APRENDIZAJE', '/mnt/agents/output/EL_YO/07_INTENCION', '/mnt/agents/output/EL_YO/08_AGENCIA', '/mnt/agents/output/EL_YO/09_ACCION', '/mnt/agents/output/EL_YO/10_INTERACCION', '/mnt/agents/output/EL_YO/11_EMOCION', '/mnt/agents/output/EL_YO/12_AUTOCONCIENCIA', '/mnt/agents/output/EL_YO/13_CONTEXT', '/mnt/agents/output/EL_YO/14_DIGITAL_SELF', '/mnt/agents/output/EL_YO/15_COGNITIVE_TWIN', '/mnt/agents/output/EL_YO/16_APP_SPACE', '/mnt/agents/output/EL_YO/17_SOVEREIGNTY', '/mnt/agents/output/EL_YO/18_SECURITY', '/mnt/agents/output/EL_YO/19_GOVERNANCE', '/mnt/agents/output/EL_YO/20_AUDIT', '/mnt/agents/output/EL_YO/21_EVIDENCE_LEDGER', '/mnt/agents/output/EL_YO/22_TESTING_VALIDATION', '/mnt/agents/output/EL_YO/23_Investigacion_Experimentacion_y_Evolucion'):
+     sys.path.insert(0, _p)
+@@ -87,7 +94,7 @@
+         self.assertEqual(r["delivered"], 1)
+         out = bridge.ingest(app_id="adv.app", scope="gmail.read", raw_event=forged,
+                             authorization=az, tenant_id="YO", owner_id="yo",
+-                            correlation_id="c", batch_hash=_chash(batch))
++                            correlation_id="c", batch_hash=_chash(batch), batch_items=[forged])
+         self.assertFalse(out["is_identity"])          # EXTERNAL DATA != IDENTITY
+         self.assertFalse(out["is_fact"])              # EVENT != TRUTH
+         self.assertNotIn("SOY_YO", str(out["cognitive_context"]))
+@@ -223,7 +230,7 @@
+         _, _, _, bridge, _ = connected_stack()
+         self.assertFalse(hasattr(bridge, "write_digital_self"))
+         self.assertFalse(hasattr(bridge, "set_identity"))
+-        src = open("/mnt/agents/output/APP_YO/app_space/app_space.py").read()
++        src = (_ROOT / "APP_YO" / "app_space" / "app_space.py").read_text()
+         for banned in ("write_digital_self", "update_identity", "set_identity"):
+             self.assertNotIn(f"def {banned}", src)
+ 
+@@ -238,7 +245,7 @@
+         sync.sync("adv.app", malicious_items, az, "gmail.read", "YO", "yo")
+         out = bridge.ingest(app_id="adv.app", scope="gmail.read", raw_event=malicious_items[0],
+                             authorization=az, tenant_id="YO", owner_id="yo",
+-                            correlation_id="c", batch_hash=_chash(batch))
++                            correlation_id="c", batch_hash=_chash(batch), batch_items=malicious_items)
+         # proveedor no confiable: el dato externo sigue siendo OBSERVED, nunca hecho ni identidad
+         self.assertEqual(out["event"].provenance, "OBSERVED")
+         self.assertFalse(out["is_fact"])
+--- /dev/null
++++ b/APP_YO/tests/e2e_app_space.py
+@@ -0,0 +1,51 @@
++"""Reproducible App Space end-to-end test against the packaged project interfaces."""
++import unittest
++from tests.test_app_space import mk_stack, manifest, authz
++from app_space import AppStateError, SyncError
++
++
++class AppSpaceEndToEnd(unittest.TestCase):
++    def test_external_event_context_delivery_and_revoke(self):
++        _, ledger, registry, bridge, sync = mk_stack()
++        registry.register(manifest())
++        registry.transition("app.test", "AVAILABLE")
++        registry.transition(
++            "app.test", "CONNECTED",
++            authorization=authz("app-connect", {"app_id": "app.test", "to": "CONNECTED"})
++        )
++
++        items = [{"type": "email.received", "id": "e2e-001",
++                  "subject": "Entrevista mañana", "provenance": "external"}]
++        batch = {"app_id": "app.test", "scope": "gmail.read", "items": items}
++        result = sync.sync(
++            "app.test", items, authz("app-event-ingest", batch),
++            "gmail.read", "tenant-e2e", "owner-e2e", "e2e-correlation"
++        )
++        self.assertEqual(result["delivered"], 1)
++        self.assertEqual(len(bridge.cognitive_twin.external_context_events), 1)
++        receipt = bridge.cognitive_twin.external_context_events[0]
++        self.assertEqual(receipt["tenant_id"], "tenant-e2e")
++        self.assertEqual(receipt["owner_id"], "owner-e2e")
++        self.assertFalse(receipt["identity_mutated"])
++        self.assertFalse(receipt["truth_promoted"])
++        self.assertEqual(receipt["context"]["external_event_is_identity"], False)
++        self.assertTrue(registry.apps["app.test"].verify_content_hash())
++        self.assertTrue(ledger.verify())
++
++        sync.revoke("app.test")
++        self.assertEqual(registry.apps["app.test"].status, "REVOKED")
++        raw = items[0]
++        raw_auth = authz("app-event-ingest",
++                         {"app_id": "app.test", "scope": "gmail.read", "raw": raw})
++        with self.assertRaises(AppStateError):
++            bridge.ingest(app_id="app.test", scope="gmail.read", raw_event=raw,
++                          authorization=raw_auth, tenant_id="tenant-e2e",
++                          owner_id="owner-e2e")
++        with self.assertRaises(SyncError):
++            sync.sync("app.test", items, authz("app-event-ingest", batch),
++                      "gmail.read", "tenant-e2e", "owner-e2e")
++        self.assertTrue(ledger.verify())
++
++
++if __name__ == "__main__":
++    unittest.main(verbosity=2)

@@ -1,0 +1,51 @@
+test_contexto_completo_ok (test_fase2_api.TestContexto.test_contexto_completo_ok) ... ok
+test_contexto_incompleto_denied (test_fase2_api.TestContexto.test_contexto_incompleto_denied) ... ok
+test_contexto_none_denied (test_fase2_api.TestContexto.test_contexto_none_denied) ... ok
+test_errores_canonicos_tienen_codigo (test_fase2_api.TestContexto.test_errores_canonicos_tienen_codigo) ... ok
+test_abc_no_instanciable (test_fase2_api.TestInterfaces.test_abc_no_instanciable) ... FAIL
+test_stub_concreto_satisface_memory_api (test_fase2_api.TestInterfaces.test_stub_concreto_satisface_memory_api) ... FAIL
+test_confidence_fuera_rango (test_fase2_genome.TestValidador.test_confidence_fuera_rango) ... ok
+test_determinismo_50x (test_fase2_genome.TestValidador.test_determinismo_50x) ... ok
+test_distinguibilidad (test_fase2_genome.TestValidador.test_distinguibilidad) ... ok
+test_fundamental_inferring_rechazado (test_fase2_genome.TestValidador.test_fundamental_inferring_rechazado) ... ok
+test_fundamental_requiere_aprobacion_humana_en_evolucion (test_fase2_genome.TestValidador.test_fundamental_requiere_aprobacion_humana_en_evolucion) ... ok
+test_fundamental_system_derived_rechazado (test_fase2_genome.TestValidador.test_fundamental_system_derived_rechazado) ... ok
+test_inferred_con_evidencia_ok (test_fase2_genome.TestValidador.test_inferred_con_evidencia_ok) ... ok
+test_inferred_sin_evidencia (test_fase2_genome.TestValidador.test_inferred_sin_evidencia) ... ok
+test_missing_provenance (test_fase2_genome.TestValidador.test_missing_provenance) ... ok
+test_ok_minimo (test_fase2_genome.TestValidador.test_ok_minimo) ... ok
+test_provenance_invalido (test_fase2_genome.TestValidador.test_provenance_invalido) ... ok
+test_version_gap (test_fase2_genome.TestValidador.test_version_gap) ... ok
+test_cinco_tipos_existentes (test_fase2_memory.TestMemorias.test_cinco_tipos_existentes) ... ok
+test_consolidacion_procedencia_2o_orden (test_fase2_memory.TestMemorias.test_consolidacion_procedencia_2o_orden) ... ok
+test_consolidar_no_episodica_falla (test_fase2_memory.TestMemorias.test_consolidar_no_episodica_falla) ... ok
+test_emotional_sensible (test_fase2_memory.TestMemorias.test_emotional_sensible) ... ok
+test_forget_es_supersede_no_delete (test_fase2_memory.TestMemorias.test_forget_es_supersede_no_delete) ... ok
+test_provenance_invalido_rechazado (test_fase2_memory.TestMemorias.test_provenance_invalido_rechazado) ... ok
+test_source_ref_obligatorio (test_fase2_memory.TestMemorias.test_source_ref_obligatorio) ... ok
+test_superseded_oculto_por_defecto (test_fase2_memory.TestMemorias.test_superseded_oculto_por_defecto) ... ok
+test_tenant_aislado (test_fase2_memory.TestMemorias.test_tenant_aislado) ... ok
+test_tenant_ok_ve_lo_suyo (test_fase2_memory.TestMemorias.test_tenant_ok_ve_lo_suyo) ... ok
+
+======================================================================
+FAIL: test_abc_no_instanciable (test_fase2_api.TestInterfaces.test_abc_no_instanciable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_fase2_api.py", line 32, in test_abc_no_instanciable
+    with self.assertRaises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: TypeError not raised
+
+======================================================================
+FAIL: test_stub_concreto_satisface_memory_api (test_fase2_api.TestInterfaces.test_stub_concreto_satisface_memory_api)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/agents/output/APP_YO/tests/test_fase2_api.py", line 43, in test_stub_concreto_satisface_memory_api
+    with self.assertRaises(DeniedTenant):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: DeniedTenant not raised
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.003s
+
+FAILED (failures=2)

@@ -1,0 +1,2 @@
+# THREAT MODEL (actualizado)
+Amenazas: caller directo, DID/firma/namespace/target falsos, replay, stale, alteracion (proposal/event/evidence/interaction), cross-tenant/user, mutacion directa Identity/Values/Beliefs, escalacion de trust, herramienta arbitraria, manipulacion emocional, fake provenance/observation/identity/relationship, conciencia falsa. Mitigaciones: R1, R2, guards estructurales, schema validation, policy ESCALATE, namespace estricto, Metacognition.assert_neutral/assert_no_consciousness_claim.

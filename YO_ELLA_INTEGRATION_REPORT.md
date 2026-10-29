@@ -1,0 +1,1 @@
+Integración YO→ELLA: CONSTRUIR ELLA produce YO'S MODEL OF ELLA (namespace YO, not_ella_identity, imagination IMAGINED explícita) — NUNCA identidad de ELLA. Genesis R2 + Activation con autoridad soberana. Seeds YO→ELLA etiquetados con yo-ref en evidencia. Sin writes cruzados.

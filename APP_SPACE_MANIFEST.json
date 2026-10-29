@@ -1,0 +1,19 @@
+{
+  "generated_utc": "2026-10-08T16:49:57.296958+00:00Z",
+  "files": [
+    "APP_SPACE_AUDIT.md",
+    "APP_SPACE_ARCHITECTURE.md",
+    "APP_REGISTRY_SPEC.md",
+    "APP_PERMISSION_MODEL.md",
+    "APP_BRIDGE_SPEC.md",
+    "APP_SYNC_SPEC.md",
+    "APP_EVENT_SCHEMA.md",
+    "PRIVATE_APP_ECOSYSTEM.md",
+    "APP_SPACE_SECURITY.md",
+    "APP_SPACE_TEST_REPORT.md",
+    "APP_SPACE_LIMITATIONS.md",
+    "app_space/app_space.py",
+    "tests/test_app_space.py",
+    "APP_SPACE_EXISTING_COMPONENTS_AUDIT.md"
+  ]
+}

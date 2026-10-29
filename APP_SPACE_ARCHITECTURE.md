@@ -1,0 +1,2 @@
+# APP SPACE ARCHITECTURE
+YO -> COGNITIVE APP SPACE -> EXTERNAL APPS / YO APPS (8 nativas, ONE TWIN) / APP BRIDGES -> CognitiveTwin (Identity/Memory/Context/Relationships/Experience/Permissions/Evidence/Security/Sovereignty). Bridge: EXTERNAL->PERMISSION->POLICY->AUTHORIZATION(R1)->CONNECTOR->NORMALIZED->PROVENANCE->CONTEXT->EVIDENCE. Sync->Bridge->Twin (sin memoria paralela). EXTERNAL DATA != TRUTH; EXTERNAL EVENT != IDENTITY.

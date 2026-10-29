@@ -1,0 +1,77 @@
+{
+  "generated_utc": "2026-10-08T06:52:19.600670+00:00Z",
+  "regression": {
+    "suites": 16,
+    "ran": 189,
+    "fail_error": 0,
+    "rc": 0
+  },
+  "r1_state": "VERIFIED / CLOSED",
+  "digital_self_sha16": "b1a8a6deb4302fbf",
+  "v1_artifacts_present": true,
+  "matrix": {
+    "ELLA_ORIGIN existe y persiste": [
+      "IMPLEMENTED",
+      "TESTED",
+      "VERIFIED",
+      "EVIDENCED"
+    ],
+    "ELLA_ORIGIN campos completos (version app/genome, OBSERVED/INFERRED/IMAGINED, confidence, evidence, ref YO)": [
+      "PARTIAL",
+      "faltan 6 campos"
+    ],
+    "Separacion YO/ELLA estructural (rutas/imports)": [
+      "IMPLEMENTED",
+      "TESTED",
+      "VERIFIED"
+    ],
+    "Separacion runtime (enforce_separation consumida)": [
+      "PARTIAL",
+      "metodo sin consumidores en flujo"
+    ],
+    "YO model != ELLA identity (etiquetado)": [
+      "IMPLEMENTED",
+      "TESTED"
+    ],
+    "YO model != ELLA identity (enforcement en destino)": [
+      "PARTIAL",
+      "P3: funcion no verifica namespace destino"
+    ],
+    "ELLA no escribe en DigitalSelf YO": [
+      "VERIFIED",
+      "sin imports; estructural"
+    ],
+    "YO no escribe identidad ELLA": [
+      "PARTIAL",
+      "via API de genesis sin autoridad: cualquier caller crea"
+    ],
+    "Estados GENESIS_INCOMPLETE/PROPOSED/DISABLED": [
+      "IMPLEMENTED",
+      "TESTED"
+    ],
+    "Genesis requiere autoridad verificable (gate/firma)": [
+      "NOT IMPLEMENTED",
+      "bypass P1/P2"
+    ],
+    "Autonomia ELLA deshabilitada": [
+      "VERIFIED",
+      "contract + tamper test"
+    ],
+    "Proposal con verificador de integridad": [
+      "NOT IMPLEMENTED",
+      "P6"
+    ],
+    "ELLA Cognitive Twin": [
+      "NOT IMPLEMENTED",
+      "deliberado"
+    ]
+  },
+  "vulnerabilities": [
+    "V1 genesis sin autoridad verificable (bypass P1/P2)",
+    "V2 modelo YO no verifica destino",
+    "V3 enforce_separation sin consumidores",
+    "V4 proposal sin verificador de integridad",
+    "V5 origin sin frescura"
+  ],
+  "verdict": "ELLA Genesis: FUNCIONAL/PARCIAL — AUTORIZACION UNVERIFIED"
+}

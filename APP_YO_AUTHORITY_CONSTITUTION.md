@@ -1,0 +1,2 @@
+# AUTHORITY CONSTITUTION
+Cadena unica: AuthorizationGate -> Authority -> Ed25519 -> verify_authorization -> Authorized Op -> Version -> Evidence -> Ledger. PROHIBIDO: authorized=True, approved_by=texto, confidence>threshold, agent_decided. Vincula actor/DID/action/target/namespace/content_hash/freshness/nonce/anti-replay/signature/evidence.

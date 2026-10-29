@@ -1,0 +1,653 @@
+{
+ "00_CONSTITUCION_EL_YO": {
+  "modules": {
+   "00_CONSTITUCION_EL_YO/agent_runtime/__init__.py": {
+    "sha256": "be744db663625ccb",
+    "classes": [],
+    "funcs": []
+   },
+   "00_CONSTITUCION_EL_YO/agent_runtime/runtime.py": {
+    "sha256": "48cd3d56ec454165",
+    "classes": [
+     "RuntimeError_",
+     "CapabilityDenied",
+     "BudgetExceeded",
+     "CircuitOpen",
+     "TimeoutError_",
+     "TaskBudget",
+     "ValueResourceEconomics",
+     "ResourceManager",
+     "ModelRouter",
+     "LocalModelStub",
+     "CircuitBreaker",
+     "InfrastructureRecovery",
+     "MemoryCognition",
+     "SovereigntySecurity",
+     "ResearchEvolution",
+     "CognitiveAnalytics",
+     "CognitiveOrchestrator"
+    ],
+    "funcs": [
+     "_canon"
+    ]
+   },
+   "00_CONSTITUCION_EL_YO/agent_runtime/tests/__init__.py": {
+    "sha256": "e3b0c44298fc1c14",
+    "classes": [],
+    "funcs": []
+   },
+   "00_CONSTITUCION_EL_YO/el_yo/__init__.py": {
+    "sha256": "acdfa6f24fbfb071",
+    "classes": [],
+    "funcs": []
+   },
+   "00_CONSTITUCION_EL_YO/el_yo/constitution.py": {
+    "sha256": "d32527cc06d66f47",
+    "classes": [
+     "Action",
+     "Denied"
+    ],
+    "funcs": [
+     "required_authorization"
+    ]
+   },
+   "00_CONSTITUCION_EL_YO/el_yo/evidence.py": {
+    "sha256": "c0214c29700870b8",
+    "classes": [
+     "TamperedError",
+     "EvidenceLedger"
+    ],
+    "funcs": []
+   },
+   "00_CONSTITUCION_EL_YO/el_yo/gates.py": {
+    "sha256": "168b4bf1443d50f9",
+    "classes": [
+     "DailyCodeProvider",
+     "AuthorizationGate"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "01_GOBIERNO": {
+  "modules": {
+   "01_GOBIERNO/tests/conftest.py": {
+    "sha256": "de928dc2e8617bcc",
+    "classes": [],
+    "funcs": []
+   }
+  },
+  "tests": [
+   "test_gobierno.py"
+  ]
+ },
+ "01_IDENTIDAD": {
+  "modules": {
+   "01_IDENTIDAD/identity.py": {
+    "sha256": "b7f9033b7c99f228",
+    "classes": [
+     "Identity",
+     "CredentialIssuer",
+     "CredentialVerifier",
+     "StatusList"
+    ],
+    "funcs": [
+     "_b64u",
+     "_from_b64u"
+    ]
+   }
+  },
+  "tests": []
+ },
+ "02_IDENTIDAD": {
+  "modules": {
+   "02_IDENTIDAD/__init__.py": {
+    "sha256": "e3b0c44298fc1c14",
+    "classes": [],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "02_MEMORIA": {
+  "modules": {
+   "02_MEMORIA/memory_model.py": {
+    "sha256": "0b68756159b3e952",
+    "classes": [
+     "MemoryError",
+     "TenantDenied",
+     "MissingProvenance",
+     "MemoryRecord",
+     "MemoryStore"
+    ],
+    "funcs": []
+   },
+   "02_MEMORIA/persistent_memory.py": {
+    "sha256": "57cd35e707b44338",
+    "classes": [
+     "PMemoryError",
+     "TenantDenied",
+     "IntegrityError",
+     "PersistentMemoryStore"
+    ],
+    "funcs": [
+     "_canon",
+     "_hash"
+    ]
+   },
+   "02_MEMORIA/vector_memory.py": {
+    "sha256": "5ae1ce898035d92e",
+    "classes": [
+     "SemanticMemoryIndex",
+     "MemoryRetriever"
+    ],
+    "funcs": [
+     "_embed",
+     "_cos"
+    ]
+   }
+  },
+  "tests": []
+ },
+ "03_ESTADOS": {
+  "modules": {
+   "03_ESTADOS/__init__.py": {
+    "sha256": "e3b0c44298fc1c14",
+    "classes": [],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "03_PERCEPCION": {
+  "modules": {
+   "03_PERCEPCION/perception_engine.py": {
+    "sha256": "8211b62fe5249902",
+    "classes": [
+     "PerceptionError",
+     "IntegrityFailure",
+     "ReplayDetected",
+     "SourceUnavailable",
+     "MaliciousPayload",
+     "Percept",
+     "SourceHealth",
+     "PerceptionEngine"
+    ],
+    "funcs": [
+     "_canon"
+    ]
+   },
+   "03_PERCEPCION/tests/__init__.py": {
+    "sha256": "e3b0c44298fc1c14",
+    "classes": [],
+    "funcs": []
+   }
+  },
+  "tests": [
+   "test_perception.py"
+  ]
+ },
+ "04_CHAOS_TESTS": {
+  "modules": {},
+  "tests": []
+ },
+ "04_COGNICION": {
+  "modules": {
+   "04_COGNICION/insights.py": {
+    "sha256": "9ffeb0ebef79281d",
+    "classes": [
+     "InsightError",
+     "InvalidInsightState",
+     "InvalidInsightTransition",
+     "MissingEvidence",
+     "HumanConfirmationRequired",
+     "TrackedInsight",
+     "InsightTracker"
+    ],
+    "funcs": []
+   },
+   "04_COGNICION/reflection.py": {
+    "sha256": "7ee4bee27b2b5b65",
+    "classes": [
+     "Insight"
+    ],
+    "funcs": [
+     "_canon",
+     "_iid",
+     "_with_label",
+     "reflect"
+    ]
+   }
+  },
+  "tests": []
+ },
+ "05_RAZONAMIENTO": {
+  "modules": {
+   "05_RAZONAMIENTO/relationship_model.py": {
+    "sha256": "859f8f9a5b326afe",
+    "classes": [
+     "Turn",
+     "SessionState",
+     "Relationship",
+     "TwinModelError",
+     "CognitiveTwinModel",
+     "PolicyError",
+     "PolicyEngine",
+     "TrustProfile",
+     "DecisionEngine"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "06_APRENDIZAJE": {
+  "modules": {
+   "06_APRENDIZAJE/feedback_loop.py": {
+    "sha256": "c7475c88852595f6",
+    "classes": [
+     "PreferenceObservation",
+     "FeedbackLoop"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "07_INTENCION": {
+  "modules": {},
+  "tests": []
+ },
+ "08_AGENCIA": {
+  "modules": {
+   "08_AGENCIA/swarm.py": {
+    "sha256": "ab66796f6c33aa63",
+    "classes": [
+     "SwarmError",
+     "UnknownCapability",
+     "TrustRampViolation",
+     "SafetyImmutable",
+     "Agent",
+     "Swarm"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "09_ACCION": {
+  "modules": {},
+  "tests": []
+ },
+ "10_INTERACCION": {
+  "modules": {
+   "10_INTERACCION/chat.py": {
+    "sha256": "3c55c8c0c7500cbf",
+    "classes": [
+     "ChatPipeline"
+    ],
+    "funcs": []
+   },
+   "10_INTERACCION/interaction_to_cognition.py": {
+    "sha256": "7e07ace881e2497e",
+    "classes": [
+     "InteractionError",
+     "NamespaceViolation",
+     "InteractionRecord",
+     "InformationLayer",
+     "RelationalModel",
+     "InteractionToCognitionEngine"
+    ],
+    "funcs": [
+     "_canon"
+    ]
+   },
+   "10_INTERACCION/interoperability.py": {
+    "sha256": "1c1649b5386f4cdb",
+    "classes": [
+     "TwinFacade",
+     "TestInteroperability"
+    ],
+    "funcs": []
+   },
+   "10_INTERACCION/realtime.py": {
+    "sha256": "153feb50ed75650b",
+    "classes": [
+     "SSEStream",
+     "RealtimeSession",
+     "VoiceProvider",
+     "MCPGateway"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "11_EMOCION": {
+  "modules": {
+   "11_EMOCION/emotion_engine.py": {
+    "sha256": "6997c8096dc7dc46",
+    "classes": [
+     "EmotionError",
+     "ManipulativeEmotion",
+     "IdentityClaimError",
+     "EmotionSignal",
+     "EmotionContradiction",
+     "EmotionEngine"
+    ],
+    "funcs": [
+     "_canon"
+    ]
+   },
+   "11_EMOCION/tests/__init__.py": {
+    "sha256": "e3b0c44298fc1c14",
+    "classes": [],
+    "funcs": []
+   }
+  },
+  "tests": [
+   "test_emotion_engine.py"
+  ]
+ },
+ "12_AUTOCONCIENCIA": {
+  "modules": {
+   "12_AUTOCONCIENCIA/reflective_metacognition.py": {
+    "sha256": "e72a69395514d164",
+    "classes": [
+     "RMError",
+     "EpistemicViolation",
+     "SecurityViolation",
+     "IdentityConversionBlocked",
+     "ReflectiveElement",
+     "ReflectionTrace",
+     "MetacognitiveSecurity",
+     "ReflectiveMetacognition"
+    ],
+    "funcs": [
+     "_canon"
+    ]
+   },
+   "12_AUTOCONCIENCIA/self_awareness.py": {
+    "sha256": "f2b2244f12a5b7b2",
+    "classes": [
+     "SelfAwarenessError",
+     "ProhibitedEvaluation",
+     "ConsciousnessClaimError",
+     "CognitiveEvent",
+     "CongruenceAnalyzer",
+     "UserDefinedCriterion",
+     "CapabilityMirror",
+     "SelfContrastEngine",
+     "Metacognition",
+     "SelfAwarenessEngine"
+    ],
+    "funcs": [
+     "_canon"
+    ]
+   },
+   "12_AUTOCONCIENCIA/tests/__init__.py": {
+    "sha256": "e3b0c44298fc1c14",
+    "classes": [],
+    "funcs": []
+   }
+  },
+  "tests": [
+   "test_reflective_metacognition.py"
+  ]
+ },
+ "13_CONTEXT": {
+  "modules": {
+   "13_CONTEXT/context_assembly.py": {
+    "sha256": "f369ea5ae572944c",
+    "classes": [
+     "AssemblyError",
+     "ContextAssembler"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "14_DIGITAL_SELF": {
+  "modules": {
+   "14_DIGITAL_SELF/cognitive_api.py": {
+    "sha256": "8974bb65a5da5714",
+    "classes": [
+     "CognitiveAPIError",
+     "DeniedPolicy",
+     "DeniedTenant",
+     "Unprovenanced",
+     "EvolutionLocked",
+     "ReplayStale",
+     "RequestContext",
+     "CognitiveAPI",
+     "MemoryAPI",
+     "EvidenceAPI",
+     "InsightsAPI"
+    ],
+    "funcs": []
+   },
+   "14_DIGITAL_SELF/digital_self.py": {
+    "sha256": "b1a8a6deb4302fbf",
+    "classes": [
+     "DigitalSelfError",
+     "InvalidProvenance",
+     "UnknownEntityKind",
+     "VersionIntegrityError",
+     "EntityVersion",
+     "SelfEntity",
+     "DigitalSelf"
+    ],
+    "funcs": [
+     "_canon"
+    ]
+   },
+   "14_DIGITAL_SELF/genome.py": {
+    "sha256": "8ff7d65467532c89",
+    "classes": [
+     "GenomeError"
+    ],
+    "funcs": [
+     "validate_genome_element",
+     "provenance_breakdown"
+    ]
+   },
+   "14_DIGITAL_SELF/genome_store.py": {
+    "sha256": "730cfd09c96b8ed7",
+    "classes": [
+     "GenomeStore"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "15_COGNITIVE_TWIN": {
+  "modules": {
+   "15_COGNITIVE_TWIN/cognitive_twin_yo.py": {
+    "sha256": "56e1ea7765d1ce65",
+    "classes": [],
+    "funcs": [
+     "_entity_view",
+     "build_twin"
+    ]
+   },
+   "15_COGNITIVE_TWIN/maturity.py": {
+    "sha256": "8b3bd9b03fd1e014",
+    "classes": [
+     "MaturityError"
+    ],
+    "funcs": [
+     "compute"
+    ]
+   }
+  },
+  "tests": []
+ },
+ "16_APP_SPACE": {
+  "modules": {
+   "16_APP_SPACE/web_tools.py": {
+    "sha256": "35cd79c5d266e3f9",
+    "classes": [
+     "WebToolRegistry"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "17_SOVEREIGNTY": {
+  "modules": {
+   "17_SOVEREIGNTY/authority.py": {
+    "sha256": "cd8647f2c0a4f0b6",
+    "classes": [
+     "InvalidAuthorization",
+     "ChangeAuthorization",
+     "Authority"
+    ],
+    "funcs": [
+     "_canon",
+     "verify_authorization"
+    ]
+   },
+   "17_SOVEREIGNTY/elyo_wiring.py": {
+    "sha256": "bf753ec13f9c1002",
+    "classes": [
+     "ElyoGateUnavailable"
+    ],
+    "funcs": [
+     "_load_elyo_gate",
+     "make_elyo_gate",
+     "elyo_code"
+    ]
+   },
+   "17_SOVEREIGNTY/sovereignty.py": {
+    "sha256": "e068f7294086ccab",
+    "classes": [
+     "SovereigntyError",
+     "SignatureInvalid",
+     "HashMismatch",
+     "GenomeIntegrityFail",
+     "HistoryBroken",
+     "AuditTrailBroken",
+     "TwinExporter",
+     "TwinVerifier"
+    ],
+    "funcs": [
+     "_canon",
+     "_sha",
+     "_pubkey_from_did"
+    ]
+   }
+  },
+  "tests": []
+ },
+ "18_SECURITY": {
+  "modules": {
+   "18_SECURITY/webhook.py": {
+    "sha256": "31f1bd9f4bffa2ee",
+    "classes": [
+     "WebhookValidator"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "19_GOVERNANCE": {
+  "modules": {
+   "19_GOVERNANCE/evolution_engine.py": {
+    "sha256": "f4b813e86cbc4513",
+    "classes": [
+     "Proposal",
+     "EvolutionEngine"
+    ],
+    "funcs": []
+   },
+   "19_GOVERNANCE/pipeline_evolution.py": {
+    "sha256": "0abd7675d8a4f2e9",
+    "classes": [
+     "EvolutionPipelineError",
+     "InvalidTransition",
+     "EvolutionLocked",
+     "ChangeRequest",
+     "EvolutionPipeline"
+    ],
+    "funcs": []
+   },
+   "19_GOVERNANCE/state_engine.py": {
+    "sha256": "2e919fd08d1b4a7e",
+    "classes": [
+     "StateError",
+     "StateEngine"
+    ],
+    "funcs": []
+   }
+  },
+  "tests": []
+ },
+ "20_AUDIT": {
+  "modules": {
+   "20_AUDIT/cli.py": {
+    "sha256": "c454cb33d6f3ae8b",
+    "classes": [],
+    "funcs": [
+     "cmd_status",
+     "cmd_verify",
+     "cmd_gate_check",
+     "main"
+    ]
+   },
+   "20_AUDIT/observability.py": {
+    "sha256": "f2cb810147216ac7",
+    "classes": [
+     "Correlation",
+     "StructuredLogger",
+     "Metrics",
+     "Tracer",
+     "HealthChecks",
+     "AuditEvents",
+     "Observability"
+    ],
+    "funcs": [
+     "_sanitize"
+    ]
+   }
+  },
+  "tests": []
+ },
+ "21_EVIDENCE_LEDGER": {
+  "modules": {},
+  "tests": []
+ },
+ "22_TESTING_VALIDATION": {
+  "modules": {},
+  "tests": []
+ },
+ "23_INVESTIGACION_EXPERIMENTACION_Y_EVOLUCION": {
+  "modules": {
+   "23_INVESTIGACION_EXPERIMENTACION_Y_EVOLUCION/research_engine.py": {
+    "sha256": "708f979a12e5b943",
+    "classes": [
+     "ResearchError",
+     "ResearchQuestion",
+     "Experiment",
+     "Evaluation",
+     "ResearchEngine"
+    ],
+    "funcs": [
+     "_canon"
+    ]
+   },
+   "23_INVESTIGACION_EXPERIMENTACION_Y_EVOLUCION/tests/__init__.py": {
+    "sha256": "e3b0c44298fc1c14",
+    "classes": [],
+    "funcs": []
+   }
+  },
+  "tests": [
+   "test_research_engine.py"
+  ]
+ }
+}

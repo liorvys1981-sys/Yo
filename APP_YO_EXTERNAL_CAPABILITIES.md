@@ -1,0 +1,2 @@
+# EXTERNAL CAPABILITIES
+Personality Machine / DigitalTwin / SkyTwin: REJECTED — code unavailable. ADAPTED AT PATTERN LEVEL ONLY (Relationship/Session/Turn, Decision/Policy/Trust, Context, SSE/WS/Voice, MCP). ZERO copied lines, ZERO source extraction claim, ZERO reused files.

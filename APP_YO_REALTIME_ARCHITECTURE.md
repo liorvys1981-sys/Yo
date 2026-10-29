@@ -1,0 +1,2 @@
+# REALTIME
+SSE (event streams) + RealtimeSession (WebSocket-style, aislamiento por session, reconnect/resume con cursor, correlation_id, ack idempotente) + VoiceProvider (interfaz SIN backend: proveedor NO activado, no inventado). Declarado: Voice backend BLOCKED (sin proveedor ejecutable).

@@ -1,0 +1,2 @@
+# FINAL REGRESSION
+25 suites / 284 tests / 0 FAIL / 0 ERROR / rc=0 / doble corrida determinista (273->284 tras gaps). Subprocess independiente. Baselines: 232->260->264->273->284 (evolucion documentada, nunca sobrescrita).

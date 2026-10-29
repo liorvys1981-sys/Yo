@@ -1,0 +1,2 @@
+# CAPABILITY MIRROR
+Clasificaciones: OBSERVED_CAPABILITY (>=3 frecuencia + evidencia), POTENTIAL_CAPABILITY, USER_CONFIRMED_CAPABILITY (evidencia + confirmacion), UNCERTAIN_CAPABILITY. Cada una con evidencia/frecuencia/contexto/temporalidad/confidence/provenance/confirmacion. POTENTIAL nunca -> identidad (is_identity=False estructural).

@@ -1,0 +1,2 @@
+# ANTI-MANIPULATION
+PROHIBIDO generar: miedo, culpa, verguenza, dependencia, coercion, presion emocional, aislamiento, falsa certeza, adulacion manipulativa. assert_neutral() rechaza lexico manipulativo (test: ataque #25). Preguntas metacognitivas neutrales, sin conducir. Sin diagnostico automatico ni etiquetado moral.

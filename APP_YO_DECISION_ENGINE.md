@@ -1,0 +1,2 @@
+# DECISION ENGINE
+Pipeline INPUT->CONTEXT->OPTIONS->EVALUATION->POLICY->TRUST->DECISION->EXPLANATION->OUTCOME->FEEDBACK. Registrado: decision_id/input/context/options/selected/evidence/confidence/policy/trust/reason/ts. Explicacion auditable SIN chain-of-thought privado (prohibido en logs).

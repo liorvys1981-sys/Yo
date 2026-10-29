@@ -1,0 +1,2 @@
+# APP BRIDGE SPEC
+Pipeline 9 etapas. Cada evento conserva source/provider/timestamp/provenance/permission_scope/tenant/owner/confidence/content_hash/evidence_id. Bridge NO escribe DigitalSelf. Ruta a DigitalSelf solo via G8/R1.

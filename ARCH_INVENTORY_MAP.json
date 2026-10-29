@@ -1,0 +1,147 @@
+{
+ "EL_YO/00_CONSTITUCION_EL_YO/el_yo/constitution.py": [
+  "00",
+  "Matriz de impacto constitucional",
+  "test_gobierno.py, R1 suite"
+ ],
+ "EL_YO/00_CONSTITUCION_EL_YO/el_yo/gates.py": [
+  "00",
+  "Frase-canal + codigo del dia + doble llave",
+  "R1 12/12"
+ ],
+ "EL_YO/00_CONSTITUCION_EL_YO/el_yo/evidence.py": [
+  "00",
+  "Ledger append-only hash-chained+flock",
+  "todo"
+ ],
+ "EL_YO/00_CONSTITUCION_EL_YO/el_yo/cli.py": [
+  "20",
+  "CLI status/verify/gate-check",
+  "cli tests"
+ ],
+ "EL_YO/00_CONSTITUCION_EL_YO/el_yo/webhook.py": [
+  "18",
+  "Frontera HMAC anti-replay",
+  "webhook tests"
+ ],
+ "EL_YO/02_IDENTIDAD/identity.py": [
+  "01",
+  "DID did:key + VC + revocacion",
+  "fase2 10/10"
+ ],
+ "APP_YO/impl/persistent_memory.py": [
+  "02",
+  "5 memorias persistentes lifecycle",
+  "G5 10/10"
+ ],
+ "APP_YO/impl/vector_memory.py": [
+  "02",
+  "Indice semantico determinista + retriever",
+  "OM 7/7"
+ ],
+ "APP_YO/impl/self_awareness.py": [
+  "12",
+  "Metacognicion, espejo, congruencia",
+  "post284 suites"
+ ],
+ "APP_YO/impl/reflection.py": [
+  "04",
+  "Reflection determinista 6 tipos",
+  "G6 14/14"
+ ],
+ "APP_YO/impl/insights.py": [
+  "04",
+  "Ciclo insight CONFIRMED/REFUTED",
+  "G10 14/14"
+ ],
+ "APP_YO/impl/relationship_model.py": [
+  "05",
+  "Decision/Policy/Trust + Session/Turn",
+  "OM suites"
+ ],
+ "APP_YO/impl/feedback_loop.py": [
+  "06",
+  "Feedback->observation->proposal",
+  "OM"
+ ],
+ "APP_YO/impl/swarm.py": [
+  "08",
+  "6 agentes capability manifests trust-ramp",
+  "G9 12/12"
+ ],
+ "APP_YO/impl/realtime.py": [
+  "10",
+  "SSE/WS/Voice/MCP gateway",
+  "OM gaps"
+ ],
+ "APP_YO/impl/chat.py": [
+  "10",
+  "ChatPipeline interfaz del Twin",
+  "OM gaps"
+ ],
+ "APP_YO/impl/interaction_to_cognition.py": [
+  "10",
+  "Pipeline interaccion->cognicion",
+  "post284"
+ ],
+ "APP_YO/impl/observability.py": [
+  "20",
+  "Logs/metrics/tracing/health/audit",
+  "OM gaps"
+ ],
+ "APP_YO/impl/digital_self.py": [
+  "14",
+  "DigitalSelf v2.0.0 FROZEN",
+  "20/20"
+ ],
+ "APP_YO/impl/genome.py": [
+  "14",
+  "Validador genoma",
+  "fase2 13/13"
+ ],
+ "APP_YO/impl/genome_store.py": [
+  "14",
+  "Persistencia versionada + EvidenceAPI",
+  "fase3+fase4"
+ ],
+ "APP_YO/impl/cognitive_twin_yo.py": [
+  "15",
+  "Twin YO 13 dimensiones",
+  "P10"
+ ],
+ "APP_YO/impl/maturity.py": [
+  "15",
+  "Madurez multi-criterio",
+  "P10"
+ ],
+ "APP_YO/impl/web_tools.py": [
+  "16",
+  "Web tools declared/scoped/audited",
+  "OM gaps"
+ ],
+ "APP_YO/impl/sovereignty.py": [
+  "17",
+  "Export soberano verify offline",
+  "G11 20/20"
+ ],
+ "APP_YO/impl/authority.py": [
+  "17",
+  "Authority Ed25519 (R1)",
+  "R1 12/12"
+ ],
+ "APP_YO/impl/pipeline_evolution.py": [
+  "19",
+  "Pipeline 8 estados EVOLUTION_LOCKED",
+  "G8 15/15"
+ ],
+ "APP_YO/impl/evolution_engine.py": [
+  "19",
+  "Engine propose->approve/reject",
+  "fase4 12/12"
+ ],
+ "EL_YO/03_ESTADOS/state_engine.py": [
+  "19",
+  "State engine AREA.json",
+  "fase3 6/6"
+ ]
+}

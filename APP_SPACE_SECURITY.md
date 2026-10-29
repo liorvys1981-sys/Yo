@@ -1,0 +1,2 @@
+# APP SPACE SECURITY
+Ataques verificados (suite test_app_space Security + sync): write-using-read-scope, undeclared app, forged auth, replay (misma authz contenido distinto), revoked/paused blocks ops, wildcard scope, app-to-app privilege escalation. Mas matrices previas R1/R2/OM/POST284 (25+11). GAPs: 0.

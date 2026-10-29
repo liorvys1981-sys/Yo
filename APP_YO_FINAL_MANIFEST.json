@@ -1,0 +1,834 @@
+{
+  "generated_utc": "2026-10-08T16:10:41.592496+00:00Z",
+  "files": 138,
+  "manifest": [
+    {
+      "file": "AGENT_CAPABILITY_MATRIX.md",
+      "bytes": 2277,
+      "sha256": "4137d203ea80aa0547227fb0ad18d061d7244630bf292e33edb5634122a25873",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_ARCHITECTURE.json",
+      "bytes": 923,
+      "sha256": "34038e4e21385bce241626508a8e924907c89b27685a6507fd98123c53099204",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_ARCHITECTURE.md",
+      "bytes": 478,
+      "sha256": "3c67d5ed84c4bb2ada1d5a54df2b0010665ab0993f54f9b21721dc4602dbbeb5",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_AUTHORITY_CONSTITUTION.md",
+      "bytes": 342,
+      "sha256": "3c005525f34823b3866dbe6d594869125ec8d832288fa50e0f42add011cf1955",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_BASELINE_FORENSIC.json",
+      "bytes": 7908,
+      "sha256": "24a9f822d584abfbd87a679e005616f57151df2d413451965cacb165d2c8c5a8",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_BASELINE_FORENSIC.md",
+      "bytes": 9160,
+      "sha256": "287fb5963f38e4e7e33b9277ceaca4c6eca235e82bf7ac74085592916c579843",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_BASELINE_SHA256.txt",
+      "bytes": 190,
+      "sha256": "392b0e1586b9dda4be3e7460c3ad46238d456224555881a1cac3bb1d29bd6484",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_COGNITIVE_TWIN_FINAL.md",
+      "bytes": 291,
+      "sha256": "93087d7fa09dfb2f687b000efe97aec8e266814a6d74bf19f9138e6da9c68c25",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_COMPONENT_DECISION_MATRIX.json",
+      "bytes": 6329,
+      "sha256": "fbd57d26e3c0ac4ab564d4d4ea5265d63993ca5c75218aea1c4e28d06a308585",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_CONTEXT_ARCHITECTURE.md",
+      "bytes": 311,
+      "sha256": "92c983217ccfa5695ef82ad9466afdb1a72467c0703b393b53e261f9b2c0cf8f",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_CONTROL_MODEL.md",
+      "bytes": 301,
+      "sha256": "692a7b843d7fa8ea74630a79cab11eb7d76aec0e56888b6f69c616efe24a1b2d",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_DECISION_ENGINE.md",
+      "bytes": 291,
+      "sha256": "6ff53e143b9447e30b3dd3f3b834fc51e726c9e269a25014f250c219d8d85290",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_EXTERNAL_CAPABILITIES.md",
+      "bytes": 277,
+      "sha256": "0faa67fb5f14e4a5d6e3fd49f30337d461037d34a158b4eea938814caa2a9405",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_EXTERNAL_LICENSE_AUDIT.md",
+      "bytes": 283,
+      "sha256": "f4d2dcbb87e6c19b28a32b4b6f450229d0c2f403ddb52832c6568fc5400eabcf",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_FEEDBACK_LOOP.md",
+      "bytes": 284,
+      "sha256": "16e2ae3551d45f3b2332f30e31f7032b4a63b5218b7fc5a60ddd06a9ea25b7d5",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_FINAL_REGRESSION.md",
+      "bytes": 222,
+      "sha256": "aeddae0ba0a417226538c112304e69a5c2f4ceedff2b3efe6feaa3bb507494ea",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_MCP_ARCHITECTURE.md",
+      "bytes": 236,
+      "sha256": "3561771744271599e5fc019c55d12eac9cf7b858a1f37965b2e47ebc2139513a",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_MEMORY_ARCHITECTURE.md",
+      "bytes": 297,
+      "sha256": "eb48dcba4e1357e262e3b219fcf634d577a6fce80e34a450f694e051c0484360",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_POLICY_ENGINE.md",
+      "bytes": 234,
+      "sha256": "f7bd3cf0942d5436d9096a02a52b3cb95684e6d0c7a361c6ae0aaaa4bf5bddd2",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_REALTIME_ARCHITECTURE.md",
+      "bytes": 291,
+      "sha256": "37d9d875593e44434aee5f04e80a06c657e6eb5de072a18a78fb5d3e212f1992",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_SECURITY_REPORT.md",
+      "bytes": 337,
+      "sha256": "f88a787b63a3a20154a6270fbf96069d81d378c6d507e223f70f01178c4c83e3",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_TO_EL_YO_MAPPING.md",
+      "bytes": 1568,
+      "sha256": "39f179fea147f802e89ca96a7b3d624092143b85f8aeb31cb7612d363da25a06",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "APP_YO_TRUST_MODEL.md",
+      "bytes": 194,
+      "sha256": "6a14f222a439063c3b9f2c3126c5f8b59337e71ae49112885afac4d02b24775a",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "AUDIT_ELLA_GENESIS.json",
+      "bytes": 2057,
+      "sha256": "1b616a7799ac953ecee5140e71f91160d1998e89cc2fae86573d3d4a3531d70d",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "AUDIT_ELLA_GENESIS.md",
+      "bytes": 6170,
+      "sha256": "68787418b53c0ddd2f917fe52fc6ac527e7c23da85403155d1f6b2573052b94e",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "AUDIT_ELLA_GENESIS_SHA256.txt",
+      "bytes": 178,
+      "sha256": "bb82754912d9db9cdf3f59511a2fe25006b418ea64f0e03c0dd6ae4327359154",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "AUDIT_FINAL_APP_YO.json",
+      "bytes": 3356,
+      "sha256": "c439110368685e30d5bb6661bc49a996aac5cac64807e3ee9ab66421a771efcc",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "AUDIT_FINAL_APP_YO.md",
+      "bytes": 3311,
+      "sha256": "8327c49303e658ddcbfa532954d797691fa309662ed337f83cd9ed8c0a1eeccd",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "AUDIT_FINAL_SHA256.txt",
+      "bytes": 178,
+      "sha256": "f6284750166a7926d12aa501c9d6b1555055ee85a0d241f20aefa40cd502dd4f",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "COGNITIVE_API_SPEC.md",
+      "bytes": 2103,
+      "sha256": "2693fbcc06451097218f534c0513743c1a235e1b0d8b64cc76fe9da1544196df",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "COGNITIVE_API_SPEC_REAL.md",
+      "bytes": 371,
+      "sha256": "8b3a69d6860c65f27999b54927fa1428db5f6132393bcc85565015d633318bbb",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "COGNITIVE_GENOME_SPEC.md",
+      "bytes": 1880,
+      "sha256": "63c2f401544eaa65cf3a2858c23b234cb3c00be2d6571061291dec814f32e17e",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "COGNITIVE_ONBOARDING_FORENSIC_AUDIT.json",
+      "bytes": 7537,
+      "sha256": "f222bacbd97b082b2eb201299eef28f84122fecb7947299cb2e35f23162392a3",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "COGNITIVE_ONBOARDING_FORENSIC_AUDIT.md",
+      "bytes": 6329,
+      "sha256": "753b2d4155e4cc424054da1d2ba2c29a66aff8840ecf741aa34fafc14ddd7344",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "COGNITIVE_ONBOARDING_FORENSIC_AUDIT_SHA256.txt",
+      "bytes": 212,
+      "sha256": "6dd02dd867084826f828386ec727ec549629c767f7afc4369d3fbae7a1e72986",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "COGNITIVE_TWIN_SPEC.md",
+      "bytes": 1747,
+      "sha256": "8fbb9f3429d808df954d1a09691dc25f9bb41386051621b984464009913773eb",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITALSELF_RESEAL_RECORD.json",
+      "bytes": 1350,
+      "sha256": "990887b812f974c25547dd18f85595a08983bd69fca7de900a007d39491b35d2",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITALSELF_RESEAL_REPORT.md",
+      "bytes": 1685,
+      "sha256": "c4801d640d43d04a56d127bcc9c95c98937daca570e985867376cbeb8675c950",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITAL_SELF_EVOLUTION_v1_to_v2.json",
+      "bytes": 810,
+      "sha256": "393e4553eebe8bea1534ef31f620cc6715ed05468f650732994364aa5cf5f5ac",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITAL_SELF_FREEZE.json",
+      "bytes": 1299,
+      "sha256": "35d63f8a7b99c4bfe6bf345d6f183b5ca9425a9dea445d78ff301057dff40ce5",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITAL_SELF_MODEL.md",
+      "bytes": 1576,
+      "sha256": "d0b7d471983d5bc6e8fe24bba36a04dad5a237311220bd6decb3916451e3ecc0",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITAL_SELF_PROVENANCE.md",
+      "bytes": 965,
+      "sha256": "814f34f740ee201cece4138c40be3e03888a3ab4238aade3d302261288326243",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITAL_SELF_SCHEMA.json",
+      "bytes": 2360,
+      "sha256": "997ca5883d5bc7573b8c47f7a757d51bf81fa75884ff6760638afc000eae8d9f",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITAL_SELF_SPEC.md",
+      "bytes": 1730,
+      "sha256": "dd455b99826d6e425c996dba58f0667dbcd7d8e3e36daaa206495090be50cd09",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITAL_SELF_TEMPORAL_MODEL.md",
+      "bytes": 790,
+      "sha256": "39b02b3afcef5d419d1daaaa6f3035927d41dde5f6bc6c3bb07fd01dd6cad955",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITAL_SELF_VALIDATION.md",
+      "bytes": 1161,
+      "sha256": "af355d5914059a83524f5ad92f31313dbaa1ddfe667ce2be2946b024e993469b",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "DIGITAL_SELF_VERSIONING.md",
+      "bytes": 1047,
+      "sha256": "3b45a83576fd0376bb46e2545dff70236e89e20297db3cbcaef1c55d3c187018",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/ELLA_ARCHITECTURE.md",
+      "bytes": 963,
+      "sha256": "0977fd31090cfeb41409d6980e66a58f4df6cf8511d5240246301da7a58aff58",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/ELLA_COGNITIVE_TWIN_SPEC.md",
+      "bytes": 292,
+      "sha256": "e07aa1c4d1154668a41a53fc8f22e46a1a4c5c119a79e109d98e13dca7fc797f",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/ELLA_IDENTITY_ACTIVATION_REPORT.md",
+      "bytes": 375,
+      "sha256": "7fdeb01a26475bb1cdc32a676ce8dac0c5711d66131b5219f79ed51de3a2f95d",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/ELLA_ORIGIN.md",
+      "bytes": 1537,
+      "sha256": "cbe033bc3af7d9efab35a7cfb0756b8168394ca53f66d8b3d1008a5d6382237a",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/ELLA_SELF_CONTRACT.json",
+      "bytes": 1042,
+      "sha256": "16d94c024700f1808fd83aaac01c6bb5ce4d7ff1b34d96d80e376af32251b15e",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/build_ella.py",
+      "bytes": 2515,
+      "sha256": "e2e4fc202caf8144218c66dae5cb28a2a574bf9770ca8ade1ba31b00d259dba5",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/ella_activation.py",
+      "bytes": 6229,
+      "sha256": "4841320c63730d0acd703437868e560568f5c7027aa975a1d37e676fb7f4e0dc",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/ella_foundation.py",
+      "bytes": 4838,
+      "sha256": "dc1ad4dc2cd50d41b445ca01962f72782d1f7513fcdc58eba27c8ec854b8d47c",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/ella_genesis.py",
+      "bytes": 8100,
+      "sha256": "0c4d5ad124af5e3148ab8af227a7f88dda5a91a66f16c2dbf08519d003f5001c",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA/twin_contracts.py",
+      "bytes": 4420,
+      "sha256": "fd38205869dba1b734b9c0bb91c6f7564cd7a5b43592356eebd104870e06fac2",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA_CONTRACT_REPAIR_REPORT.md",
+      "bytes": 1068,
+      "sha256": "a0011fcefd180941e78001587dbdc98469fb89916403b4e5c85bf1d5d3934bdd",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA_IDENTITY_ACTIVATION_CONTRACT.json",
+      "bytes": 3734,
+      "sha256": "d139fe0844e95df8e89607bcc813f280b46e079def78eb5e179c8caac752db50",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA_IDENTITY_ACTIVATION_DESIGN.md",
+      "bytes": 3537,
+      "sha256": "0c65ed5bebadb1ca5bca770afef4fc3e23c9691a6516323be60dc75bbc13c9aa",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "ELLA_IDENTITY_ACTIVATION_TEST_PLAN.md",
+      "bytes": 1692,
+      "sha256": "a0e7825cd54c7cdfb53be01f9b6fcb64c85ac3655f3a3eaa17695672c235e1d1",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "EVOLUTION_ENGINE_SPEC.md",
+      "bytes": 1361,
+      "sha256": "1e41cc1e1042a847526a64fadbf97608b7e24eeac502feb53bfa1aee018f2853",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "EXTERNAL_PROJECTS_CLASSIFICATION.md",
+      "bytes": 965,
+      "sha256": "909bc163bfbad903525a921ac77fd0376f8b51cf5bd89be4b1db296f8233e743",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "FASE2_REPORT.md",
+      "bytes": 5443,
+      "sha256": "ca09c56bb005cab2b727e01bff39051f1c73c149f157ee8be210e2ae738e33f9",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "FASE3_REPORT.md",
+      "bytes": 1981,
+      "sha256": "82275f9f95e7f7ff1906572b92be42734e45b4d90cab49ca6c4c7bf086c42eb9",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "FASE4_REPORT.md",
+      "bytes": 1278,
+      "sha256": "c41c70bb103e6a99b3f88f8e324b7ca1afc3c645eb04241cb5dfe8c59968e4cf",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "GATES_STATUS.json",
+      "bytes": 3745,
+      "sha256": "5a304b8d8cf7661901ae6b1964edfcb8aa8b4d4af009024dcef32849a1778aad",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "MEMORY_MODEL.md",
+      "bytes": 1546,
+      "sha256": "2101c644a4be8345fb94ceef85d91f87e9e0659ab32295aed53ec95bf6e33e35",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "OM_AUTHORITY_CONTROL_AUDIT.md",
+      "bytes": 1538,
+      "sha256": "ed2200729eda4a26ce46442b936561f3a9316172cd33d81b2ddadf35cfe81dde",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "OM_FINAL_AUDIT.md",
+      "bytes": 1757,
+      "sha256": "4ee9fac375e8fb47fe49d5865690605e19a1422d4ab7f8d107b8d02eefdf844e",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "OM_FINAL_MANIFEST.json",
+      "bytes": 6394,
+      "sha256": "9a7a878fe281c047693dd291aa6be0eb50b44876e7fdc772a24c593b7d78db55",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "OM_FINAL_MANIFEST_SHA256.txt",
+      "bytes": 2823,
+      "sha256": "9656963f9c193f30c05c5adf2ed7fada14eace851b9efbff3fdd38a24c2795ed",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "OM_SECURITY_COVERAGE_MATRIX.md",
+      "bytes": 1278,
+      "sha256": "8e7013aa55e86d10358be22a0b63fef938ba54ea497600b07bc1111695633003",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "PHASE_NEXT_BASELINE_SHA256.txt",
+      "bytes": 788,
+      "sha256": "3e8c8c070cafc47cbe51a9a7b057b057ea70bcd4c9d42e2fc2208dbb4d28f37b",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "R2_ELLA_GENESIS_AUTHORIZATION.json",
+      "bytes": 3700,
+      "sha256": "706849ca25cad1731422b41f113058aafb1c133d60b8051e6cf1c5731f2511d8",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "R2_ELLA_GENESIS_AUTHORIZATION_REPORT.md",
+      "bytes": 4424,
+      "sha256": "f048af5a7cae1245099397dee3e43caaafab6aba7a42eb113a2b43da7f14edbb",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "R2_ELLA_GENESIS_AUTHORIZATION_SHA256.txt",
+      "bytes": 207,
+      "sha256": "201e174c03931e759535c77400fdbd36f0d5af984113d9292d72d0c2b005519d",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "YO_ELLA_INTEGRATION_REPORT.md",
+      "bytes": 283,
+      "sha256": "1f6c2aded56a78eaff77ba7c501daafa9de9fb7ca84ab95f26e94a846cde3728",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "YO_ELLA_REGRESSION.md",
+      "bytes": 170,
+      "sha256": "b8c37c3e2954910e4434cfa7562210e3efc57308e18c29450aa0d540d4bdef83",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/__init__.py",
+      "bytes": 94,
+      "sha256": "ab7c902fdd215f64489a34dda4400e402b2a813bbadf71786ed0632c67492719",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/authority.py",
+      "bytes": 4607,
+      "sha256": "3297ae027e15df75c09ddf35126fcf2977eebd5687232a4c1b08c0510b422750",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/chat.py",
+      "bytes": 2440,
+      "sha256": "58bb673afce17ae8c7a20e645ad45e225e88ef264fbf09023f8af98b771e5738",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/cognitive_api.py",
+      "bytes": 4223,
+      "sha256": "8974bb65a5da57140c91015d906f5df0895e153b2c2134ec71f178f2a3614496",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/context_assembly.py",
+      "bytes": 2674,
+      "sha256": "f369ea5ae572944c134a2946e97472e71772c411ea5654a5b71bea8fdabfd805",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/digital_self.py",
+      "bytes": 6538,
+      "sha256": "b1a8a6deb4302fbf2b92e0e517d75ae0073d180575650efc21664a83ac165935",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/elyo_wiring.py",
+      "bytes": 1663,
+      "sha256": "904899f4df00010e1fb30e564fbc31fdfbe5f789e9271873b2cf75e1a013b694",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/evolution_engine.py",
+      "bytes": 4083,
+      "sha256": "0edab94cb6e1f95d11af748a6b3329e1d4aa72db7417d6c6fc62f4558e9b86a6",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/feedback_loop.py",
+      "bytes": 2133,
+      "sha256": "dadaa252044148f26aef141b17181271bd4779bf7c4023b3de818481f9c03c75",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/genome.py",
+      "bytes": 2405,
+      "sha256": "8ff7d65467532c89a191bd1c1f80fbe07aaeb1b11301543ec606ba4742dd23df",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/genome_store.py",
+      "bytes": 6267,
+      "sha256": "e31f48f634c896ab22ac13443ce0d661f132d99613f6044696d19f95e3cf8c5b",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/insights.py",
+      "bytes": 5145,
+      "sha256": "4e8f7d3e6993dfc128863bb960454693544ca7243b5b5fb946df6cbaf57d2ac8",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/interoperability.py",
+      "bytes": 1198,
+      "sha256": "78153e53c2f78e05801a8e8b057d3d274efee9cba3f2295aad58d0491460f99b",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/memory_model.py",
+      "bytes": 4243,
+      "sha256": "0b68756159b3e952a0bc1a5658c28e282634b2be46ac5491859a98823a888218",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/observability.py",
+      "bytes": 3796,
+      "sha256": "f2cb810147216ac733a165e88989f76f6f3af7accbbbcd8754e6183a5050529e",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/persistent_memory.py",
+      "bytes": 6025,
+      "sha256": "2b7ca508d84385ba0b42d360ff9b0320d1d073935a3aebf084edf66b9e28fe8a",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/pipeline_evolution.py",
+      "bytes": 6900,
+      "sha256": "4809a76d8d9cbb3a7286665b03b606946487ce01fc578c79125caa1273928648",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/realtime.py",
+      "bytes": 4192,
+      "sha256": "153feb50ed75650b0b2eedaf84dd8d7c1ec018e3fc996be9720735897fd43a00",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/reflection.py",
+      "bytes": 5664,
+      "sha256": "7ee4bee27b2b5b65c8e207da60ba62f735c37d963d683f409924369f85369012",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/relationship_model.py",
+      "bytes": 7435,
+      "sha256": "859f8f9a5b326afe731b7f07ed5c1c016a6175e4433c4b7413c81ee2ffa50609",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/sovereignty.py",
+      "bytes": 6937,
+      "sha256": "2cf568b759c916c063c7d05ec242143d8f0a5d71e97e89a8c45aaf3e2d9682dc",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/swarm.py",
+      "bytes": 5255,
+      "sha256": "ab66796f6c33aa63ad841fed9c08fded92a2f3b604744e6d20914e88756f9491",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/vector_memory.py",
+      "bytes": 3102,
+      "sha256": "5ae1ce898035d92e88a4fec5afd85cfda9c7a053d6e7537ab42fd723039736cc",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "impl/web_tools.py",
+      "bytes": 1841,
+      "sha256": "35cd79c5d266e3f99759874c6d90d47e1f90bc70bd10a8ac9562dec83d124433",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/ADAPTIVE_QUESTION_ENGINE.md",
+      "bytes": 215,
+      "sha256": "a9cd0dc1941537c1ee36c8e0190f8cf1fec7b9a4555fbdc6c99c8de33f8ddd4a",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/COGNITIVE_MATURITY_SPEC.md",
+      "bytes": 358,
+      "sha256": "1c0c5c05312f097017bde3bea2b0cf1bc716c509393ea69dc97511ccf19fbd21",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/COGNITIVE_ONBOARDING_CONTRACT.json",
+      "bytes": 688,
+      "sha256": "0650018b76440b026fabdb50804d01fa55253c600ac1263d98fc29255d1e2feb",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/COGNITIVE_ONBOARDING_IMPLEMENTATION.md",
+      "bytes": 826,
+      "sha256": "25ae5e1a83c5e3e10d433a42c1a77351222cce7e5ed20f971cddb4949a59be79",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/COGNITIVE_TWIN_YO_SPEC.md",
+      "bytes": 263,
+      "sha256": "624cd8bea492a0ca8ee472e737583558a67a7262a2338a9cbc5f254b33dba022",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/QUESTION_REGISTRY.json",
+      "bytes": 4936,
+      "sha256": "acf5c9b00124fa749703af2065077d9829a605316c12d82549fb391f66c65cc8",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/adaptive_engine.py",
+      "bytes": 7106,
+      "sha256": "e9ce2103dd40c1dbba41adce776595f588fe60038fe399154035c62e5ba3a8dc",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/cognitive_twin_yo.py",
+      "bytes": 2703,
+      "sha256": "56e1ea7765d1ce65a82c7b89d4b818fbc79099bb9790b416906b2858e0ad4b89",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/maturity.py",
+      "bytes": 4116,
+      "sha256": "8b3bd9b03fd1e0147ab90be49c19a89c671befe18170b59832f53d9611ea684a",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "onboarding/question_registry.py",
+      "bytes": 3072,
+      "sha256": "d522504b18cae1f31ec22e62831bb5a6f62014c23b633561d0f145e359150f18",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_ella_genesis.py",
+      "bytes": 5906,
+      "sha256": "b332fbfb4831181aa65ee10d607e87e39aa86002c2a5a72db0f1e7d458d4af00",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_fase2_api.py",
+      "bytes": 2077,
+      "sha256": "398ecaf85354f4bfb9d7c0b2a562569db1029b298b07510e1a778ccd49e59e81",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_fase2_digitalself.py",
+      "bytes": 6601,
+      "sha256": "4d61b67724d6724b85ed1111d6b5d51cef6fe1d838e2c059974ed263d2754db7",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_fase2_genome.py",
+      "bytes": 3455,
+      "sha256": "7fb5fdef6d2ea765a5a27926e1c00cbcec1927d1ab14295d1794d49485092750",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_fase2_memory.py",
+      "bytes": 2910,
+      "sha256": "fc9653ca19457f400adb6810284c617c5d12c7454b847096e2881cbebbf9e905",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_fase3_genome_store.py",
+      "bytes": 4286,
+      "sha256": "26e5179b24867b505cee8cd79a2fe076b9eaf5d2ddb51baed963c2d90b6864e1",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_fase4_evolution.py",
+      "bytes": 6537,
+      "sha256": "2932d9ba05efb3f7237a6a7bc6c12fbb4da451c47d026de953e02f7abc44f47c",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_g10_insights.py",
+      "bytes": 6926,
+      "sha256": "0fe5914985f01685e15fb3c6328dd2b186ed586c6048ecf9111219ff2a2cd2a6",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_g11_sovereignty.py",
+      "bytes": 8135,
+      "sha256": "e53abf725e1231d898053b95a79d5498ea988d70ac3b82c67a4b4edf02cd3ba4",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_g12_integration.py",
+      "bytes": 7423,
+      "sha256": "2d896ada1e7baac7fd32e3be6792f57df256291ae94f3115c7ee9a9d98ea48ad",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_g14_e2e.py",
+      "bytes": 5553,
+      "sha256": "c8546efbd1bd7c18e568f05f9f92eeaec1e80c8d4e3827acf8f4d5accba81949",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_g5_persistent_memory.py",
+      "bytes": 4128,
+      "sha256": "9cd8ed5048df15dfe1cd41801ba8da3f88d03b9191b42f277fcce6332f4eb218",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_g6_reflection.py",
+      "bytes": 5233,
+      "sha256": "e32eae1aa0eab65c8ce5c59a840ab07f3066a002a5cdb361add831de59ea4854",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_g8_pipeline.py",
+      "bytes": 9612,
+      "sha256": "02c285359eaa976eaa60b1fb1e7687d28948e4790ed9e10e84acb7b217aeacb5",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_g9_swarm.py",
+      "bytes": 4147,
+      "sha256": "b62b9c4d458326509b4add2a0101949a49aad3544ecceac10ce306dfd5fd5fb6",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_mission_security_matrix.py",
+      "bytes": 5402,
+      "sha256": "36e40f4afe1d087ffbdc9971fca6e93e9929c7f61a786bfe08e652ad02405423",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_om_gaps.py",
+      "bytes": 4645,
+      "sha256": "0ef70edaaae42a586d680dd8b8d00a5156b190eac57e5a499ef7d5953bdbd51d",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_om_memory_context.py",
+      "bytes": 3486,
+      "sha256": "408814a1f3e176e0e453a23dd8bdf487c44ea29ce648b84db0d5f3100f02a3d5",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_om_realtime_tenancy.py",
+      "bytes": 6508,
+      "sha256": "4a585054f034765cad6e68442ac3b33d114f42d80aed1d65a7a763a664708b95",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_om_relationship_decision.py",
+      "bytes": 3540,
+      "sha256": "d9b78572736551c1d5716867b3def6166ba84c5356c4fe85ffa858a7ad454fd7",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_om_twin_contracts.py",
+      "bytes": 2908,
+      "sha256": "0b78bbc37f247e5a26f038615280b9712306707518ea8efebbee5afc39497935",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_p10_ella.py",
+      "bytes": 9080,
+      "sha256": "4afb3bb2186ecdbc8d4c06b82d775f655f54b38f3187a98de70982b88eabba65",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_p10_onboarding.py",
+      "bytes": 5855,
+      "sha256": "8165fb83ef56bfe72a85b15a2e89a410dfaafe3a0f6adae5c55c58b55df590ea",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_r1_adversarial.py",
+      "bytes": 6086,
+      "sha256": "1b6c2cdbbe5264125e57e25da313f445853a0d5002552f173d49de3e98fe73cb",
+      "status": "VERIFIED"
+    },
+    {
+      "file": "tests/test_r2_ella_adversarial.py",
+      "bytes": 6771,
+      "sha256": "23f96c8c9d311fc9c7539c13b2a1fe690475ed33ba8ff232086f64f90efa046b",
+      "status": "VERIFIED"
+    }
+  ]
+}

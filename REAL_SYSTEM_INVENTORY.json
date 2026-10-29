@@ -1,0 +1,359 @@
+{
+  "generated_utc": "2026-10-08T01:05:25.509238Z",
+  "environment": {
+    "python": "3.12.12",
+    "pytest": "/usr/bin/pytest",
+    "git": "/usr/bin/git",
+    "node": "/usr/bin/node",
+    "openssl": "/usr/bin/openssl",
+    "docker": "NOT_AVAILABLE",
+    "network": "NOT_AVAILABLE (sandbox)",
+    "hardware_access": "NONE"
+  },
+  "states_legend": {
+    "EXISTS": "archivo presente en disco",
+    "IMPLEMENTED": "código real que ejecuta y produce resultado verificado",
+    "CONFIGURED": "configuración aplicada a un sistema real",
+    "TESTED": "prueba ejecutada con resultado registrado",
+    "VERIFIED": "prueba reproducible + evidencia con hash",
+    "DOCUMENTATION_ONLY": "especificación .md, sin ejecución",
+    "SIMULATED": "NO USADO: nada se simula como real",
+    "HARDWARE_DEPENDENT": "requiere hardware físico no disponible en este entorno",
+    "FALTANTE": "no existe ni como documentación"
+  },
+  "findings": {
+    "documentation_md": 46,
+    "zip": 1,
+    "executable_code_files": 0,
+    "docker_compose_files": 0,
+    "unit_tests": 0,
+    "services_running": 0,
+    "databases": 0,
+    "saos_v17_source": "NOT_AVAILABLE_IN_ENVIRONMENT",
+    "areas_00_23_canonical_definition": "NOT_PROVIDED_IN_ANY_MESSAGE"
+  },
+  "components": [
+    {
+      "name": "EL_YO_SOBERANO/01_INFRAESTRUCTURA_Y_HARDWARE/01_Servidor_Local_Proxmox_VE.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "7b21ff14b7484a92d3aa985232200253c16f6d4cbe425b99076d78369162c21f"
+    },
+    {
+      "name": "EL_YO_SOBERANO/01_INFRAESTRUCTURA_Y_HARDWARE/02_Almacenamiento_NAS_TrueNAS.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "6edb0329b2923c435af558a36a663567ee4fc2d6e45919e3583429431bdb6e89"
+    },
+    {
+      "name": "EL_YO_SOBERANO/01_INFRAESTRUCTURA_Y_HARDWARE/03_Hardware_Movil_GrapheneOS.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "b306f698ce0c7b01152cb8e56d9c181ba18eadb62d9e9c3d4e273e925046e511"
+    },
+    {
+      "name": "EL_YO_SOBERANO/01_INFRAESTRUCTURA_Y_HARDWARE/04_Seguridad_Fisica_YubiKey_2FA.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "3b84e50e4eb7e44cea8032b972fbfab22d29e4464d31146cdee3f8452111c8b4"
+    },
+    {
+      "name": "EL_YO_SOBERANO/01_INFRAESTRUCTURA_Y_HARDWARE/05_Bateria_Respaldo_UPS_Y_Generador_Solar.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "7293862aa57b6909043362d67b9390150b54e49de31ac14dc82f926c7258c970"
+    },
+    {
+      "name": "EL_YO_SOBERANO/02_RED_Y_CONECTIVIDAD/01_Router_pfSense_OPNsense.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "a308ba0f1db193940a19688c3fe69dd5f4e064955cdb922a72c93f910c37d24d"
+    },
+    {
+      "name": "EL_YO_SOBERANO/02_RED_Y_CONECTIVIDAD/02_VPN_Mullvad_WireGuard.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "e652fe44802f852111e9c5035c52a3c3f9e3609d60e2b254e04b816f7ca1f4cf"
+    },
+    {
+      "name": "EL_YO_SOBERANO/02_RED_Y_CONECTIVIDAD/03_Bloqueo_AdGuardHome_Pihole.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "1138ebf1a5d7995e49bbe3c1e061d69fbdfd2d770be1d96843d7522ec4d7a6dc"
+    },
+    {
+      "name": "EL_YO_SOBERANO/02_RED_Y_CONECTIVIDAD/04_Red_Remota_Tailscale.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "2c780127b154d5ce99746a608db00747fb9852811536dce62b652072ff9d4f6c"
+    },
+    {
+      "name": "EL_YO_SOBERANO/02_RED_Y_CONECTIVIDAD/05_DNS_Raiz_Alternativo_Y_BGP_Privado.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "a24e2ba3c31e043edc8a08aa605196750feead255553335200c5007cef9531c4"
+    },
+    {
+      "name": "EL_YO_SOBERANO/03_NUCLEO_COGNITIVO_E_INTELIGENCIA/01_Cerebro_Ollama_OpenWebUI.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "c7351a623fccae00435e4597598a1709ac5d7b672644aa5bd55d8a719021480e"
+    },
+    {
+      "name": "EL_YO_SOBERANO/03_NUCLEO_COGNITIVO_E_INTELIGENCIA/02_Orquestacion_n8n_NodeRed.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "1e8964d55d812f7ed81b762868a7aa130fed9b27a303fca283ca410ecba7ef27"
+    },
+    {
+      "name": "EL_YO_SOBERANO/03_NUCLEO_COGNITIVO_E_INTELIGENCIA/03_Memoria_Vectorial_Qdrant.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "0b98d42546f2dc43e1b70cd14adccb5ffa4274eb5cbd4ee3b61a04f793c31f56"
+    },
+    {
+      "name": "EL_YO_SOBERANO/03_NUCLEO_COGNITIVO_E_INTELIGENCIA/04_Fine_Tuning_ADN_Cognitivo_Personal.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "a9ea670c2f190e2c2cdd904270716614e38d7dfb20d27db03bd779a399afe3a5"
+    },
+    {
+      "name": "EL_YO_SOBERANO/04_COMUNICACIONES_Y_PRIVACIDAD/01_Correo_ProtonMail_Tuta.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "2af1ec09beadf350a4bd7a11e4eedbb9f7e4a8e97d11cecc108f95be78874a93"
+    },
+    {
+      "name": "EL_YO_SOBERANO/04_COMUNICACIONES_Y_PRIVACIDAD/02_Enmascaramiento_SimpleLogin.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "41999ffefc5dacd651fe7f9060e8a5379af6361be94fabf638eefc6018d9e16f"
+    },
+    {
+      "name": "EL_YO_SOBERANO/04_COMUNICACIONES_Y_PRIVACIDAD/03_Mensajeria_Signal_Matrix.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "67cf2f72c99a0b7dc950d06c3b6b5b04b86c20db19c115250d714b6c765b84d4"
+    },
+    {
+      "name": "EL_YO_SOBERANO/04_COMUNICACIONES_Y_PRIVACIDAD/04_Resiliencia_Briar.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "3bec6dd5b1ee85cf0e978b25f66d6dd610ff05e62ef78e64a29496ed9463dff6"
+    },
+    {
+      "name": "EL_YO_SOBERANO/04_COMUNICACIONES_Y_PRIVACIDAD/05_Telefonia_VoIP_SIP_Descentralizada.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "4878867b18ee42e3e22e7ca135fe7f50740647d58ff112fff3402c517a5b5ee6"
+    },
+    {
+      "name": "EL_YO_SOBERANO/05_DATOS_Y_ARCHIVOS/01_Nube_Privada_Nextcloud.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "fc0c46fdf11a9f79cd911f80f43846ad08843601cab7b1f51200457618e2a2c1"
+    },
+    {
+      "name": "EL_YO_SOBERANO/05_DATOS_Y_ARCHIVOS/02_Gestor_Contraseñas_Vaultwarden.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "b45d024358341e52abde4346e7c5cd83f6bcf9ef06fecb39b1daecc2656be3a9"
+    },
+    {
+      "name": "EL_YO_SOBERANO/05_DATOS_Y_ARCHIVOS/03_Sincronizacion_P2P_Syncthing.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "81cb306c545eaf4df459c1cb3b94341a1a85fe4c4bd574160f7458c89d1b0159"
+    },
+    {
+      "name": "EL_YO_SOBERANO/05_DATOS_Y_ARCHIVOS/04_Backups_Immutables_Restic_Borg.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "f103edd2bd7fddba73e67a620b094c0c84a1f280ed5e62e38968261d026124fd"
+    },
+    {
+      "name": "EL_YO_SOBERANO/06_PRODUCTIVIDAD_Y_CONOCIMIENTO/01_Segundo_Cerebro_Obsidian_Logseq.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "d316c3a402edaf9ec53c10e824472aa80fa6f5972819c96e54e77722e6fa3b2a"
+    },
+    {
+      "name": "EL_YO_SOBERANO/06_PRODUCTIVIDAD_Y_CONOCIMIENTO/02_Gestion_Proyectos_Plane.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "cc8519257727a13375cc11858d52a511d0356fd9ff8537b779b8aa076b51de50"
+    },
+    {
+      "name": "EL_YO_SOBERANO/07_NAVEGACION_Y_BUSQUEDA/01_Motor_Busqueda_SearXNG.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "97ed72382176b1eae7adf0a9e76eb95722fbf6ec3a14eba526455e2f1ea213ef"
+    },
+    {
+      "name": "EL_YO_SOBERANO/07_NAVEGACION_Y_BUSQUEDA/02_Navegadores_LibreWolf_Mullvad.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "cc7ba5ec3cd884da842762792ad278edc74d9fc40cc07e84eede9894b10e3c2a"
+    },
+    {
+      "name": "EL_YO_SOBERANO/08_FINANZAS_Y_OPERACIONES/01_Contabilidad_Firefly_III.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "ccac305d7f0cc842ec84cfcd6ef7ab5f12d62a75077cebf05d316e53fcf2af2d"
+    },
+    {
+      "name": "EL_YO_SOBERANO/08_FINANZAS_Y_OPERACIONES/02_CRM_Y_Negocios_EspoCRM.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "b4bb3c830675ade1d4df87f93c06090e634bfaae7f6b8d7a8bfa809b5b1264e8"
+    },
+    {
+      "name": "EL_YO_SOBERANO/09_MEDIOS_Y_ENTRETENIMIENTO/01_Servidor_Multimedia_Jellyfin.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "9bf3fe3212743a724eec1d36c9a6c4f67d1f9699eb1e82d7b853c552a04820f9"
+    },
+    {
+      "name": "EL_YO_SOBERANO/09_MEDIOS_Y_ENTRETENIMIENTO/02_Biblioteca_Audiobookshelf.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "76c5479931e7c75168cdcfb8589481a98423b4d10f4a60437529f4a4a84e7eb7"
+    },
+    {
+      "name": "EL_YO_SOBERANO/10_CRIPTOGRAFIA_Y_ACTIVOS/01_Billeteras_Frias_Multisig.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "5980ee755c360024cc447a435321eef0aa2d6a000281e273a9d12ad1b48cdaae"
+    },
+    {
+      "name": "EL_YO_SOBERANO/11_CONSCIENCIA_OPERATIVA_Y_ETICA/01_Constitucion_Del_Yo.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": false,
+      "sha256": "30420aeb18768ca91e592caf856892a3f214f609dc5a76301137c3cef67d1f6a"
+    },
+    {
+      "name": "EL_YO_SOBERANO/11_CONSCIENCIA_OPERATIVA_Y_ETICA/02_Auditoria_De_Sesgos.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": false,
+      "sha256": "e31c2c740584bc5d46c56ce55e67df95e941dd865179afd4455afaf2b1d778bc"
+    },
+    {
+      "name": "EL_YO_SOBERANO/12_SEGURIDAD_EXTREMA_Y_BUNKER/01_Cifrado_LUKS_Nuke_Passphrase.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "c46fbd1e8d2179580ed32af1bc7e0ca6b2a0883f4c787eb1af2b667fad63a0df"
+    },
+    {
+      "name": "EL_YO_SOBERANO/12_SEGURIDAD_EXTREMA_Y_BUNKER/02_Sensores_HomeAssistant.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "cc921d751ddcc66ba200bf5380c224b1ba721626117bd467efe56ac97720288b"
+    },
+    {
+      "name": "EL_YO_SOBERANO/12_SEGURIDAD_EXTREMA_Y_BUNKER/03_Bolsas_Y_Jaulas_Faraday_Antirradiacion.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "f60b2cf510bd31e21f31d26af408991f0e6e245507b6d279dbe064899fc1de3f"
+    },
+    {
+      "name": "EL_YO_SOBERANO/13_RESPALDO_LEGAL_Y_PATRIMONIAL/01_Estructuras_Legales_DAOs.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": false,
+      "sha256": "0e4ecbe515fb85936f5514add54d6fefdee6ba6d41510c99cb7411ed6b8ff92c"
+    },
+    {
+      "name": "EL_YO_SOBERANO/13_RESPALDO_LEGAL_Y_PATRIMONIAL/02_Testamento_Criptografico.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": false,
+      "sha256": "49d18dbd0db9ff2d03c557fbd74fe0783d2b8464e0bdbf3cd82671071850de45"
+    },
+    {
+      "name": "EL_YO_SOBERANO/14_RESILIENCIA_OFF_GRID/01_Enlace_Satelital_Starlink.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "ec4e78b1c0152ad5fecd872915de0348704535c3938618add888c1494f3ced2b"
+    },
+    {
+      "name": "EL_YO_SOBERANO/14_RESILIENCIA_OFF_GRID/02_Redes_Mesh_LoRaWAN.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": true,
+      "sha256": "274051f22846c2f93328a05bcd598ae14aa3e32636ea39b7e809801c5711fc41"
+    },
+    {
+      "name": "EL_YO_SOBERANO/15_IDENTIDAD_AUTOSOBERANA/01_Credenciales_Verificables_SSI.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": false,
+      "sha256": "170f3a1c4395433aac9164fdcbc3d5dcd05b7cd8aa04f4fb5946bf8e1ff13636"
+    },
+    {
+      "name": "EL_YO_SOBERANO/16_AUTOMATIZACION_DE_PERIFERICOS_EXTERNOS/01_APIs_De_Interceptacion_Y_Filtros.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": false,
+      "sha256": "397d384fdca23909ff976df7a79836dbf5195551a30bfd52b46c5017ab8ebc2a"
+    },
+    {
+      "name": "EL_YO_SOBERANO/16_AUTOMATIZACION_DE_PERIFERICOS_EXTERNOS/02_Scraping_Y_Extraccion_De_Inteligencia.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": false,
+      "sha256": "566b168e4e6084355657c986502cf8bf3ced610e3876d9ad0eb882e538d753a5"
+    },
+    {
+      "name": "EL_YO_SOBERANO/17_AUDITORIA_Y_AUTODESTRUCCION/01_Protocolos_De_Purgado_Remoto.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": false,
+      "sha256": "93ab49c013f805ba714645e5b3f0580f9ffc4f2e2c89e7083d63c464c772c7bf"
+    },
+    {
+      "name": "EL_YO_SOBERANO/17_AUDITORIA_Y_AUTODESTRUCCION/02_Logs_De_Integridad_Del_Sistema.md",
+      "type": "documentation",
+      "state": "DOCUMENTATION_ONLY",
+      "hardware_dependent": false,
+      "sha256": "7d69739737807376e0aabec42693971338b81646d1479e04d2849b6ade1f1a4c"
+    }
+  ]
+}

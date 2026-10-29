@@ -1,0 +1,74 @@
+{
+  "$id": "https://soberano.local/schemas/digital-self/v1.0.0.json",
+  "title": "DigitalSelf (contrato fundacional del Cognitive Twin)",
+  "version": "2.0.0",
+  "layer_rule": "DigitalSelf=estructura estable | Memory=experiencias | Reflection=interpreta | Evolution=propone/versiona | CognitiveGraph=relaciones (no identidad)",
+  "required_entities": [
+    "Identity",
+    "Values",
+    "Beliefs",
+    "Goals",
+    "Traits",
+    "Relationships",
+    "Experiences"
+  ],
+  "entity_rules": {
+    "one_per_kind": true,
+    "fundamental_kinds": [
+      "Identity",
+      "Values",
+      "Beliefs"
+    ],
+    "fundamental_provenance_restriction": "Identity/Values rechazan INFERRED y SYSTEM_DERIVED (provenance o nada; declarado u observado)",
+    "immutable_history": "tamper-evidence: EntityVersion sella content_hash; verify_integrity() detecta mutacion",
+    "temporal_reconstruction": "as_of(ts) + DigitalSelf.reconstruct(ts)"
+  },
+  "EntityVersion": {
+    "required": [
+      "version",
+      "content",
+      "provenance",
+      "confidence",
+      "evidence",
+      "source_ref",
+      "ts",
+      "change_reason"
+    ],
+    "fields": {
+      "version": "int incremental, 1-based; activa = ultima",
+      "provenance": [
+        "OBSERVED",
+        "INFERRED",
+        "SELF_REPORTED",
+        "SYSTEM_DERIVED",
+        "UNCERTAIN"
+      ],
+      "confidence": "float [0,1]; INFERRED sin evidence rechazado",
+      "evidence": "array obligatorio si INFERRED",
+      "source_ref": "obligatorio siempre",
+      "approved_by": "'system' | 'humano' (fundamental exige humano en evolucion)",
+      "content_hash": "sha256 del contenido canonico (sello)"
+    }
+  },
+  "capabilities_proven": [
+    "crear DigitalSelf con 7 entidades",
+    "validar componentes (provenance/confidence/evidence/kind)",
+    "versionar cambios con historial preservado",
+    "reconstruir estados temporales (as_of/reconstruct)",
+    "registrar provenance y distinguir OBSERVED/SELF_REPORTED/INFERRED/SYSTEM_DERIVED/UNCERTAIN"
+  ],
+  "version_history": [
+    {
+      "version": "1.0.0",
+      "state": "FROZEN then SUPERSEDED",
+      "note": "Beliefs no fundamental"
+    },
+    {
+      "version": "2.0.0",
+      "state": "CURRENT",
+      "change": "Beliefs fundamental (decision soberana)",
+      "approved_by": "humano",
+      "trace": "DIGITAL_SELF_EVOLUTION_v1_to_v2.json"
+    }
+  ]
+}

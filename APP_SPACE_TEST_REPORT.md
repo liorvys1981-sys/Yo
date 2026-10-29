@@ -1,0 +1,2 @@
+# APP SPACE TEST REPORT
+28 suites / 349 tests / 349 PASS / 0 FAIL / 0 ERROR / rc=0 / doble corrida determinista / subprocess independiente. Baselines conservados: 232,260,264,273,284,328 (historico). Nueva suite test_app_space: 23 tests (manifest, registry states, bridge, sync, native apps, security).

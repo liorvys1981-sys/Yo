@@ -1,0 +1,2 @@
+# APP REGISTRY SPEC
+AppManifest 18 campos: app_id..status+content_hash. Tipos: NATIVE_YO/EXTERNAL/BRIDGED/SYSTEM/PRIVATE. Estados: DISCOVERED/AVAILABLE/CONNECTED/PAUSED/DISCONNECTED/REVOKED/BLOCKED con maquina de estados validada. 8 apps nativas YO (Mail/Chat/Social/Calendar/Drive/Contacts/Photos/Notes). ONE COGNITIVE TWIN (sin YO Mail Twin etc.).

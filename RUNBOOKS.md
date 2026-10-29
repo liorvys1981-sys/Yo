@@ -1,0 +1,2 @@
+# RUNBOOKS
+1) Ejecutar: python3.12 -m unittest discover -s tests (27 suites). 2) Determinismo: doble corrida, comparar counts. 3) Ledger: EvidenceLedger.verify(). 4) R1/R2: suites adversariales. 5) Export soberano: TwinExporter/TwinVerifier. 6) Health: Observability.health.run_all(). 7) Reparacion contrato JSON: json.loads validacion + convergencia subprocess.

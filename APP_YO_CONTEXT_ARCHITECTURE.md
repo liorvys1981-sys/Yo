@@ -1,0 +1,2 @@
+# CONTEXT ARCHITECTURE
+ContextAssembler -> CognitiveContext: DigitalSelf + relevant memory + relationships + session + conversation + patterns + insights + goals + purpose + future + evidence + uncertainty. 5 etiquetas preservadas y contadas (incl. memoria recuperada). No mezcla tenants/users/twins/namespaces.

@@ -1,0 +1,2 @@
+# MCP ARCHITECTURE
+Twin -> Permission -> Policy -> (Authorization) -> MCP -> Tool -> Result -> Evidence. Herramientas: identity/permission/scope/audit/provenance/result_hash. Arbitrary tools DENIED. Riesgo alto -> ESCALATE (no ejecuta).

@@ -1,0 +1,49 @@
+{
+  "layer": "APP_YO",
+  "position": "capa cognitiva superior sobre EL_YO/SAOS17",
+  "forbidden": [
+    "reemplazar EL_YO/SAOS17",
+    "duplicarlo",
+    "acoplar a hardware",
+    "mezclar responsabilidades"
+  ],
+  "modules": [
+    "CORE",
+    "MEMORY",
+    "IDENTITY",
+    "EXPERIENCE",
+    "COGNITIVE_SWARM",
+    "DIGITAL_SELF",
+    "INTERACTION",
+    "INSIGHTS",
+    "SOVEREIGNTY",
+    "SECURITY",
+    "PLATFORM"
+  ],
+  "cognitive_cycle": [
+    "experiencia",
+    "memoria",
+    "identidad",
+    "reflexion",
+    "patrones",
+    "insights",
+    "decisiones",
+    "futuro",
+    "evolucion"
+  ],
+  "provenance_labels": [
+    "OBSERVED",
+    "INFERRED",
+    "SELF_REPORTED",
+    "SYSTEM_DERIVED",
+    "UNCERTAIN"
+  ],
+  "tenant_fields": [
+    "tenant_id",
+    "subject_id",
+    "cognitive_instance_id",
+    "memory_scope",
+    "authorization_scope"
+  ],
+  "phase": "DISEÑO — implementacion prohibida hasta verificacion"
+}

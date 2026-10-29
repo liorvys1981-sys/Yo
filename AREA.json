@@ -1,0 +1,197 @@
+{
+  "updated_utc": "2026-10-08T04:06:13.203641+00:00Z",
+  "area_definitions": "PARCIAL: 12 areas definidas en SAOS17_PACKAGE_REFERENCE (04,05,06,07,08,11,16,17,19,20,21,23); 12 pendientes",
+  "estados_legend": {
+    "COMPLETE": "implementado + probado + verificado + sin dependencias pendientes",
+    "IMPLEMENTED": "codigo real ejecutando, con prueba",
+    "PARTIAL": "codigo real pero incompleto o con deuda",
+    "DOCUMENTATION_ONLY": "solo especificacion",
+    "HARDWARE_DEPENDENT": "requiere hardware no disponible aqui",
+    "NOT_IMPLEMENTED": "no existe",
+    "BLOCKED": "dependencia externa impide avanzar"
+  },
+  "components": {
+    "constitution_engine": {
+      "area": "00 (gobierno) — DEFINICION_CANONICA_PENDIENTE",
+      "state": "IMPLEMENTED",
+      "tests": "5/5 PASS",
+      "evidence": "ledger.jsonl entradas 4-5"
+    },
+    "authorization_gate": {
+      "area": "00 (gobierno) — DEFINICION_CANONICA_PENDIENTE",
+      "state": "IMPLEMENTED",
+      "tests": "10/10 PASS (incluye 2 FAIL corregidos documentados)",
+      "evidence": "artifacts pytest 010802Z y 010819Z"
+    },
+    "evidence_ledger": {
+      "state": "IMPLEMENTED",
+      "tests": "3/3 + chaos",
+      "note": "hardened con flock tras hallazgo de concurrencia"
+    },
+    "webhook_gateway": {
+      "area": "integraciones — DEFINICION_CANONICA_PENDIENTE",
+      "state": "IMPLEMENTED",
+      "tests": "6/6 PASS",
+      "evidence": "anti-replay, HMAC, allowlist"
+    },
+    "saos_v17": {
+      "state": "NOT_IMPLEMENTED",
+      "detail": "codigo fuente NO disponible en este entorno; interfaz de integracion pendiente de definicion"
+    },
+    "hardware_stack": {
+      "state": "HARDWARE_DEPENDENT",
+      "detail": "17 capas de EL_YO_SOBERANO listas como especificacion; 0 ejecutadas"
+    },
+    "identity_engine": {
+      "area": "00 (identidad) — DEFINICION_CANONICA_PENDIENTE",
+      "state": "IMPLEMENTED",
+      "tests": "10/10 unittest PASS",
+      "evidence": "artifact final 0149xx"
+    },
+    "state_engine": {
+      "area": "00 (gobierno) — DEFINICION_CANONICA_PENDIENTE",
+      "state": "IMPLEMENTED",
+      "tests": "6/6 unittest PASS",
+      "evidence": "misma corrida"
+    },
+    "chaos_recovery": {
+      "area": "auditoria — DEFINICION_CANONICA_PENDIENTE",
+      "state": "IMPLEMENTED",
+      "tests": "5/5 unittest PASS (50-thread, tamper, mid-write, restart, determinismo)",
+      "findings": [
+        "ledger NO thread-safe → flock (bug real encontrado y corregido)"
+      ]
+    },
+    "cli_el_yo": {
+      "area": "17 Governance/Evolution + 11 Audit/Telemetry",
+      "state": "IMPLEMENTED",
+      "tests": "5/5 PASS (tras fix de derivacion de clave documentado)",
+      "evidence": "unittest_bloques2345_20261008T020444Z_PASS.log"
+    },
+    "genome_store": {
+      "area": "05 Memory / 11 Audit",
+      "state": "IMPLEMENTED",
+      "tests": "8/8 + integrado en regresion 78/78",
+      "contract": "CIERRA EvidenceAPI v0.1"
+    },
+    "evolution_engine": {
+      "area": "17 Governance / nucleo Cognitive Twin",
+      "state": "IMPLEMENTED",
+      "tests": "12/12 (autorizacion doble llave + rechazos auditados)",
+      "note": "fundamentales exigen frase-canal + doble llave (Art. 4.2)"
+    },
+    "persistent_memory_g5": {
+      "area": "05 Memory",
+      "state": "IMPLEMENTED",
+      "contract": "04_MEMORY.md: 5 memorias, lifecycle ACTIVE/SUPERSEDED/FORGOTTEN, version, content_hash",
+      "tests": "10/10 G5 + regresion 78/78",
+      "guarantee": "no muta DigitalSelf (test estructural)"
+    },
+    "digital_self": {
+      "area": "nucleo Cognitive Twin",
+      "state": "FROZEN v2.0.0",
+      "tests": "20/20 (regresion 17 + 3 Beliefs fundamental)",
+      "trace": "DIGITAL_SELF_EVOLUTION_v1_to_v2.json"
+    },
+    "reflection_g6": {
+      "area": "04 Cognitive/Agents (Reflection Engine)",
+      "state": "IMPLEMENTED",
+      "contract": "05_REFLECTION_EVOLUTION.md: determinista, sin LLM, 6 tipos diferenciados",
+      "tests": "14/14 G6 + regresion 90/90",
+      "guarantees": [
+        "HYPOTHESIS siempre INFERRED",
+        "UNCERTAIN bajo umbral 0.4",
+        "no importa digital_self/genome_store/evolution_engine (guard estructural)",
+        "sin API de escritura: inferencias no tocan Identity/Values/Beliefs"
+      ]
+    },
+    "evolution_pipeline_g8": {
+      "area": "17 Governance / 07 Pipelines",
+      "state": "IMPLEMENTED",
+      "contract": "pipeline 8 estados EXPERIENCES->...->APPLIED, EVOLUTION_LOCKED real, gate inalienable",
+      "tests": "15/15 G8 + regresion 105/105 (9 suites)",
+      "determinism": "reloj inyectable, sin LLM, sin red"
+    },
+    "elyo_integration_g12": {
+      "area": "12 EL_YO Integration",
+      "state": "IMPLEMENTED",
+      "gate_real": "el_yo.gates.AuthorizationGate (Bloque 1, 10/10, no mock)",
+      "wiring": "impl/elyo_wiring.py: factoria sin logica duplicada; ElyoGateUnavailable si falta (req 11)",
+      "tests": "10/10 G12 + regresion 113/113 (10 suites)",
+      "bug_found_fixed": "rollback de estado en approve() ante Denied (request quedaba en APPROVED)"
+    },
+    "insights_g10": {
+      "area": "04 Cognitive/Agents + 17 Governance",
+      "state": "IMPLEMENTED",
+      "contract": "InsightsAPI.state_change restaurado de COGNITIVE_API_SPEC.md; ciclo REGISTERED->HYPOTHESIZED->CONFIRMED/REFUTED",
+      "tests": "14/14 G10 + regresion 129/129 (11 suites)",
+      "decision_reported": "CONFIRMED exige humano+evidencia; REFUTED puede ser system con evidencia",
+      "guarantees": [
+        "hipotesis nunca se confirma sola (HumanConfirmationRequired)",
+        "CONFIRMED/REFUTED conservan provenance/evidence/confidence/ts/version",
+        "sin import de digital_self/genome_store/pipeline/evolution (no toca el self)"
+      ]
+    },
+    "swarm_g9": {
+      "area": "04 Cognitive/Agents",
+      "state": "IMPLEMENTED",
+      "contract": "6 agentes con manifests, trust-ramp por evidencia, Safety inmutable",
+      "tests": "12/12 G9 + regresion"
+    },
+    "e2e_g14": {
+      "area": "14 E2E Verification",
+      "state": "IMPLEMENTED",
+      "contract": "flujo completo: experiencias->reflection->insights->evolucion(gate real)->memoria->swarm->export->verify->tamper",
+      "tests": "1/1 E2E integral + regresion 153/153 (14 suites)"
+    }
+  },
+  "summary": {
+    "IMPLEMENTED": 19,
+    "contract": "DIGITAL_SELF v2.0.0 FROZEN",
+    "TESTED_total": "153 PASS (14 suites)",
+    "FAILED_documented_and_fixed": 22,
+    "GATES": "G0-G6,G8,G9,G10,G11,G12,G14 PASS · G7 BLOQUEADO (soberano) · G13 BLOCKED (red)",
+    "APP_YO_status": "PLANO SOFTWARE PURO COMPLETO — no 'completa': faltan G7, G13, LLM runtime, e infraestructura"
+  },
+  "package_rules_adopted": [
+    "EL_YO 00-23 master taxonomy",
+    "SAOS17 19 phases / 20 gates = verification discipline when source available",
+    "Probabilistic output is never authorization",
+    "Deterministic control plane owns state/evidence/recovery",
+    "No IMPLEMENTED without executable tests + evidence",
+    "Hardware-dependent = NOT_VERIFIED until physically tested",
+    "Vendoring requires pinned commit + license review + provenance",
+    "Never modify tests/security controls merely to obtain PASS"
+  ],
+  "constitutional_rule": "GEMELO_COGNITIVO: todo componente justifica capacidad cognitiva o NO ENTRA",
+  "twin_architecture_minimal": {
+    "ENTRA": [
+      "Division Swarm (estado)",
+      "OpenFang (runtime)",
+      "Autonomic Kernel (seguridad)",
+      "SOVEREIGN (memoria)"
+    ],
+    "IN_HOUSE": [
+      "constitution_engine",
+      "authorization_gate",
+      "evidence_ledger",
+      "webhook_gateway",
+      "identity_engine",
+      "state_engine",
+      "chaos_recovery",
+      "cli_el_yo"
+    ],
+    "ADAPTAR_patrones": [
+      "Oxios: circuit-breaker/budgets/MCP-A2A",
+      "AOS: trust-ramp",
+      "SoftwareFactory: gates/worktree",
+      "AIOS: kernel/SDK",
+      "KnowledgeCompiler: diferido"
+    ],
+    "DESCARTAR": [
+      "Astra",
+      "AAiOS",
+      "Sovereign AI (licencia comercial)"
+    ]
+  }
+}

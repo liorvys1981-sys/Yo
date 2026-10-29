@@ -1,0 +1,2 @@
+# COGNITIVE EVENT SCHEMA
+Campos: event_id, actor, target, session_id, relationship_id, timestamp, event_type, content_reference, context_reference, observation, perception, interpretation, hypothesis, provenance, confidence, evidence_ids, temporal_validity, content_hash, tenant_id, owner_id. Stages por etapa: PRESENT/ABSENT/UNKNOWN/UNCERTAIN/INSUFFICIENT_EVIDENCE. Provenance validado en schema (fake provenance bloqueado — ataque #2). Sin contenido innecesario, sin secretos, sin chain-of-thought.

@@ -1,0 +1,18 @@
+{
+  "contract": "DIGITAL_SELF",
+  "from_version": "1.0.0",
+  "to_version": "2.0.0",
+  "change": "Beliefs promovido a entidad FUNDAMENTAL",
+  "rule": "Beliefs no admite creacion/modificacion directa por INFERRED ni SYSTEM_DERIVED",
+  "decision_source": "soberana (operador humano)",
+  "gate": "evolucion de contrato con version MAYOR (regla del freeze v1.0.0)",
+  "history_preserved": true,
+  "v1_artifacts_intact": true,
+  "approved_by": "humano",
+  "ts": "2026-10-08T02:38:53.588173+00:00Z",
+  "v1_0_0_hashes": {
+    "DIGITAL_SELF_SPEC.md": "d78007ee0d4e5b6c2899be3b489fe1f9e4f128501adeb048ca916e908ecf4283",
+    "DIGITAL_SELF_SCHEMA.json": "f4f2457b2e5f857e0c52b6e3a4501bf4976cdf1cefe4e01f8b8450125eb7e9ea",
+    "impl/digital_self.py": "eee7e1b6ffd16b7003fe4fee565454ab15ca41a27d45e9e57c33495cb30f4666"
+  }
+}

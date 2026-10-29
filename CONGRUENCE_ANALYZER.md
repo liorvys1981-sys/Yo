@@ -1,0 +1,2 @@
+# CONGRUENCE ANALYZER
+Compara valores declarados/creencias/objetivos/intencion/decision/accion/resultado/reflexion. Resultados permitidos: ALIGNED, POTENTIAL_DISCREPANCY, UNCERTAIN, CONTEXT_EXPLAINS, INSUFFICIENT_EVIDENCE. PROHIBIDO automatico: GOOD/BAD/RIGHT/WRONG/FAILURE/SUCCESS. Las discrepancias NO se usan para controlar decisiones.

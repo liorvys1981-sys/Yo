@@ -1,0 +1,149 @@
+{
+  "generated_utc": "2026-10-08T15:11:09.662938+00:00Z",
+  "audit": "COGNITIVE_ONBOARDING_FORENSIC",
+  "executive_summary": "Cognitive Onboarding NO EXISTE en el repositorio. Verificación en 3 capas: (1) estática: 0 archivos con nombres onboard/question/maturity/cuestionario; únicos hits de término son falsos positivos (label UNKNOWN de provenance; palabra 'coverage' en un doc); (2) dinámica: importlib.find_spec('onboarding/question_registry/adaptive_question_engine/cognitive_maturity') = None para los 4; (3) consumidores: ningún módulo invoca APIs de onboarding. La cadena adaptativa respuesta->memoria->patrón->hipótesis->reflexión->siguiente pregunta NO existe: los eslabones memoria/patrón/hipótesis/reflexión existen como motores independientes (G5/G6/G10 verificados) pero sin orquestador de preguntas. No hay Question Registry (ni las 9 categorías como cuestionario), ni Cognitive Maturity, ni condición CONSTRUIR ELLA, ni Visual Twin. Regresión intacta: 206/206 · R1/R2 CLOSED · DigitalSelf v2.0.0 · ELLA Genesis PASS · ledger verify=True.",
+  "discovery": {
+    "files_with_hits": {
+      "APP_YO/impl/digital_self.py": [
+        "UNKNOWN"
+      ],
+      "APP_YO/impl/swarm.py": [
+        "UNKNOWN"
+      ],
+      "EL_YO/00_CONSTITUCION_EL_YO/GEMELO_COGNITIVO_EVALUACION.md": [
+        "coverage"
+      ]
+    },
+    "named_files": [],
+    "verdict": "sin componentes de onboarding; hits = falsos positivos verificados"
+  },
+  "question_registry": {
+    "exists": false,
+    "categories": {
+      "Identity": "NOT IMPLEMENTED",
+      "Values": "NOT IMPLEMENTED",
+      "Beliefs": "NOT IMPLEMENTED",
+      "Decisions": "NOT IMPLEMENTED",
+      "Experiences": "NOT IMPLEMENTED",
+      "Relationships": "NOT IMPLEMENTED",
+      "Purpose": "NOT IMPLEMENTED",
+      "Shadow/blockages": "NOT IMPLEMENTED",
+      "Future": "NOT IMPLEMENTED"
+    },
+    "fields": "n/a",
+    "unknown_handling": "n/a"
+  },
+  "adaptive_engine": {
+    "exists": false,
+    "chain": "NOT IMPLEMENTED",
+    "chain_links_existing_as_engines": [
+      "Memory(G5)",
+      "Reflection(G6)",
+      "Insights(G10)"
+    ],
+    "chain_links_missing": [
+      "pregunta",
+      "respuesta->registro",
+      "siguiente pregunta",
+      "orquestador"
+    ]
+  },
+  "provenance": {
+    "flow_exists": false,
+    "note": "SELF_REPORTED/OBSERVED/INFERRED/SYSTEM_DERIVED/UNCERTAIN existen en DigitalSelf/Memory/Reflection; sin flujo onboarding que registre respuestas del usuario con ellos"
+  },
+  "integrations": {
+    "memory": "no consumer",
+    "reflection": "no consumer",
+    "insights": "no consumer",
+    "direct_routes_bypassing_contracts": "ninguna encontrada (no hay código onboarding que pueda saltarse contratos)"
+  },
+  "contradictions": {
+    "onboarding_flow": false,
+    "existing_capability": "Reflection G6 detecta CONTRADICTION entre experiencias (determinista); sin consumidor que genere pregunta de aclaración"
+  },
+  "cognitive_maturity": {
+    "exists": false,
+    "formula": "n/a",
+    "note": "no existe ningún algoritmo; los criterios pedidos (cobertura/profundidad/consistencia/...) no están implementados"
+  },
+  "construir_ella": {
+    "condition_exists": false,
+    "chain_state": "YO COGNITIVE TWIN (VERIFIED) -> YO'S MODEL OF ELLA (etiquetado, operativo) -> ELLA GENESIS (R2 VERIFIED). La separación YO'S MODEL != ELLA'S IDENTITY está enforced; NO existe condición de madurez que habilite CONSTRUIR ELLA"
+  },
+  "visual_twin": {
+    "exists": false,
+    "separation": "vacuously true (no existe representación visual que pueda contaminar)"
+  },
+  "tests": {
+    "onboarding_tests": 0,
+    "execution": "n/a (no hay suites que ejecutar)",
+    "classification": "NOT IMPLEMENTED"
+  },
+  "regression": {
+    "regression": "17 suites / 206 ran / 0 FAIL/ERROR / rc=0 / warnings=96",
+    "R1": "VERIFIED / CLOSED",
+    "R2_ELLA": "VERIFIED / CLOSED",
+    "ELLA_genesis": "PASS",
+    "DigitalSelf_v2.0.0": "b1a8a6deb4302fbf",
+    "ledger": true,
+    "subprocess": true,
+    "determinism": "doble corrida previa; esta corrida rc=0"
+  },
+  "matrix": {
+    "CognitiveOnboardingEngine": "NOT IMPLEMENTED",
+    "QuestionRegistry": "NOT IMPLEMENTED",
+    "AdaptiveQuestionEngine": "NOT IMPLEMENTED",
+    "CognitiveMaturity": "NOT IMPLEMENTED",
+    "CONSTRUIR ELLA (condición)": "NOT IMPLEMENTED",
+    "Onboarding tests": "NOT IMPLEMENTED",
+    "Memory integration desde onboarding": "NOT IMPLEMENTED",
+    "Reflection integration desde onboarding": "NOT IMPLEMENTED",
+    "Insights integration desde onboarding": "NOT IMPLEMENTED",
+    "Contradiction->clarification en onboarding": "NOT IMPLEMENTED (Reflection detecta CONTRADICTION entre experiencias; no existe consumidor onboarding que la use para preguntar)",
+    "Provenance SELF_REPORTED en respuestas": "NOT IMPLEMENTED (existe en DigitalSelf/memoria/reflection; sin flujo de respuesta de usuario -> registro)",
+    "Cadena respuesta->memoria->patrón->hipótesis->reflexión->siguiente pregunta": "NOT IMPLEMENTED (los eslabones memoria/patrón/hipótesis/reflexión EXISTEN como motores G5/G6/G10; NO existe orquestador onboarding que los encadene con preguntas)",
+    "Visual Twin separation": "NOT IMPLEMENTED (ni visual twin ni mezcla imagen/identidad: no existe representación visual en absoluto)",
+    "ELLA Genesis": "VERIFIED (R2; separación YO'S MODEL OF ELLA != ELLA'S IDENTITY operativa)",
+    "Identity Activation": "DESIGNED_NOT_IMPLEMENTED"
+  },
+  "vulnerabilities": [
+    {
+      "id": "V-ONB-01",
+      "sev": "INFO",
+      "estado": "ACEPTADO",
+      "desc": "Ausencia total de onboarding: el sistema no tiene vía de captura estructurada del usuario. No es una vulnerabilidad de seguridad; es una capacidad faltante que deja el DigitalSelf alimentado solo por cambios autorizados (R1/R2) y experiencias sintéticas de tests."
+    }
+  ],
+  "missing_components": [
+    "AdaptiveQuestionEngine",
+    "CONSTRUIR ELLA (condición)",
+    "CognitiveMaturity",
+    "CognitiveOnboardingEngine",
+    "Insights integration desde onboarding",
+    "Memory integration desde onboarding",
+    "Onboarding tests",
+    "QuestionRegistry",
+    "Reflection integration desde onboarding"
+  ],
+  "dependencies": {
+    "chain_ready_engines": [
+      "Memory G5",
+      "Reflection G6",
+      "Insights G10",
+      "DigitalSelf",
+      "Evolution G8"
+    ],
+    "missing_for_onboarding": [
+      "QuestionRegistry",
+      "AdaptiveQuestionEngine",
+      "orquestador de cadena",
+      "CognitiveMaturity",
+      "registro de respuestas con provenance",
+      "condición CONSTRUIR ELLA"
+    ],
+    "blocking_external": "LLM runtime (G13, sin red) para preguntas en lenguaje natural; el motor determinista actual podría operar sin LLM con preguntas predefinidas"
+  },
+  "next_step": "PRÓXIMO PASO RECOMENDADO (diseño primero, sin implementación): especificar el Cognitive Onboarding como CONSUMIDOR de los motores existentes (G5/G6/G10) — nunca como escritor directo del DigitalSelf (la escritura pasa por Evolution+gate). Diseñar: Question Registry (9 categorías, provenance SELF_REPORTED por respuesta directa), selección adaptativa como función determinista sobre Reflection outputs, Cognitive Maturity multi-criterio (no conteo simple), y la condición CONSTRUIR ELLA como consulta read-only sobre madurez + separación estructural (modelo YO != identidad ELLA). Precondición de diseño: nada escribe en DigitalSelf fuera de Evolution+R1.",
+  "prohibitions": "cumplidas: 0 implementación, 0 cambios a DigitalSelf/R1/R2/tests, 0 evidencia borrada"
+}

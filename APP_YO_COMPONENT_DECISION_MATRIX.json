@@ -1,0 +1,167 @@
+[
+  {
+    "COMPONENT": "SOVEREIGN",
+    "FUNCTION": "memoria grafo+vector + provenance + auditoria append-only",
+    "COGNITIVE_CONTRIBUTION": "memoria biografica del gemelo: conserva conocimiento, procedencia, distingue derivada de fuente",
+    "APP_YO_AREA": "MEMORY",
+    "EL_YO_AREA": "05 Memory",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "MIT",
+    "EVIDENCE": "evaluacion constitucional + pendiente vendorar (red)",
+    "DECISION": "ENTRA"
+  },
+  {
+    "COMPONENT": "Division Swarm",
+    "FUNCTION": "state machine durable, crash recovery, replay",
+    "COGNITIVE_CONTRIBUTION": "objetivos persistentes, recuperacion de actividades, memoria de decisiones replayable",
+    "APP_YO_AREA": "PLATFORM/EXPERIENCE",
+    "EL_YO_AREA": "05/20/07",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "Apache-2.0",
+    "EVIDENCE": "evaluacion constitucional; vendor pendiente",
+    "DECISION": "ENTRA"
+  },
+  {
+    "COMPONENT": "OpenFang",
+    "FUNCTION": "runtime/kernel de agentes",
+    "COGNITIVE_CONTRIBUTION": "cuerpo ejecutor del swarm: agentes continuos, aislamiento, seguridad de runtime",
+    "APP_YO_AREA": "COGNITIVE_SWARM/PLATFORM",
+    "EL_YO_AREA": "04",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "MIT",
+    "EVIDENCE": "evaluacion; vendor pendiente",
+    "DECISION": "ENTRA"
+  },
+  {
+    "COMPONENT": "Autonomic Kernel",
+    "FUNCTION": "control plane: sandbox, mediacion de efectos, politicas",
+    "COGNITIVE_CONTRIBUTION": "inmunidad: protege identidad, capacidades, herramientas y autoridad del gemelo",
+    "APP_YO_AREA": "SECURITY",
+    "EL_YO_AREA": "06",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "MIT",
+    "EVIDENCE": "evaluacion; vendor pendiente",
+    "DECISION": "ENTRA"
+  },
+  {
+    "COMPONENT": "evidence_ledger (in-house)",
+    "FUNCTION": "log hash-chained append-only",
+    "COGNITIVE_CONTRIBUTION": "el gemelo demuestra que sabia/decidia/hizo; trazabilidad de identidad",
+    "APP_YO_AREA": "SOVEREIGNTY/EXPERIENCE",
+    "EL_YO_AREA": "11",
+    "REUSE_SOURCE": "01_GOBIERNO (implementado)",
+    "LICENSE": "propia (soberana)",
+    "EVIDENCE": "13 tests PASS + chaos",
+    "DECISION": "ENTRA (existente)"
+  },
+  {
+    "COMPONENT": "identity_engine (in-house)",
+    "FUNCTION": "DID did:key, VC, revocacion",
+    "COGNITIVE_CONTRIBUTION": "identidad verificable del gemelo y de sus agentes",
+    "APP_YO_AREA": "IDENTITY/SECURITY",
+    "EL_YO_AREA": "19",
+    "REUSE_SOURCE": "02_IDENTIDAD (implementado)",
+    "LICENSE": "propia",
+    "EVIDENCE": "10 tests PASS",
+    "DECISION": "ENTRA (existente)"
+  },
+  {
+    "COMPONENT": "AuthorizationGate+constitution (in-house)",
+    "FUNCTION": "frase-canal, doble llave, matriz de impacto",
+    "COGNITIVE_CONTRIBUTION": "autoridad del gemelo: evolucion y acciones solo con aprobacion soberana",
+    "APP_YO_AREA": "SECURITY/INSIGHTS",
+    "EL_YO_AREA": "06/17",
+    "REUSE_SOURCE": "01_GOBIERNO",
+    "LICENSE": "propia",
+    "EVIDENCE": "15 tests PASS",
+    "DECISION": "ENTRA (existente)"
+  },
+  {
+    "COMPONENT": "Oxios (patrones)",
+    "FUNCTION": "circuit breaker, budgets, MCP/A2A",
+    "COGNITIVE_CONTRIBUTION": "protege continuidad cognitiva ante fallos de herramientas; controla coste de ejecucion",
+    "APP_YO_AREA": "PLATFORM",
+    "EL_YO_AREA": "06/08",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "MIT",
+    "EVIDENCE": "evaluacion; patrones al integrar",
+    "DECISION": "ADAPTAR (patrones)"
+  },
+  {
+    "COMPONENT": "AOS trust-ramp (modelo)",
+    "FUNCTION": "niveles shadow/approval/autonomous por evidencia",
+    "COGNITIVE_CONTRIBUTION": "el gemelo gana autonomia por evidencia, nunca por defecto",
+    "APP_YO_AREA": "COGNITIVE_SWARM",
+    "EL_YO_AREA": "17",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX (concepto)",
+    "LICENSE": "verificar",
+    "EVIDENCE": "politica sobre gate existente",
+    "DECISION": "ADAPTAR (modelo)"
+  },
+  {
+    "COMPONENT": "Autonomous Software Factory (gates)",
+    "FUNCTION": "gates deterministas, worktree isolation, invariantes",
+    "COGNITIVE_CONTRIBUTION": "evolucion del gemelo verificada: cambios de su propio software pasan por gates",
+    "APP_YO_AREA": "CORE (Evolution Engine)",
+    "EL_YO_AREA": "07/23",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "verificar",
+    "EVIDENCE": "disciplina SAOS17",
+    "DECISION": "ADAPTAR (patrones)"
+  },
+  {
+    "COMPONENT": "Astra",
+    "FUNCTION": "microkernel multi-tenant, DAG, Redis",
+    "COGNITIVE_CONTRIBUTION": "ninguna unica: DAG cubierto, multi-tenancy innecesario (single-operator), cost tracking cubierto",
+    "APP_YO_AREA": "—",
+    "EL_YO_AREA": "07/21/08",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "verificar",
+    "EVIDENCE": "evaluacion",
+    "DECISION": "DESCARTAR"
+  },
+  {
+    "COMPONENT": "AAiOS",
+    "FUNCTION": "GenericAgent, DAG, checkpoint",
+    "COGNITIVE_CONTRIBUTION": "ninguna unica: redundante con ganadores",
+    "APP_YO_AREA": "—",
+    "EL_YO_AREA": "04/20/21",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "verificar",
+    "EVIDENCE": "evaluacion",
+    "DECISION": "DESCARTAR"
+  },
+  {
+    "COMPONENT": "Sovereign AI",
+    "FUNCTION": "identidad cripto, memoria hash-chained",
+    "COGNITIVE_CONTRIBUTION": "ninguna unica: cubierta in-house; licencia comercial bloquea",
+    "APP_YO_AREA": "—",
+    "EL_YO_AREA": "19",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "dual/comercial",
+    "EVIDENCE": "evaluacion",
+    "DECISION": "DESCARTAR"
+  },
+  {
+    "COMPONENT": "Sovereign Knowledge Compiler",
+    "FUNCTION": "CRDT sync, ledger de conflictos",
+    "COGNITIVE_CONTRIBUTION": "memoria multi-nodo consistente — SOLO cuando exista segundo nodo",
+    "APP_YO_AREA": "MEMORY (futuro)",
+    "EL_YO_AREA": "05/23",
+    "REUSE_SOURCE": "OPEN_SOURCE_MATRIX",
+    "LICENSE": "verificar",
+    "EVIDENCE": "diferido",
+    "DECISION": "ADAPTAR DIFERIDO"
+  },
+  {
+    "COMPONENT": "INTERACTION voice/video/WebRTC",
+    "FUNCTION": "canales multimodales",
+    "COGNITIVE_CONTRIBUTION": "entrada de EXPERIENCIA rica; sin ellos el gemelo queda ciego a voz/imagen",
+    "APP_YO_AREA": "INTERACTION",
+    "EL_YO_AREA": "04/08",
+    "REUSE_SOURCE": "no seleccionado aun",
+    "LICENSE": "n/a",
+    "EVIDENCE": "requiere red/docker (bloqueado)",
+    "DECISION": "REFERENCIA (decidir tras desbloqueo red)"
+  }
+]

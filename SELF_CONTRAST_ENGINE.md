@@ -1,0 +1,2 @@
+# SELF CONTRAST ENGINE
+PAST/PRESENT/DESIRED/POTENTIAL con reglas: DESIRED != REQUIRED, POTENTIAL != GUARANTEED, PAST != PERMANENT_IDENTITY. Resultado informativo (prescriptive=False), nunca prescriptivo.

@@ -1,0 +1,28 @@
+{
+ "checks": {
+  "BASELINE_VERIFIED.json": true,
+  "BASELINE_VERIFIED_002.json": true,
+  "BASELINE_VERIFIED_003.json": true,
+  "master_audit_md": true,
+  "master_state_json": true,
+  "supervisor_py": true,
+  "verdict_B": true,
+  "ledger_verify": true,
+  "supervisor_11_11": true,
+  "app_space_unchanged": true,
+  "digital_self_unchanged": true
+ },
+ "regression": {
+  "run1": {
+   "tests": 537,
+   "fail": 0
+  },
+  "run2": {
+   "tests": 537,
+   "fail": 0
+  },
+  "det": true,
+  "s17": true
+ },
+ "verified_utc": "2026-10-08T22:30:22.118567+00:00Z"
+}

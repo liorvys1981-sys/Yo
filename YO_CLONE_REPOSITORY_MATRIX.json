@@ -1,0 +1,73 @@
+{
+ "generated_utc": "2026-10-09T17:34:40.608764+00:00Z",
+ "audit_method": "git clone --depth 1 real + inspection de archivos + API GitHub (rate-limit parcial). Sin ejecucion de modelos (sin GPU/weights).",
+ "repos": {
+  "ai-avatar-system": {
+   "url": "https://github.com/PunithVT/ai-avatar-system",
+   "exists": "VERIFICADO",
+   "last_commit": "0dee976c229b | 2026-09-18 | docs(funding)",
+   "license": {
+    "repo": "MIT (VERIFICADO, LICENSE file)",
+    "models": "NO VERIFICADO (musetalk worker; pesos musetalk/wav2lip/runs licencias propias - BLOQUEADO sin inspeccion de weights)"
+   },
+   "stack": "VERIFICADO: Python FastAPI backend (alembic, musetalk_worker, workers TTS, pytest.ini) + React/TSX frontend + docker-compose + nginx + infra/",
+   "fidelity": "NO VERIFICADO (no se ejecuto; README afirma photo->avatar; musetalk es sincronizacion labial, no generacion fotorrealista desde 1 foto de alta calidad)",
+   "lipsync_animation": "VERIFICADO-parcial (codigo musetalk_worker presente); resultado visual NO VERIFICADO",
+   "voice": "VERIFICADO-parcial (requirements-tts.txt + workers TTS; edge/openai-tts en deps)",
+   "streaming_latency": "NO VERIFICADO (docker-compose + nginx + WebRTC impl? backend async; sin benchmark real)",
+   "mobile_compat": "NO VERIFICADO (frontend React responsive; sin build movil real)",
+   "resources": "NO VERIFICADO (Dockerfile presente; GPU requerida por musetalk: tipicamente CUDA, sin medir)",
+   "external_deps": "VERIFICADO: TTS providers, DB, alembic, nginx; musetalk weights descarga externa (BLOQUEADO sin GPU)",
+   "security": "VERIFICADO: pytest.ini + CI (.github); sin auditoria de seguridad ejecutada; .env.example presente (no .env real commiteado)",
+   "tests": "VERIFICADO-parcial: pytest.ini + requirements-dev; ejecucion NO REALIZADA (deps pesadas sin GPU)",
+   "maintenance": "VERIFICADO: activo (commit 2026-09-18, ~7 semanas)",
+   "cost": "NO VERIFICADO (self-host; GPU requerida)",
+   "risk_notes": "Prometheus/OpenTelemetry deps; infra terraform? - surface amplia, auditoria de seguridad pendiente antes de cualquier uso"
+  },
+  "LiveTalking": {
+   "url": "https://github.com/ChenleWang123/LiveTalking",
+   "exists": "VERIFICADO",
+   "last_commit": "ec2e425132c | 2026-09-10 | continuous voice conversation workflow",
+   "license": {
+    "repo": "Apache-2.0 (VERIFICADO)",
+    "models": "NO VERIFICADO (deps incluyen transformers/edge_tts; wav2lip/er-nerf musetalk weights externos BLOQUEADOS)"
+   },
+   "stack": "VERIFICADO: Python 156 archivos, Flask + aiortc (WebRTC), edge_tts, opencv-headless, app.py streaming",
+   "fidelity": "NO VERIFICADO (talking-face real-time con pesos externos; requiere descarga de modelos)",
+   "lipsync_animation": "VERIFICADO-parcial (codigo de render + wav2lip/musetalk en docs); resultado NO VERIFICADO",
+   "voice": "VERIFICADO-parcial (edge_tts como TTS por defecto; requiere red a servicio Microsoft - EXTERNAL)",
+   "streaming_latency": "VERIFICADO-parcial (aiortc WebRTC real-time; benchmark_asr.py presente para medir; NO EJECUTADO sin GPU)",
+   "mobile_compat": "NO VERIFICADO (WebRTC browser; sin app movil)",
+   "resources": "NO VERIFICADO (tipicamente GPU CUDA para musetalk/wav2lip; README menciona 4GB+ VRAM segun modelo - marcar como NO VERIFICADO no medido)",
+   "external_deps": "VERIFICADO: edge_tts (servicio externo), modelos externos (Baidu/HF), transformers",
+   "security": "NO VERIFICADO (sin tests de seguridad; app.py expone WebRTC; sin auth visible en inspection rapida)",
+   "tests": "NO VERIFICADO (benchmark_asr.py = benchmark, no tests unitarios; ningun test ejecutado)",
+   "maintenance": "VERIFICADO: activo (2026-09-10); upstream original lipku/LiveTalking (fork con mejoras)",
+   "cost": "NO VERIFICADO",
+   "risk_notes": "Fork reciente; validar provenance vs upstream lipku; edge_tts dependencia de servicio externo no soberano"
+  },
+  "twin-mind-mirror": {
+   "url": "https://github.com/JabranMustafa/twin-mind-mirror",
+   "exists": "VERIFICADO",
+   "last_commit": "4c588caad2 | 2026-03-09 (6+ meses) - ESTANCADO",
+   "license": {
+    "repo": "SIN LICENCIA (VERIFICADO: no LICENSE file) -> NO USABLE legalmente sin permiso del autor",
+    "models": "N/A"
+   },
+   "stack": "VERIFICADO: Vite + React + TS + Supabase (backend SaaS externo); NO es motor visual fotorrealista",
+   "fidelity": "NO APLICA para réplica visual: es un chatbot de 'personalidad digital' (README: aprende estilo/decisiones); cero generacion facial",
+   "lipsync_animation": "NO APLICA (no existe capacidad visual en el repo)",
+   "voice": "NO APLICA",
+   "streaming_latency": "NO APLICA",
+   "mobile_compat": "VERIFICADO-parcial (React web; sin build movil)",
+   "resources": "NO APLICA (web app ligera)",
+   "external_deps": "VERIFICADO: Supabase (SaaS externo, no soberano)",
+   "security": "VERIFICADO-NEGATIVO: .env COMMITEADO con claves Supabase (publishable key — riesgo de abuso de cuota; mala practica grave); sin auth audit",
+   "tests": "NO VERIFICADO (sin tests)",
+   "maintenance": "VERIFICADO: estancado (2026-03-09)",
+   "cost": "NO VERIFICADO",
+   "risk_notes": "SIN LICENCIA = no se puede copiar/incorporar legalmente. DESCARTADO para integracion."
+  }
+ },
+ "verification_notes": "Ningun modelo de avatar ejecutado (sin GPU/weights en sandbox). Toda metrica de calidad/latencia/recursos: NO VERIFICADO hasta prueba en hardware real."
+}

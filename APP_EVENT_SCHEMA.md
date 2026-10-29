@@ -1,0 +1,2 @@
+# APP EVENT SCHEMA
+AppEvent: event_id, app_id, tenant_id, owner_id, timestamp, event_type, payload_reference, source, permission_scope, provenance, correlation_id, content_hash. Nunca secretos. Nunca chain-of-thought. Tamper-evidence por content_hash.

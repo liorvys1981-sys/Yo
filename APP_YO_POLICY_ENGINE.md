@@ -1,0 +1,2 @@
+# POLICY ENGINE
+ALLOW/DENY/REVIEW/ESCALATE segun risk/sensitivity/reversibility/domain/tenant/user/tool/action. ESCALATE -> R1. GAP real encontrado y cerrado: wildcard '*' en scope de MCP (bypass silencioso eliminado, scope estricto).

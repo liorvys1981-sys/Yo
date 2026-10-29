@@ -1,0 +1,326 @@
+{
+  "generated_utc": "2026-10-08T02:03:24.641222+00:00Z",
+  "master_taxonomy": "EL_YO 00-23 (12 areas definidas en SAOS17_PACKAGE_REFERENCE; 12 pendientes)",
+  "layers": [
+    {
+      "layer": "01",
+      "nombre": "Infraestructura y Hardware",
+      "descripcion": "Hipervisor, NAS, movil, llaves fisicas, energia",
+      "areas_ELYO_relacionadas": [
+        "06",
+        "20"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "02",
+      "nombre": "Red y Conectividad",
+      "descripcion": "Firewall, VPN, DNS, mesh, BGP",
+      "areas_ELYO_relacionadas": [
+        "06",
+        "08",
+        "21"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "03",
+      "nombre": "Nucleo Cognitivo e IA",
+      "descripcion": "LLM local, orquestador, memoria vectorial, fine-tuning",
+      "areas_ELYO_relacionadas": [
+        "04",
+        "05",
+        "07",
+        "23"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "04",
+      "nombre": "Comunicaciones y Privacidad",
+      "descripcion": "Correo, alias, mensajeria, voz",
+      "areas_ELYO_relacionadas": [
+        "06",
+        "08"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "05",
+      "nombre": "Datos y Archivos",
+      "descripcion": "Nube, secretos, sync, backups",
+      "areas_ELYO_relacionadas": [
+        "05",
+        "20"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "06",
+      "nombre": "Productividad y Conocimiento",
+      "descripcion": "PKM, gestion de proyectos",
+      "areas_ELYO_relacionadas": [
+        "05"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "07",
+      "nombre": "Navegacion y Busqueda",
+      "descripcion": "Metabuscador, navegadores",
+      "areas_ELYO_relacionadas": [
+        "06"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "08",
+      "nombre": "Finanzas y Operaciones",
+      "descripcion": "Contabilidad, CRM",
+      "areas_ELYO_relacionadas": [
+        "08"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "09",
+      "nombre": "Medios y Entretenimiento",
+      "descripcion": "Streaming multimedia",
+      "areas_ELYO_relacionadas": [
+        "21"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "10",
+      "nombre": "Criptografia y Activos",
+      "descripcion": "Custodia multisig",
+      "areas_ELYO_relacionadas": [
+        "19",
+        "20"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "11",
+      "nombre": "Consciencia Operativa y Etica",
+      "descripcion": "Constitucion, auditoria de sesgos",
+      "areas_ELYO_relacionadas": [
+        "17"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": false,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "12",
+      "nombre": "Seguridad Extrema y Bunker",
+      "descripcion": "LUKS, sensores, Faraday",
+      "areas_ELYO_relacionadas": [
+        "06",
+        "16"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "13",
+      "nombre": "Respaldo Legal y Patrimonial",
+      "descripcion": "Entidades, testamento criptografico",
+      "areas_ELYO_relacionadas": [
+        "17",
+        "20"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": false,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "14",
+      "nombre": "Resiliencia Off-Grid",
+      "descripcion": "Satelital, LoRaWAN",
+      "areas_ELYO_relacionadas": [
+        "20",
+        "21"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": true,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "15",
+      "nombre": "Identidad Autosoberana",
+      "descripcion": "DID, VC verificables",
+      "areas_ELYO_relacionadas": [
+        "19",
+        "06"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": false,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "16",
+      "nombre": "Automatizacion de Perifericos",
+      "descripcion": "Webhooks, scraping inteligencia",
+      "areas_ELYO_relacionadas": [
+        "07",
+        "08",
+        "23"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": false,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    },
+    {
+      "layer": "17",
+      "nombre": "Auditoria y Autodestruccion",
+      "descripcion": "Purgado, logs de integridad",
+      "areas_ELYO_relacionadas": [
+        "11",
+        "16",
+        "20"
+      ],
+      "componentes_requeridos": "ver especificacion EL_YO_SOBERANO",
+      "componentes_existentes": 0,
+      "componentes_faltantes": "todos (software no implementado en esta capa)",
+      "estado_real": "DOCUMENTATION_ONLY",
+      "dependencia_de_hardware": false,
+      "pruebas_requeridas": "acceptance tests del documento de capa (sin ejecutar)",
+      "evidencia_disponible": "especificacion .md con hash SHA-256",
+      "evidencia_faltante": "ejecucion real en hardware"
+    }
+  ],
+  "software_implementado_fuera_de_capas": {
+    "01_GOBIERNO": [
+      "constitution_engine",
+      "authorization_gate",
+      "evidence_ledger",
+      "webhook_gateway"
+    ],
+    "02_IDENTIDAD": [
+      "identity_engine (DID did:key, VC, revocacion)"
+    ],
+    "03_ESTADOS": [
+      "state_engine"
+    ],
+    "04_CHAOS_TESTS": [
+      "chaos_recovery suite"
+    ]
+  },
+  "areas_EL_YO_mapeo_software": {
+    "04 Cognitive/Agents": "pendiente (sin GPU/red en sandbox)",
+    "05 Memory": "pendiente",
+    "06 Security": "IMPLEMENTADO parcial: gates, webhook HMAC, constitution",
+    "07 Automation/Pipelines": "pendiente (n8n requiere docker)",
+    "08 APIs/Integrations": "IMPLEMENTADO parcial: webhook_gateway",
+    "11 Audit/Telemetry": "IMPLEMENTADO parcial: evidence_ledger",
+    "16 Testing/Chaos": "IMPLEMENTADO: chaos_recovery (5 tests)",
+    "17 Governance/Evolution": "IMPLEMENTADO parcial: constitution_engine, state_engine",
+    "19 Cryptographic Identity": "IMPLEMENTADO: identity_engine (10 tests)",
+    "20 Recovery/Continuity": "IMPLEMENTADO parcial: state_engine, chaos restart",
+    "21 Observability": "pendiente",
+    "23 Research/Evolution": "pendiente"
+  }
+}

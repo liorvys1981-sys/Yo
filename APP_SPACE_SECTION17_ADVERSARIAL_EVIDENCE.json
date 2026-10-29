@@ -1,0 +1,160 @@
+{
+  "generated_utc": "2026-10-08T19:06:27.356548+00:00Z",
+  "section": "17-adversarial",
+  "total_scenarios": 14,
+  "pass": 14,
+  "fail": 0,
+  "invariants_covered": [
+    "ALL_SIX",
+    "APP_PERMISSION_NEQ_SOVEREIGN",
+    "CONNECTION_NEQ_TRUST",
+    "EVENT_NEQ_TRUTH",
+    "EXTERNAL_DATA_NEQ_IDENTITY",
+    "NO_WILDCARD_SCOPE",
+    "READ_NEQ_WRITE"
+  ],
+  "vulnerabilities_found": 0,
+  "corrections": "none (no bypass detected)",
+  "scenarios": [
+    {
+      "test_id": "test_app_space_section17_adversarial::S01",
+      "invariant_attacked": "EXTERNAL_DATA_NEQ_IDENTITY",
+      "expected": "malicious payload",
+      "observed": "conflicto/rechazo; nunca identidad",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "e20cc39ad63af159"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S02",
+      "invariant_attacked": "EXTERNAL_DATA_NEQ_IDENTITY",
+      "expected": "identity fields falsificados",
+      "observed": "is_identity=False; is_fact=False",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "9686a25acd22eaa3"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S03",
+      "invariant_attacked": "EVENT_NEQ_TRUTH",
+      "expected": "eventos duplicados",
+      "observed": "idempotencia: 1 entrega, resto duplicados",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "95b59b5e913af84e"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S04",
+      "invariant_attacked": "EVENT_NEQ_TRUTH",
+      "expected": "eventos fuera de orden",
+      "observed": "orden del lote preservado",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "4976be0b6ce59299"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S05",
+      "invariant_attacked": "APP_PERMISSION_NEQ_SOVEREIGN",
+      "expected": "replay (misma authz, lote distinto)",
+      "observed": "AppSpaceError",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "d3385a85040d015c"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S06",
+      "invariant_attacked": "APP_PERMISSION_NEQ_SOVEREIGN",
+      "expected": "retry",
+      "observed": "entrega tras reintento",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "ec9a346607798a86"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S07",
+      "invariant_attacked": "CONNECTION_NEQ_TRUST",
+      "expected": "concurrencia (8 hilos)",
+      "observed": "ledger integro; cursor consistente",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "14afe2577fc14419"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S08",
+      "invariant_attacked": "CONNECTION_NEQ_TRUST",
+      "expected": "reinicio mid-op",
+      "observed": "checkpoint continuo (from_cursor)",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "ce8f62f28aa48118"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S09",
+      "invariant_attacked": "CONNECTION_NEQ_TRUST",
+      "expected": "disconnect/reconnect",
+      "observed": "bloqueo en DISCONNECTED; reanudacion ok",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "3f599fd880c2bf57"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S10",
+      "invariant_attacked": "READ_NEQ_WRITE",
+      "expected": "write sin scope write",
+      "observed": "ScopeViolation",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "2263e80af2207ec3"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S11",
+      "invariant_attacked": "NO_WILDCARD_SCOPE",
+      "expected": "wildcard / scope desconocido",
+      "observed": "ScopeViolation / AppSpaceError",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "a8761ef070afa0a0"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S12",
+      "invariant_attacked": "EXTERNAL_DATA_NEQ_IDENTITY",
+      "expected": "write directo a DigitalSelf",
+      "observed": "sin API estructural (def write_digital_self ausente)",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "33b10ec85ff01e15"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S13",
+      "invariant_attacked": "EXTERNAL_DATA_NEQ_IDENTITY",
+      "expected": "proveedor comprometido",
+      "observed": "OBSERVED nunca verdad/identidad",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "2e2fd093a8aeedf3"
+    },
+    {
+      "test_id": "test_app_space_section17_adversarial::S14",
+      "invariant_attacked": "ALL_SIX",
+      "expected": "zero-trust global",
+      "observed": "ninguna invariante rota; ledger intacto",
+      "enforcement": "structural+R1",
+      "timestamp": "2026-10-08T19:06:27.356548+00:00Z",
+      "result": "PASS",
+      "evidence_hash": "302a0201950dfa25"
+    }
+  ]
+}

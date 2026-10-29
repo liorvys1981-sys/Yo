@@ -1,0 +1,2 @@
+# MEMORY ARCHITECTURE
+5 tipos persistentes (lifecycle/version/hash) + SemanticMemoryIndex/MemoryRetriever (embedding determinista, metadata completa, tenant isolation, temporal retrieval). Similitud SOLO retrievals. MEMORY != TRUTH (provenance obligatorio). YO MEMORY != ELLA MEMORY (root+tenant).

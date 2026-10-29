@@ -1,0 +1,2 @@
+# SELF-AWARENESS ARCHITECTURE
+SelfAwarenessEngine: CognitiveEvent (event/observation/perception/interpretation/hypothesis/fact distinguidos; stages PRESENT/ABSENT/UNKNOWN/UNCERTAIN/INSUFFICIENT_EVIDENCE; hash; tenant/owner) -> CongruenceAnalyzer -> CapabilityMirror -> SelfContrastEngine -> Metacognition -> Reflection -> Proposal (R1/G8). NO escribe DigitalSelf. 328/328.

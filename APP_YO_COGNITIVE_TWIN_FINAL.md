@@ -1,0 +1,2 @@
+# COGNITIVE TWIN FINAL
+YO: DigitalSelf v2.0.0 (autoridad) + Onboarding + Memory (5 tipos + vector + temporal) + Context + Relationship/Session/Turn + Decision/Policy/Trust + Feedback + Observability + Chat + Realtime + MCP + WebTools. 284/284. Autoridad: R1 unica. Inteligencia != autoridad.

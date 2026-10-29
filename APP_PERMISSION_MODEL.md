@@ -1,0 +1,2 @@
+# APP PERMISSION MODEL
+Permisos explicitos (12: READ/WRITE x EMAIL/CONTACTS/CALENDAR/FILES/MESSAGES/SOCIAL). No asumidos. Sin authorized=True ni approved_by texto. Operaciones sensibles: R1 completa. Integracion de app NO concede autoridad sobre identidad. Lectura no implica escritura.

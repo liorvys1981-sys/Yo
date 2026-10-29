@@ -1,0 +1,2 @@
+# TEST REPORT (POST-284)
+27 suites / 328 tests / 328 PASS / 0 FAIL / 0 ERROR / rc=0 / doble corrida determinista / subprocess independiente. Baselines conservados: 232, 260, 264, 273, 284 (historico, nunca sobrescrito).

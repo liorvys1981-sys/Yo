@@ -1,0 +1,2 @@
+# APP SPACE LIMITATIONS
+UI real de tiles/cards: NOT_IMPLEMENTED en este entorno (sin frontend); contratos y estados presentes. OAuth real: BLOCKED (sin credenciales/red; no inventado). External live connectors: BLOCKED (sin proveedor; declared-only). Sync real con proveedores: BLOCKED. iOS/Android embedding: NOT_APPLICABLE aqui; sandbox respetado (clasificacion PLATFORM_LIMITATION si aplica). Voice backend: BLOCKED (pre-existente).

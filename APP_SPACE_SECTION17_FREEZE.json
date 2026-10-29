@@ -1,0 +1,12 @@
+{
+  "frozen_utc": "2026-10-08T19:04:00.052155+00:00Z",
+  "scope": "17-verified-happy-path",
+  "rule": "no modificar ni repetir el happy path; solo adversarial/failure validation",
+  "files_frozen": [
+    "app_space/app_space.py"
+  ],
+  "files_sha256": {
+    "app_space/app_space.py": "19bf9ff8d1774a68cdee9102f91168b9e0dd465c963ca6cf8ed596f567ada3ea"
+  },
+  "evidence_policy": "FAIL inicial y VERIFIED posterior del happy path se conservan integros"
+}

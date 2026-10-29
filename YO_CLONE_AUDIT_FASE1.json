@@ -1,0 +1,13 @@
+{
+ "el_yo": "EXISTS (24 areas COMPLETE, runtime, landing/)",
+ "app_yo": "EXISTS (app_space FROZEN §17, onboarding/, ELLA/)",
+ "mobile_app_yo": "NOT_FOUND (no existe codebase de app movil YO previo)",
+ "agent_runtime": "EXISTS (rtpkg/, routing 4 niveles, capabilities)",
+ "cognitive_twin": "EXISTS (15 area, 14 DIGITAL_SELF FROZEN)",
+ "memory": "EXISTS (02_MEMORIA 5 tipos + vectorial)",
+ "camera_mic_interfaces": "NOT_IMPLEMENTED (no hay codigo de camara/microfono; VoiceProvider interfaz sin backend)",
+ "authorization": "EXISTS (R1 frase-canal + doble llave; Authority ed25519)",
+ "providers_tts_avatar": "EXTERNAL_BLOCKED (sin claves; GPT-4o BLOCKED documentado; ningun proveedor de avatar/TTS configurado)",
+ "baselines_manifests": "PRESERVED (OPERATIONAL_001 + snapshots)",
+ "biometric_real_data": "NONE (prohibido; tests usan fixtures sinteticos)"
+}

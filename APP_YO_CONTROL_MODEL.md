@@ -1,0 +1,2 @@
+# CONTROL MODEL
+PolicyEngine: ALLOW/DENY/REVIEW/ESCALATE (no sustituye R1). TrustProfile: informa control, NUNCA concede autoridad (test: trust=1.0 + identity -> ESCALATE). DecisionEngine: external_execution=NEVER (v1). CAPABILITY != AUTHORITY (MCP/WebTools scope estricto, arbitrary denied, audited).

@@ -1,0 +1,79 @@
+{
+  "contract": "ELLA_IDENTITY_ACTIVATION/v0.1-DESIGN",
+  "status": "DESIGNED_NOT_IMPLEMENTED",
+  "chain": [
+    "ELLA GENESIS",
+    "IDENTITY PROPOSAL",
+    "SOVEREIGN AUTHORIZATION",
+    "IDENTITY ACTIVATION",
+    "ELLA DIGITALSELF"
+  ],
+  "states": {
+    "proposal": [
+      "PROPOSED",
+      "ACTIVATED",
+      "REJECTED(implicit: no existe transicion)"
+    ],
+    "activation": [
+      "NOT_REQUESTED",
+      "AUTHORIZED",
+      "APPLIED",
+      "REJECTED"
+    ]
+  },
+  "transitions": {
+    "PROPOSED -> ACTIVATED": {
+      "preconditions": [
+        "ELLA_ORIGIN.json existe, integrity OK, no expirado (valid_day)",
+        "ELLA_IDENTITY_PROPOSAL.json existe, content_hash verificado contra contenido",
+        "autorizacion ChangeAuthorization valida: DID==authority_did, action=='ELLA-identity-activation', day==today, firma ed25519 correcta",
+        "authorization.content_hash == sha256(canon(proposal_sin_hash))",
+        "no existe ELLA_IDENTITY_ACTIVE.json (anti doble activacion)"
+      ],
+      "authorization": "Authority.authorize_action('ELLA-identity-activation','destructiva',phrase,content_hash=...) (reuse R1)",
+      "postconditions": [
+        "ELLA_IDENTITY_ACTIVE.json creado: contenido = copia inmutable del proposal, activated_by=DID, authorization_nonce, origin_content_hash link, valid_day, content_hash",
+        "estado proposal documentalmente ACTIVATED (marcador en proposal o en active file)",
+        "evidence ledger: evento ella_activation con proposal_id, nonce, content_hash, by=DID",
+        "ELLA DigitalSelf scaffold: SOLO entidad Identity ACTIVE; demas entidades PENDING; autonomy DISABLED"
+      ],
+      "provenance": "SELF_REPORTED/SOVEREIGN_DECLARATION (misma politica genesis)",
+      "replay_protection": "content binding + nonce determinista + day freshness + existencia de ACTIVE",
+      "temporalidad": "politica R1: autorizacion valida solo el dia de emision; ACTIVE conserva valid_day"
+    },
+    "INVALIDAS": [
+      "PROPOSED -> ACTIVATED sin autorizacion",
+      "PROPOSED -> ACTIVATED con DID arbitrario",
+      "PROPOSED -> ACTIVATED con firma ausente/invalida",
+      "PROPOSED -> ACTIVATED con autorizacion de otra accion ('ELLA-genesis', 'Genome-change', ...)",
+      "PROPOSED -> ACTIVATED con autorizacion de otro namespace (binding por ruta + namespace)",
+      "PROPOSED(alterada) -> ACTIVATED (content mismatch)",
+      "PROPOSAL inexistente -> ACTIVATED",
+      "PROPOSAL expirada -> ACTIVATED",
+      "ACTIVATED -> ACTIVATED (doble)",
+      "ORIGIN alterado -> cualquier transicion",
+      "caller directo (sin pipeline de activacion)",
+      "objeto de autorizacion arbitrario",
+      "activar identidad YO via ruta ELLA (namespace binding)",
+      "modificar YO desde ELLA (sin imports; enforce runtime)",
+      "CUALQUIER transicion hacia autonomia/agentes/memoria/LLM: NO EXISTE en el contrato"
+    ]
+  },
+  "errors": [
+    "UnauthorizedActivation",
+    "ProposalIntegrityError",
+    "OriginIntegrityError",
+    "DoubleActivation",
+    "NamespaceBindingError",
+    "ExpiredAuthorization"
+  ],
+  "invariants": [
+    "YO DIGITALSELF != ELLA DIGITALSELF (namespace+ruta disjuntos)",
+    "YO MEMORY != ELLA MEMORY (en activacion: ELLA aun NO tiene memoria; scaffold lo prohibe)",
+    "YO'S MODEL OF ELLA != ELLA'S IDENTITY (modelo vive en namespace YO etiquetado)",
+    "ELLA no modifica YO; YO no modifica identidad ELLA sin autorizacion",
+    "autonomy DISABLED post-activacion; sin agentes/LLM/memoria autonoma/evolucion autonoma"
+  ],
+  "limits_of_authority": "la activacion establece identidad soberana de ELLA; no concede ninguna capacidad autonoma",
+  "determinism": "clock inyectable; nonce determinista (HMAC de contenido+dia); doble corrida identica"
+}

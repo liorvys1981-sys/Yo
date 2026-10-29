@@ -1,0 +1,2 @@
+# COGNITIVE DATA PROVENANCE
+USER_STATED / OBSERVED / INFERRED / SYSTEM_DERIVED / UNCERTAIN / IMAGINED / GENERATED / RELATIONAL_OBSERVATION. MEMORY != TRUTH. Provenance validado en CognitiveEvent. 'Prefiero X' de ELLA -> ELLA_USER_STATED_INFORMATION (nunca ELLA_IDENTITY_VALUE). Seeds YO->ELLA con yo-ref en evidencia. Temporalidad: valid_day + temporal_validity + reconstruccion @T.

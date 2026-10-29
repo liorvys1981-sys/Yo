@@ -1,0 +1,2 @@
+# FEEDBACK LOOP
+DECISION->OUTCOME->USER_FEEDBACK->OBSERVATION->PATTERN->HYPOTHESIS->REFLECTION->POSSIBLE EVOLUTION. Nunca muta DigitalSelf. Identity/Values/Beliefs: Feedback->Proposal->Review->R1->Versioned Evolution. Preferences: 4 origenes; INFERRED nunca se convierte en identidad.

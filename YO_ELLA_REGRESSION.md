@@ -1,0 +1,1 @@
+Regresión post-P10: 19 suites / 232 tests / 0 FAIL / 0 ERROR / doble corrida determinista=True. Baseline previo 206/206 -> +26 tests (onboarding 14 + ella 13 + ajustes).

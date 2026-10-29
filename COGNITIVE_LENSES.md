@@ -1,0 +1,2 @@
+# COGNITIVE LENSES
+PRINCIPLE->COGNITIVE FUNCTION->COMPONENT->EVIDENCE LEVEL->TEST. 9 lentes: Grinberg (SPECULATIVA — no ciencia establecida), Metzinger, Friston, Dehaene, Tononi (IIT teorico, sin claim de conciencia), Barrett, Festinger, Higgins, Metacognition. Lentes NO son agentes ni autoridades ni hechos universales.

@@ -1,0 +1,2 @@
+# APP SYNC SPEC
+initial+incremental+cursor+checkpoint+idempotency+dedup+conflict detection+retry(3)+pause+resume+revoke+audit. Autorizacion vincula al LOTE (batch_hash). Toda sincronizacion produce evidencia en ledger. Sin duplicacion de memoria paralela.

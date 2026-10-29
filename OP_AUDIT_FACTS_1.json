@@ -1,0 +1,161 @@
+{
+ "components": {
+  "CognitiveOrchestrator": {
+   "real": true,
+   "entry": "CognitiveOrchestrator()",
+   "class": "CognitiveOrchestrator"
+  },
+  "SovereigntySecurity": {
+   "real": true,
+   "entry": "SovereigntySecurity()",
+   "class": "SovereigntySecurity",
+   "capabilities": [
+    "route_task",
+    "remember",
+    "recall",
+    "research",
+    "reflect",
+    "perceive",
+    "privileged_op"
+   ],
+   "scope_policy": "scope estricto; sin wildcard (test)"
+  },
+  "InfrastructureRecovery": {
+   "real": true,
+   "entry": "InfrastructureRecovery()",
+   "class": "InfrastructureRecovery",
+   "features": [
+    "idempotency",
+    "retries",
+    "circuit_breaker"
+   ]
+  },
+  "ResourceManager": {
+   "real": true,
+   "entry": "ResourceManager()",
+   "class": "ResourceManager"
+  },
+  "ValueResourceEconomics": {
+   "real": true,
+   "entry": "ValueResourceEconomics()",
+   "class": "ValueResourceEconomics"
+  },
+  "CognitiveAnalytics": {
+   "real": true,
+   "entry": "CognitiveAnalytics()",
+   "class": "CognitiveAnalytics"
+  },
+  "MemoryCognition": {
+   "real": true,
+   "entry": "MemoryCognition()",
+   "class": "MemoryCognition"
+  },
+  "ResearchEvolution": {
+   "real": true,
+   "entry": "ResearchEvolution()",
+   "class": "ResearchEvolution"
+  },
+  "ModelRouter": {
+   "real": true,
+   "entry": "ModelRouter()",
+   "class": "ModelRouter",
+   "routes": [
+    "DETERMINISTIC",
+    "LOCAL_MODEL",
+    "GPT-4o(BLOCKED)",
+    "HUMAN_APPROVAL"
+   ]
+  },
+  "TaskBudget": {
+   "real": true,
+   "entry": "TaskBudget()",
+   "class": "TaskBudget"
+  },
+  "CircuitBreaker": {
+   "real": true,
+   "entry": "CircuitBreaker()",
+   "class": "CircuitBreaker"
+  }
+ },
+ "identity": {
+  "public": [
+   "EL_YO",
+   "ELLA"
+  ],
+  "tests": [
+   [
+    "agente no se declara EL_YO",
+    true
+   ],
+   [
+    "runtime sin did:key",
+    true
+   ],
+   [
+    "default deny",
+    true
+   ],
+   [
+    "no auto-escalation",
+    true
+   ]
+  ],
+  "all_pass": true
+ },
+ "chain": [
+  {
+   "step": "REQUEST",
+   "ok": true
+  },
+  {
+   "step": "CONSTITUTION",
+   "ok": true
+  },
+  {
+   "step": "AUTHORIZATION(capability)",
+   "ok": true
+  },
+  {
+   "step": "RUNTIME+CAPABILITY",
+   "ok": true
+  },
+  {
+   "step": "MODEL(router)",
+   "ok": true
+  },
+  {
+   "step": "VERIFICATION",
+   "ok": true
+  },
+  {
+   "step": "LEDGER",
+   "ok": true
+  },
+  {
+   "step": "RESULT",
+   "ok": true
+  },
+  {
+   "step": "AUTHORIZATION_capability_denied",
+   "ok": true
+  },
+  {
+   "step": "AUTHORIZATION_R1_ok",
+   "ok": true
+  }
+ ],
+ "chain_all_ok": true,
+ "memory_restart": {
+  "write": true,
+  "recover": true,
+  "integrity": true
+ },
+ "observability": {
+  "usage_events": 1,
+  "reconstructible": true
+ },
+ "backup_restore": {
+  "backup_bytes": 78762,
+  "restore_verify": true
+ }
+}

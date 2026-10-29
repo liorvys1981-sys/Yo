@@ -1,0 +1,37 @@
+{
+  "chain": [
+    "QUESTION",
+    "USER_RESPONSE",
+    "SELF_REPORTED_MEMORY",
+    "PATTERN",
+    "HYPOTHESIS",
+    "REFLECTION",
+    "INSIGHT",
+    "NEXT_QUESTION"
+  ],
+  "categories": [
+    "Identity",
+    "Values",
+    "Beliefs",
+    "Decisions",
+    "Experiences",
+    "Relationships",
+    "Purpose",
+    "Shadow",
+    "Future"
+  ],
+  "question_fields": [
+    "id",
+    "category",
+    "goal",
+    "priority",
+    "activation",
+    "expected_provenance",
+    "followup_rules",
+    "related",
+    "no_repeat"
+  ],
+  "unknown_policy": "UNCERTAIN confidence=0.1",
+  "contradiction_policy": "register+clarify, never decide",
+  "digitalself_write": "PROHIBITED (only Evolution+gate R1)"
+}

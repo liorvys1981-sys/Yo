@@ -1,0 +1,1 @@
+Madurez multi-criterio: coverage, depth, consistency, evidence, uncertainty, contradictions, temporal_evolution, entity_coverage, purpose_future, memory_patterns. Explicable por criterio, determinista, auditable. Gate CONSTRUIR ELLA: coverage>=0.8 AND consistency>=0.7 AND 0 contradicciones. Nunca afirma que la persona 'es' algo. Ver onboarding/maturity.py.

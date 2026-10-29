@@ -1,0 +1,1 @@
+Motor adaptativo: selección por prioridad+cobertura, aclaraciones por contradicción, UNKNOWN explícito. Ver COGNITIVE_ONBOARDING_IMPLEMENTATION.md y tests test_p10_onboarding.py (232/232 en la regresión global).

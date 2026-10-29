@@ -1,0 +1,1 @@
+Twin de YO: 13 dimensiones (7 entidades + Memory/Patterns/Reflections/Insights/Purpose/Future) con tags fact/memory/hypothesis/interpretation/uncertainty/projection. NO fabrica atributos sin evidencia (NO EVIDENCE explícito). Ver onboarding/cognitive_twin_yo.py.

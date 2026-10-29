@@ -1,0 +1,234 @@
+[
+  {
+    "id": "q.identity.1",
+    "category": "Identity",
+    "goal": "nombre/como se presenta la persona",
+    "priority": 1,
+    "activation": {
+      "requires": [],
+      "min_answers": 0
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.identity.2",
+    "category": "Identity",
+    "goal": "que la distingue de otros",
+    "priority": 2,
+    "activation": {
+      "requires": [
+        "Identity"
+      ],
+      "min_answers": 1
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [
+      "Values"
+    ],
+    "no_repeat": true
+  },
+  {
+    "id": "q.values.1",
+    "category": "Values",
+    "goal": "principios no negociables",
+    "priority": 1,
+    "activation": {
+      "requires": [],
+      "min_answers": 0
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.values.2",
+    "category": "Values",
+    "goal": "valor que sacrificaria menos",
+    "priority": 3,
+    "activation": {
+      "requires": [
+        "Values"
+      ],
+      "min_answers": 1
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.beliefs.1",
+    "category": "Beliefs",
+    "goal": "creencia central sobre el mundo",
+    "priority": 2,
+    "activation": {
+      "requires": [],
+      "min_answers": 0
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.beliefs.2",
+    "category": "Beliefs",
+    "goal": "creencia que ha cambiado con el tiempo",
+    "priority": 4,
+    "activation": {
+      "requires": [
+        "Beliefs"
+      ],
+      "min_answers": 1
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [
+      "Experiences"
+    ],
+    "no_repeat": true
+  },
+  {
+    "id": "q.decisions.1",
+    "category": "Decisions",
+    "goal": "decision importante reciente y su razon",
+    "priority": 3,
+    "activation": {
+      "requires": [],
+      "min_answers": 0
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.experiences.1",
+    "category": "Experiences",
+    "goal": "experiencia que le definio",
+    "priority": 2,
+    "activation": {
+      "requires": [],
+      "min_answers": 0
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.experiences.2",
+    "category": "Experiences",
+    "goal": "experiencia que evita repetir",
+    "priority": 4,
+    "activation": {
+      "requires": [
+        "Experiences"
+      ],
+      "min_answers": 1
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [
+      "Shadow"
+    ],
+    "no_repeat": true
+  },
+  {
+    "id": "q.relationships.1",
+    "category": "Relationships",
+    "goal": "vinculo mas importante y por que",
+    "priority": 3,
+    "activation": {
+      "requires": [],
+      "min_answers": 0
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.purpose.1",
+    "category": "Purpose",
+    "goal": "para que cree que esta aqui / su mision",
+    "priority": 2,
+    "activation": {
+      "requires": [],
+      "min_answers": 0
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.purpose.2",
+    "category": "Purpose",
+    "goal": "que legado quiere dejar",
+    "priority": 4,
+    "activation": {
+      "requires": [
+        "Purpose"
+      ],
+      "min_answers": 1
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [
+      "Future"
+    ],
+    "no_repeat": true
+  },
+  {
+    "id": "q.shadow.1",
+    "category": "Shadow",
+    "goal": "que evita enfrentar / patron no deseado",
+    "priority": 5,
+    "activation": {
+      "requires": [],
+      "min_answers": 0
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.future.1",
+    "category": "Future",
+    "goal": "como se ve en 5-10 anos",
+    "priority": 3,
+    "activation": {
+      "requires": [],
+      "min_answers": 0
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [],
+    "no_repeat": true
+  },
+  {
+    "id": "q.future.2",
+    "category": "Future",
+    "goal": "que necesita cambiar para lograrlo",
+    "priority": 5,
+    "activation": {
+      "requires": [
+        "Future"
+      ],
+      "min_answers": 1
+    },
+    "expected_provenance": "SELF_REPORTED",
+    "followup_rules": [],
+    "related": [
+      "Shadow"
+    ],
+    "no_repeat": true
+  }
+]

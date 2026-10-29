@@ -1,0 +1,1 @@
+ELLA Cognitive Twin Foundation: DigitalSelf (solo Identity ACTIVE tras activación, resto PENDING) + Memory (tenant ELLA, root propio) + Experiences + Reflection (G6 reutilizado con datos de ELLA) + Insights (G10). Separación estricta YO/ELLA. Autonomy DISABLED. Ver ELLA/ella_foundation.py.

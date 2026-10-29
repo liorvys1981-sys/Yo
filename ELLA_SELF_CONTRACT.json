@@ -1,0 +1,22 @@
+{
+  "contract": "ELLA_SELF_GENESIS/v0.1",
+  "entity": "ELLA (entidad distinta e independiente del YO)",
+  "namespace": "ELLA",
+  "separation_rules": [
+    "ELLA NO es un modelo del YO: los estados del YO sobre ELLA son YO'S MODEL OF ELLA y viven en el namespace YO",
+    "ELLA NO vive dentro del YO Cognitive Twin: self separado, almacen separado, aislamiento estructural",
+    "El modelo del YO sobre ELLA no escribe en ELLA; ELLA no lee el self del YO",
+    "Ningun write cross-namespace: enforcement estructural (rutas y namespaces disjuntos)"
+  ],
+  "genesis": {
+    "state": "GENESIS_INCOMPLETE",
+    "entities_allowed": ["Identity"],
+    "identity_status": "PROPOSED",
+    "autonomy": "DISABLED",
+    "activation_requires": "aprobacion soberana futura (no implementada en genesis)"
+  },
+  "provenance_policy": {
+    "identity_source": "SOVEREIGN_DECLARATION",
+    "note": "la identidad de ELLA nace de declaracion soberana (SELF_REPORTED por el soberano en representacion); NUNCA de INFERRED/SYSTEM_DERIVED del sistema sobre ELLA"
+  }
+}

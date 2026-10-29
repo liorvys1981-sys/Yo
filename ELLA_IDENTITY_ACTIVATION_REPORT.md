@@ -1,0 +1,1 @@
+Activación implementada según el contrato auditado v0.1: precondiciones (origin/proposal íntegros, freshness, namespace), autorización R1 (action='ELLA-identity-activation', impact destructiva, content binding), ACTIVE inmutable (copia del proposal), anti-doble, scaffold (Identity ACTIVE, resto PENDING, autonomy DISABLED), evidence ledger. Tests: test_p10_ella (13/13).

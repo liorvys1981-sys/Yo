@@ -1,0 +1,24 @@
+{
+ "generated_utc": "2026-10-09T20:00:31.904765Z",
+ "gpu": {
+  "status": "HARDWARE_BLOCKED / NO VERIFICADO",
+  "note": "upstream documenta CUDA para musetalk/wav2lip en tiempo real; requisito EXACTO (VRAM GB, throughput) NO VERIFICADO sin hardware"
+ },
+ "memory_ram": {
+  "status": "NO VERIFICADO",
+  "note": "no medido en sandbox"
+ },
+ "storage": {
+  "status": "NO VERIFICADO",
+  "note": "pesos de modelos en el orden de GB segun upstream (descarga externa); tamano exacto por verificar en HF cuando la red lo permita"
+ },
+ "connectivity": {
+  "status": "EXTERNAL_BLOCKED",
+  "note": "descarga de weights desde HF/Baidu; edge_tts requiere servicio Microsoft (no soberano)"
+ },
+ "weights_licenses": {
+  "status": "NO VERIFICADO - BLOQUEADO",
+  "attempts": "raw.githubusercontent SSL rc=35; sparse clone timeout; pagina HTML parcial (619KB sin detalle parseable); API rate-limit 60/60",
+  "note": "licencia del REPO (MIT/Apache) NO cubre pesos; verificacion pendiente - condicion bloqueante YC-INT-1"
+ }
+}

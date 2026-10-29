@@ -1,0 +1,86 @@
+{
+ "generated_utc": "2026-10-09T19:56:19.246508+00:00Z",
+ "tasks": [
+  {
+   "id": "YC-INT-0",
+   "stage": 0,
+   "task": "Auditoria de seguridad del repo elegido (deps, auth, endpoints)",
+   "depends_on": [],
+   "acceptance": "informe de findings sin criticos sin resolver; 0 secretos en codigo",
+   "status": "PENDING_LOCAL",
+   "blocked_by": null
+  },
+  {
+   "id": "YC-INT-1",
+   "stage": 1,
+   "task": "Verificar licencias de PESOS por separado (musetalk/wav2lip/er-nerf/voces)",
+   "depends_on": [],
+   "acceptance": "licencia de cada weight verificada por escrito; incompatible -> BLOQUEO documentado",
+   "status": "IN_PROGRESS_LOCAL",
+   "blocked_by": "red a HF/model-zoo (parcialmente; rate limits)"
+  },
+  {
+   "id": "YC-INT-2",
+   "stage": 2,
+   "task": "Entorno aislado (contenedor sin salida excepto lo estricto; GPU CUDA)",
+   "depends_on": [
+    "YC-INT-0"
+   ],
+   "acceptance": "contenedor corre; nvidia-smi visible; egress denegado salvo whitelist",
+   "status": "HARDWARE_BLOCKED",
+   "blocked_by": "GPU/CUDA inexistente en sandbox"
+  },
+  {
+   "id": "YC-INT-3",
+   "stage": 3,
+   "task": "Adaptador yoclone/providers/avatar_engine.py (interfaz CloneBuilder.generate + TTSEngine/LipSyncEngine)",
+   "depends_on": [],
+   "acceptance": "adaptador compila; tests de contrato (gates, provenance) PASS sin proveedor real",
+   "status": "PENDING_LOCAL"
+  },
+  {
+   "id": "YC-INT-4",
+   "stage": 4,
+   "task": "Gates: motor externo solo via authorize_provider_transfer (R1)",
+   "depends_on": [
+    "YC-INT-3"
+   ],
+   "acceptance": "tests: sin auth -> ProviderTransferUnauthorized; con auth -> OK",
+   "status": "PENDING_LOCAL"
+  },
+  {
+   "id": "YC-INT-5",
+   "stage": 5,
+   "task": "Pruebas con datos sinteticos (fixtures, nunca biometricos reales)",
+   "depends_on": [
+    "YC-INT-2",
+    "YC-INT-4"
+   ],
+   "acceptance": "pipeline extremo a extremo con fixture sintetico; 0 datos reales",
+   "status": "HARDWARE_BLOCKED",
+   "blocked_by": "GPU + pesos (YC-INT-1/2)"
+  },
+  {
+   "id": "YC-INT-6",
+   "stage": 6,
+   "task": "Prueba de conversacion REAL con replica visual",
+   "depends_on": [
+    "YC-INT-5"
+   ],
+   "acceptance": "demostracion reproducible; SOLO entonces se puede declarar clon funcional",
+   "status": "HARDWARE_BLOCKED",
+   "blocked_by": "todo lo anterior"
+  },
+  {
+   "id": "YC-INT-7",
+   "stage": 7,
+   "task": "Soak 72h en infraestructura real",
+   "depends_on": [
+    "YC-INT-6"
+   ],
+   "acceptance": "72h sin intervencion; 0 perdida de tareas",
+   "status": "EXTERNAL_BLOCKED",
+   "blocked_by": "infraestructura"
+  }
+ ]
+}

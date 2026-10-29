@@ -1,0 +1,39 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.11.2, pytest-7.2.1, pluggy-1.0.0+repack -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/agents/output/EL_YO/01_GOBIERNO
+[1mcollecting ... [0mcollected 23 items
+
+tests/test_gobierno.py::TestMatriz::test_informativa [32mPASSED[0m[32m              [  4%][0m
+tests/test_gobierno.py::TestMatriz::test_reversible [32mPASSED[0m[32m               [  8%][0m
+tests/test_gobierno.py::TestMatriz::test_externa [32mPASSED[0m[32m                  [ 13%][0m
+tests/test_gobierno.py::TestMatriz::test_destructiva [32mPASSED[0m[32m              [ 17%][0m
+tests/test_gobierno.py::TestMatriz::test_impacto_desconocido [32mPASSED[0m[32m      [ 21%][0m
+tests/test_gobierno.py::TestGates::test_informativa_agente [32mPASSED[0m[32m        [ 26%][0m
+tests/test_gobierno.py::TestGates::test_externa_denegada_a_agente [32mPASSED[0m[32m [ 30%][0m
+tests/test_gobierno.py::TestGates::test_externa_humano_ok [31mFAILED[0m[31m         [ 34%][0m
+tests/test_gobierno.py::TestGates::test_externa_codigo_erroneo [32mPASSED[0m[31m    [ 39%][0m
+tests/test_gobierno.py::TestGates::test_externa_mal_formato [32mPASSED[0m[31m       [ 43%][0m
+tests/test_gobierno.py::TestGates::test_destructiva_sin_segunda_llave [32mPASSED[0m[31m [ 47%][0m
+tests/test_gobierno.py::TestGates::test_destructiva_doble_llave_ok [31mFAILED[0m[31m [ 52%][0m
+tests/test_gobierno.py::TestGates::test_codigo_cambia_por_dia [32mPASSED[0m[31m     [ 56%][0m
+tests/test_gobierno.py::TestGates::test_determinismo_codigo [32mPASSED[0m[31m       [ 60%][0m
+tests/test_gobierno.py::TestEvidence::test_cadena_verifica [32mPASSED[0m[31m        [ 65%][0m
+tests/test_gobierno.py::TestEvidence::test_tamper_detectado [32mPASSED[0m[31m       [ 69%][0m
+tests/test_gobierno.py::TestEvidence::test_hash_depende_de_orden [32mPASSED[0m[31m  [ 73%][0m
+tests/test_gobierno.py::TestWebhook::test_valido [32mPASSED[0m[31m                  [ 78%][0m
+tests/test_gobierno.py::TestWebhook::test_firma_invalida [32mPASSED[0m[31m          [ 82%][0m
+tests/test_gobierno.py::TestWebhook::test_ts_expirado [32mPASSED[0m[31m             [ 86%][0m
+tests/test_gobierno.py::TestWebhook::test_replay_rechazado [32mPASSED[0m[31m        [ 91%][0m
+tests/test_gobierno.py::TestWebhook::test_ip_fuera_allowlist [32mPASSED[0m[31m      [ 95%][0m
+tests/test_gobierno.py::TestWebhook::test_determinismo_100 [31mFAILED[0m[31m        [100%][0m
+
+=================================== FAILURES ===================================
+[1m[31m/mnt/agents/output/EL_YO/01_GOBIERNO/el_yo/gates.py[0m:54: el_yo.constitution.Denied: formato de frase-canal invalido (Anexo A)
+[1m[31m/mnt/agents/output/EL_YO/01_GOBIERNO/el_yo/gates.py[0m:54: el_yo.constitution.Denied: formato de frase-canal invalido (Anexo A)
+[1m[31m/mnt/agents/output/EL_YO/01_GOBIERNO/tests/test_gobierno.py[0m:145: assert False
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_gobierno.py::[1mTestGates::test_externa_humano_ok[0m - el_yo.constitution.Denied: formato de frase-canal invalido (Anexo A)
+[31mFAILED[0m tests/test_gobierno.py::[1mTestGates::test_destructiva_doble_llave_ok[0m - el_yo.constitution.Denied: formato de frase-canal invalido (Anexo A)
+[31mFAILED[0m tests/test_gobierno.py::[1mTestWebhook::test_determinismo_100[0m - assert False
+[31m========================= [31m[1m3 failed[0m, [32m20 passed[0m[31m in 0.32s[0m[31m =========================[0m

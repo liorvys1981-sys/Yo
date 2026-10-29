@@ -1,0 +1,31 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.11.2, pytest-7.2.1, pluggy-1.0.0+repack -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/agents/output/EL_YO/01_GOBIERNO
+[1mcollecting ... [0mcollected 23 items
+
+tests/test_gobierno.py::TestMatriz::test_informativa [32mPASSED[0m[32m              [  4%][0m
+tests/test_gobierno.py::TestMatriz::test_reversible [32mPASSED[0m[32m               [  8%][0m
+tests/test_gobierno.py::TestMatriz::test_externa [32mPASSED[0m[32m                  [ 13%][0m
+tests/test_gobierno.py::TestMatriz::test_destructiva [32mPASSED[0m[32m              [ 17%][0m
+tests/test_gobierno.py::TestMatriz::test_impacto_desconocido [32mPASSED[0m[32m      [ 21%][0m
+tests/test_gobierno.py::TestGates::test_informativa_agente [32mPASSED[0m[32m        [ 26%][0m
+tests/test_gobierno.py::TestGates::test_externa_denegada_a_agente [32mPASSED[0m[32m [ 30%][0m
+tests/test_gobierno.py::TestGates::test_externa_humano_ok [32mPASSED[0m[32m         [ 34%][0m
+tests/test_gobierno.py::TestGates::test_externa_codigo_erroneo [32mPASSED[0m[32m    [ 39%][0m
+tests/test_gobierno.py::TestGates::test_externa_mal_formato [32mPASSED[0m[32m       [ 43%][0m
+tests/test_gobierno.py::TestGates::test_destructiva_sin_segunda_llave [32mPASSED[0m[32m [ 47%][0m
+tests/test_gobierno.py::TestGates::test_destructiva_doble_llave_ok [32mPASSED[0m[32m [ 52%][0m
+tests/test_gobierno.py::TestGates::test_codigo_cambia_por_dia [32mPASSED[0m[32m     [ 56%][0m
+tests/test_gobierno.py::TestGates::test_determinismo_codigo [32mPASSED[0m[32m       [ 60%][0m
+tests/test_gobierno.py::TestEvidence::test_cadena_verifica [32mPASSED[0m[32m        [ 65%][0m
+tests/test_gobierno.py::TestEvidence::test_tamper_detectado [32mPASSED[0m[32m       [ 69%][0m
+tests/test_gobierno.py::TestEvidence::test_hash_depende_de_orden [32mPASSED[0m[32m  [ 73%][0m
+tests/test_gobierno.py::TestWebhook::test_valido [32mPASSED[0m[32m                  [ 78%][0m
+tests/test_gobierno.py::TestWebhook::test_firma_invalida [32mPASSED[0m[32m          [ 82%][0m
+tests/test_gobierno.py::TestWebhook::test_ts_expirado [32mPASSED[0m[32m             [ 86%][0m
+tests/test_gobierno.py::TestWebhook::test_replay_rechazado [32mPASSED[0m[32m        [ 91%][0m
+tests/test_gobierno.py::TestWebhook::test_ip_fuera_allowlist [32mPASSED[0m[32m      [ 95%][0m
+tests/test_gobierno.py::TestWebhook::test_determinismo_100 [32mPASSED[0m[32m        [100%][0m
+
+[32m============================== [32m[1m23 passed[0m[32m in 0.21s[0m[32m ==============================[0m

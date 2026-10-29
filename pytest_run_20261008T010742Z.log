@@ -1,0 +1,20 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.11.2, pytest-7.2.1, pluggy-1.0.0+repack -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/agents/output/EL_YO/01_GOBIERNO
+[1mcollecting ... [0mcollected 0 items / 1 error
+
+==================================== ERRORS ====================================
+[31m[1m___________________ ERROR collecting tests/test_gobierno.py ____________________[0m
+[31mImportError while importing test module '/mnt/agents/output/EL_YO/01_GOBIERNO/tests/test_gobierno.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+[1m[31m/usr/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31mtests/test_gobierno.py[0m:2: in <module>
+    [94mfrom[39;49;00m [04m[96mel_yo[39;49;00m[04m[96m.[39;49;00m[04m[96mconstitution[39;49;00m [94mimport[39;49;00m Action, Denied, required_authorization[90m[39;49;00m
+[1m[31mE   ModuleNotFoundError: No module named 'el_yo'[0m[0m
+[36m[1m=========================== short test summary info ============================[0m
+[31mERROR[0m tests/test_gobierno.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+[31m=============================== [31m[1m1 error[0m[31m in 0.11s[0m[31m ===============================[0m

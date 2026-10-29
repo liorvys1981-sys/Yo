@@ -632,10 +632,10 @@ class SyncEngine:
         manifest = self.bridge.registry.apps.get(app_id)
         if manifest is None:
             raise SyncError(f"app not registered: {app_id}")
-        self.paused.add(app_id)
-        self.cursors.pop(app_id, None)
         if manifest.status == "BLOCKED":
             raise SyncError("blocked apps cannot be revoked through sync")
+        self.paused.add(app_id)
+        self.cursors.pop(app_id, None)
         if manifest.status != "REVOKED":
             self.bridge.registry.transition(app_id, "REVOKED")
         self._audit("revoke", app_id, {"status": manifest.status})
